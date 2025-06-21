@@ -1,0 +1,120 @@
+<section class="advantages-banner-container container">
+    <div class="advantages-banner swiper">
+        <div class="wrapper swiper-wrapper">
+            
+            {% if settings.banners_advantages_1_enable %}
+            <div class="item swiper-slide">
+                <div>
+                    {% if settings.banners_advantages_1_icon %}
+                    <i>{{ settings.banners_advantages_1_icon }}</i>
+                    {% endif %}
+                    <div class="text">
+                        {% if settings.banners_advantages_1_heading %}
+                        <div class="heading">{{ settings.banners_advantages_1_heading }}</div>
+                        {% endif %}
+                        {% if settings.banners_advantages_1_subheading %}
+                        <div class="subheading">{{ settings.banners_advantages_1_subheading }}</div>
+                        {% endif %}
+                    </div>
+                    {% if settings.banners_advantages_1_link %}
+                    {% set target = settings.banners_advantages_1_target_blank ? 'target="_blank"' : 'target="_self"' %}
+                    <a href="{{ settings.banners_advantages_1_link }}" {{ target }}></a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+            
+            {% if settings.banners_advantages_2_enable %}
+            <div class="item swiper-slide">
+                <div>
+                    {% if settings.banners_advantages_2_icon %}
+                    <i>{{ settings.banners_advantages_2_icon }}</i>
+                    {% endif %}
+                    <div class="text">
+                        {% if settings.banners_advantages_2_heading %}
+                        <div class="heading">{{ settings.banners_advantages_2_heading }}</div>
+                        {% endif %}
+                        {% if settings.banners_advantages_2_subheading %}
+                        <div class="subheading">{{ settings.banners_advantages_2_subheading }}</div>
+                        {% endif %}
+                    </div>
+                    {% if settings.banners_advantages_2_link %}
+                    {% set target = settings.banners_advantages_2_target_blank ? 'target="_blank"' : 'target="_self"' %}
+                    <a href="{{ settings.banners_advantages_2_link }}" {{ target }}></a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+            
+            {% if settings.banners_advantages_3_enable %}
+            <div class="item swiper-slide">
+                <div>
+                    {% if settings.banners_advantages_3_icon %}
+                    <i>{{ settings.banners_advantages_3_icon }}</i>
+                    {% endif %}
+                    <div class="text">
+                        {% if settings.banners_advantages_3_heading %}
+                        <div class="heading">{{ settings.banners_advantages_3_heading }}</div>
+                        {% endif %}
+                        {% if settings.banners_advantages_3_subheading %}
+                        <div class="subheading">{{ settings.banners_advantages_3_subheading }}</div>
+                        {% endif %}
+                    </div>
+                    {% if settings.banners_advantages_3_link %}
+                    {% set target = settings.banners_advantages_3_target_blank ? 'target="_blank"' : 'target="_self"' %}
+                    <a href="{{ settings.banners_advantages_3_link }}" {{ target }}></a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+            
+            {% if settings.banners_advantages_4_enable %}
+            <div class="item swiper-slide">
+                <div>
+                    {% if settings.banners_advantages_4_icon %}
+                    <i>{{ settings.banners_advantages_4_icon }}</i>
+                    {% endif %}
+                    <div class="text">
+                        {% if settings.banners_advantages_4_heading %}
+                        <div class="heading">{{ settings.banners_advantages_4_heading }}</div>
+                        {% endif %}
+                        {% if settings.banners_advantages_4_subheading %}
+                        <div class="subheading">{{ settings.banners_advantages_4_subheading }}</div>
+                        {% endif %}
+                    </div>
+                    {% if settings.banners_advantages_4_link %}
+                    {% set target = settings.banners_advantages_4_target_blank ? 'target="_blank"' : 'target="_self"' %}
+                    <a href="{{ settings.banners_advantages_4_link }}" {{ target }}></a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+            
+            {% if settings.banners_advantages_5_enable %}
+            <div class="item swiper-slide">
+                <div>
+                    {% if settings.banners_advantages_5_icon %}
+                    <i>{{ settings.banners_advantages_5_icon }}</i>
+                    {% endif %}
+                    <div class="text">
+                        {% if settings.banners_advantages_5_heading %}
+                        <div class="heading">{{ settings.banners_advantages_5_heading }}</div>
+                        {% endif %}
+                        {% if settings.banners_advantages_5_subheading %}
+                        <div class="subheading">{{ settings.banners_advantages_5_subheading }}</div>
+                        {% endif %}
+                    </div>
+                    {% if settings.banners_advantages_5_link %}
+                    {% set target = settings.banners_advantages_5_target_blank ? 'target="_blank"' : 'target="_self"' %}
+                    <a href="{{ settings.banners_advantages_5_link }}" {{ target }}></a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+            
+        </div>
+
+        <div class="swiper-scrollbar"></div>
+                    
+    </div>
+</section>

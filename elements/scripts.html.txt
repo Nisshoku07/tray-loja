@@ -1,0 +1,11 @@
+{{ tray.scripts }}
+    
+{{
+    html.script({
+        '0' : tray.paths.js ~ 'dist/application.min.js?' ~ utils.assets_version
+    })
+}}
+
+<script src="{{ asset('js/swiper.min.js') }}" defer="defer"></script>
+<script src="{{ asset('js/theme-scripts.js') }}" defer="defer"></script>
+<script src="{{ asset('js/custom-scripts.js') }}" defer="defer"></script>

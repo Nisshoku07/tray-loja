@@ -1,0 +1,154 @@
+<div class="{{ settings.product_list_outline_enabled ? 'with-border' : 'no-border' }}">
+
+    <div class="product-image">
+        <a href="{{product.link}}" title="{{product.name}}">
+            <img 
+            data-expand="-10" 
+            data-src="{{ product.images[0].large }}" 
+            data-srcset="{{ product.images[0].medium }} 300w, {{ product.images[0].large }} 450w"
+            sizes="(min-width: 768px) 450px, 300px"
+            class="lazyload" 
+            alt="{{ product.name }}" 
+            title="{{ product.name }}"
+            >
+            
+            {% if product.images[1] %}
+            <img 
+            data-expand="-10" 
+            data-src="{{ product.images[1].large }}" 
+            data-srcset="{{ product.images[1].medium }} 300w, {{ product.images[1].large }} 450w"
+            sizes="(min-width: 768px) 450px, 300px"
+            class="lazyload" 
+            alt="{{ product.name }}" 
+            title="{{ product.name }}"
+            >
+            {% endif %}
+        </a>
+        {% element 'snippets/add-cart' { 
+            'product': product,
+            'vitrineID' : vitrineID,
+        } %}
+    </div>
+    <h2 class="product-name">
+        <a href="{{ product.link }}">{{ product.name }}</a>
+    </h2>
+
+    <div class="fake-comprar" data-item="{{product.id}}-{{vitrineID}}">
+        Comprar
+    </div>
+    
+    {% if pages.current != 'product' and settings.cache_infopreco %}
+    
+    <div data-module="pricing" data-snippet="snippets/product-payment" data-product-id="{{ product.id }}">       
+        <span class="loading">carregando...</span>
+    </div>
+    
+    {% else %}
+    
+    {% element 'snippets/product-payment' {"product": product } %}
+    
+    {% endif %}
+    
+    
+    <div class="product-stamps">
+        
+        
+        <div class="left-side">
+            {% if settings.product_list_promotion_stamp_enabled %}
+            {% set porcentagemDesconto = 100 - ( product.price_offer / product.price ) * 100 %}
+            {% if porcentagemDesconto < 100 %}
+            <span class="discount">-{{ porcentagemDesconto|number_format }}%</span>
+            {% endif %}    
+            {% endif %}
+        </div>
+        
+        
+        {% if settings.product_list_stamps_enabled %}
+        <div class="right-side">
+            
+            {% if product.free_shipping %}
+            {% if Image('free_shipping') %}
+            <span class="image-stamp">{{ Image('free_shipping') }}</span>
+            {% else %}
+            <span class="free-shipping">Frete gr&#x00E1;tis</span> 
+            {% endif %}
+            {% endif %}
+
+            {% if product.featured %}
+            {% if Image('featured') %}
+            <span class="image-stamp">{{ Image('featured') }}</span>
+            {% else %}
+            <span class="featured">Destaque</span>
+            {% endif %}
+            {% endif %}
+            
+            {% if product.new %}
+            {% if Image('new') %}
+            <span class="image-stamp">{{ Image('new') }}</span>
+            {% else %}
+            <span class="new">Lan&#x00E7;amento</span>
+            {% endif %}
+            {% endif %}
+            
+            {% if product.additional_button and Image('additional_button') %}
+            <span class="image-stamp">{{ Image('additional_button') }}</span>
+            {% endif %}
+            
+        </div>
+        {% endif %}
+ 
+    </div>
+
+    {% if product.available and (product.stock > 0 or settings.without_stock_sale) and not product.upon_request %}
+    <div class="actions {{ settings.product_list_action_button_view_mode }}">
+        
+        {% if settings.product_list_action_button_enabled %}
+            {% if not product.upon_request %}
+                
+            {# {% element 'snippets/add-cart' { 
+                'product': product,
+                'vitrineID' : vitrineID,
+            } %} #}
+
+                {# {% if settings.product_list_action_button_definition == 'add-to-cart-and-stay-on-page' %}
+                    {% if product.has_variation %}
+                        <a href="{{ product.link }}">{{ settings.product_list_action_button_text }}</a>
+                    {% else %}
+                        <button type="submit" data-app="product.buy-button" data-product="{{ product.id }}">
+                            {{ settings.product_list_action_button_text }}
+                        </button>
+                    {% endif %}
+                {% elseif settings.product_list_action_button_definition == 'go-to-product' %}
+                    <a href="{{ product.link }}">{{ settings.product_list_action_button_text }}</a>
+                {% endif %} #}
+
+            {% endif %}
+        {% endif %}
+        
+        {% if settings.compare %}
+        {% if pages.current == 'catalog' and settings.compare %}
+        <div class="compare-buttons">
+            
+            {% set compareCSS = 'compare-hidden' %}
+        
+            <a data-compare="remove" href="{{ links.compare_delete ~ product.id }}" class="{{ not product.compare ? compareCSS }}">
+                <span class="filter-checkbox checked"></span>
+                {{ Translation("remover_comparar") }}
+            </a>
+            
+            <a data-compare="add" href="{{ links.compare_add  ~ product.id }}" class="{{ product.compare ? compareCSS }}">
+                <span class="filter-checkbox"></span>
+                {{ Translation("comparar_produto") }}
+            </a>
+            
+        </div>
+        {% endif %}
+        {% endif %}
+        
+    </div>
+    {% endif %}
+    
+    
+    
+
+</div>

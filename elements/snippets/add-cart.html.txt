@@ -1,0 +1,222 @@
+{% if product.stock > 0 %}
+    <div class="variants">
+
+        <div class="title-mobile">
+            <span>Escolha</span>
+        </div>
+        {% set productVar = product.Variants|length ? product.Variants : product.variants %}
+        {% set listVariants = [] %}
+        {% set listVariantsSecond = [] %}
+        {% set variants = [] %}
+        {% set variantName = '' %}
+        {% set variantSecondName = '' %}
+
+        {% for variant in productVar %}
+
+            {% if loop.index == 1 %}
+                {% if variant.Sku[1] %}
+                    {% set variantSecondName = variant.Sku[1].type %}
+                {% endif %}
+
+                {% set variantName = variant.Sku[0].type %}
+            {% endif %}
+
+            {% set stock = variant.stock %}
+
+
+            {% if variant.id|length == '0' %}
+
+                {% set variants = '' %}
+
+            {% elseif variant.Sku[1] %}
+                {% set variants = variants|merge([
+                    {
+                        "price": {
+                            "price": variant.price,
+                            "priceoff": variant.price_offer,
+                            "payment": variant.payment_option_details
+                        },
+                        "id": variant.id,
+                        "stock": stock,
+                        "option": variant.Sku[0].value|e('html'),
+                        "option2": variant.Sku[1].value|e('html'),
+                        "image_secure": variant.Sku[0].image_secure ? variant.Sku[0].image_secure : 'none' ,
+                        "image_secure2": variant.Sku[1].image_secure ? variant.Sku[1].image_secure : 'none',
+                        "image_variant": variant.images[0].full ? variant.images[0].full : 'none',
+                        "product_id" : product.id,
+                    }
+                ]) %}
+
+                {% set valueSecond = variant.Sku[1].value %}
+                {% set valueSecondImage = variant.Sku[1].image_secure %}
+                {% set combinedValueImage = valueSecond ~ ',' ~ valueSecondImage %}
+
+                {% if not (combinedValueImage in listVariantsSecond) %}
+                    {% set listVariantsSecond = listVariantsSecond|merge([valueSecond ~ ',' ~ valueSecondImage]) %}
+                {% endif %}
+
+            {% else %}
+                {% set variants = variants|merge([
+                    {
+                        "price": {
+                            "price": variant.price,
+                            "priceoff": variant.price_offer,
+                            "payment": variant.payment_option_details
+                        },
+                        "id": variant.id,
+                        "stock": stock,
+                        "option": variant.Sku[0].value|e('html'),
+                        "image_secure": variant.Sku[0].image_secure ? variant.Sku[0].image_secure : 'none',
+                        "image_variant": variant.images[0].full ? variant.images[0].full : 'none',
+                        "product_id" : product.id,
+                    }
+                ]) %}
+            {% endif %}
+
+            {% if stock > 0 %}
+                {% set value = variant.Sku[0].value %}
+                {% set valueImage = variant.Sku[0].image_secure %}
+                {% set combinedValueImage = value ~ ',' ~ valueImage %}
+                {% if not (combinedValueImage in listVariants) %}
+                    {% set listVariants = listVariants|merge([value ~ ',' ~ valueImage]) %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+
+
+
+        <form class="list-variants list-desktop {% if variantSecondName %} second-variant-form {% endif %}"
+            data-api-cart="1" data-id="{{ product.id }}" data-variants='{{ variants ? variants|json_encode : "sem" }}'>
+            <div class="errorCartNenza">
+                <span></span>
+            </div>
+            {# <div class="msg-erro">
+                <span>Selecione uma varia&#x00E7;&#x00E3;o.</span>
+            </div> #}
+            {% if variantName %}
+            <div class="variation-checks">
+                <h4>{{ variantName }}</h4>
+
+                <div class="content-checks first-check">
+
+                    {% for item in listVariants %}
+                    {% set itemArray = item|split(',') %}
+                    {% set orderValue = '' %}
+
+                    {% if itemArray[0] | upper == "P" %}
+                        {% set orderValue = "order-1" %}
+                    {% elseif itemArray[0] | upper == "M" %}
+                        {% set orderValue = "order-2" %}
+                    {% elseif itemArray[0] | upper == "G" %}
+                        {% set orderValue = "order-3" %}
+                    {% elseif itemArray[0] | upper == "GG" %}
+                        {% set orderValue = "order-4" %}
+                    {% else %}
+                        {% set orderValue = "order-5" %}
+                    {% endif %}
+
+                    {% set float = float ? "flutuante" %}
+
+                    <label for="{{product.id}}-page-product-first-{{loop.index}}-{{vitrineID }}-{{loopIndex}}-{{float}}"
+                        class="{{itemArray[1] != '' ? 'img-label' : 'text-label'}} first-label {{orderValue}}">
+                        <input class="first" type="radio" value="{{ itemArray[0] }}"
+                            id="{{product.id}}-page-product-first-{{loop.index}}-{{vitrineID }}-{{loopIndex}}-{{float}}"
+                            name="{{product.id}}-page-product-first-{{vitrineID }}-{{loopIndex}}-{{float}}"
+                            data-stock="{{item.stock}}">
+                        {% if itemArray[1] != '' %}
+                        <div class="content-label">
+                            <img src="{{ itemArray[1]}}" alt="{{itemArray[0]}}">
+                        </div>
+                        {% else %}
+                        <div class="content-label">
+                            <span>{{itemArray[0]}}</span>
+                        </div>
+                        {% endif %}
+                    </label>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            {% if variantSecondName %}
+                <div class="variation-checks">
+                    <h4>{{ variantSecondName }}</h4>
+
+                    <div class="content-checks ">
+
+                        {% for item in listVariantsSecond %}
+                        {% set itemArray = item|split(',') %}
+                        {% set orderValue = '' %}
+
+                        {% if itemArray[0] | upper == "P" %}
+                        {% set orderValue = "order-1" %}
+                        {% elseif itemArray[0] | upper == "M" %}
+                        {% set orderValue = "order-2" %}
+
+                        {% elseif itemArray[0] | upper == "G" %}
+                        {% set orderValue = "order-3" %}
+
+                        {% elseif itemArray[0] | upper == "GG" %}
+                        {% set orderValue = "order-4" %}
+
+                        {% else %}
+                        {% set orderValue = "order-5" %}
+
+                        {% endif %}
+                        <label for="{{product.id}}-page-product-second-{{loop.index}}-{{vitrineID}}-{{loopIndex}}-{{float}}"
+                            class="{{itemArray[1] != '' ? 'img-label' : 'text-label'}} second-label {{orderValue}}"
+                            data-namevariant="{{ itemArray[0] }}">
+                            <input class="second" type="radio" value="{{ itemArray[0] }}"
+                                id="{{product.id}}-page-product-second-{{loop.index}}-{{vitrineID}}-{{loopIndex}}-{{float}}"
+                                name="{{product.id}}-page-product-second-{{vitrineID}}-{{loopIndex}}-{{float}}"
+                                data-stock="{{item.stock}}">
+
+                            {% if itemArray[1] != '' %}
+                            <div class="content-label">
+                                <img src="{{ itemArray[1]}}" alt="{{itemArray[0]}}">
+                            </div>
+                            {% else %}
+                            <div class="content-label">
+                                <span>{{itemArray[0]}}</span>
+                            </div>
+                            {% endif %}
+                        </label>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+
+            <form class="list-variants" data-id="{{ product.id }}" data-variants='sem'>
+                <div class="flex align-center add-cart">
+                    <label class="quantity-input">
+                        <span class="minusQtd" title="remover" onclick="process(this, -1)">
+                            <svg width="10" height="3" viewBox="0 0 10 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.54588 0.831433V2.61785H0.288975V0.831433H9.54588Z" fill="#fff" />
+                            </svg>
+                        </span>
+
+
+                        <input required type="number" value="1" class="quanti-var" placeholder="Quantidade">
+                        <span class="plusQtd" title="Adicionar" onclick="process(this, 1)">
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.4521 7.64105H7.51046V12.6523H5.53844V7.64105H0.619985V5.85463H5.53844V0.820176H7.51046V5.85463H12.4521V7.64105Z"
+                                    fill="#fff" />
+                            </svg>
+                        </span>
+                    </label>
+
+                    <button type="submit" title="{{ settings.text_buy ? settings.text_buy : " Comprar" }}" class="action">
+                        Comprar
+                    </button>
+
+
+                </div>
+            </form>
+        </form>
+        <div class="detalhes-mobile">
+            <a href="{{product.link}}">
+                Ver detalhes do produto
+            </a>
+        </div>
+    </div>
+{% endif %}

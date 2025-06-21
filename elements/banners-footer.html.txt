@@ -1,0 +1,16 @@
+<section class="banners-footer">
+    <div class="container">
+        
+        {% if banners.footer.link %}
+        <a href="{{ banners.footer.link }}" target="{{ banners.footer.target }}">
+        {% endif %}
+        
+        <img data-src="{{ banners.footer.src }}" alt="{{ banners.footer.alt }}" class="lazyload">
+        
+        {% if banners.footer.link %}
+        </a>
+        {% endif %}
+        
+    </div>
+    
+</section>

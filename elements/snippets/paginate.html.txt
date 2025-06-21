@@ -1,0 +1,49 @@
+{% if paginate.params.pageCount > 1 %}
+    <ul class="pagination d-flex flex-wrap">
+
+        {{ paginate.first('<i><<</i>', {
+            'escape' : false,
+            'tag'    : 'li',
+            'title'  : 'Primeira página',
+            'class'  : 'page first'
+        }) }}
+
+        {#
+        {% if paginate.hasPrev %}
+            {{ paginate.prev('<i><</i>', {
+                'escape' : false,
+                'tag'    : 'li',
+                'title'  : 'Página anterior',
+                'class'  : 'page prev'
+            }) }}
+        {% endif %}
+        #}
+     
+        {{ paginate.numbers({
+            'modulus'      : 3,
+            'separator'    : false,
+            'tag'          : 'li',
+            'class'        : 'page',
+            'currentClass' : 'current',
+        }) }}
+     
+        {#
+        {% if paginate.hasNext %}
+            {{ paginate.next('<i>></i>', {
+                'escape' : false,
+                'tag'    : 'li',
+                'title'  : 'Próxima página',
+                'class'  : 'page next'
+            }) }}
+        {% endif %}
+        #}
+
+        {{ paginate.last('<i>>></i>',{
+            'escape' : false,
+            'tag'    : 'li',
+            'title'  : 'Última página',
+            'class'  : 'page last'
+        }) }}
+
+    </ul>
+{% endif %}

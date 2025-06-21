@@ -1,0 +1,14 @@
+{% for pages in pages.custom %}
+    {% if pages.info == "depoimentos_de_clientes" %}
+    <section class="section-testimonials">
+        <div class="testimonials-container container">
+            <div class="section-header">
+                {% if settings.testimonials_section_heading %}
+                <h2 class="title-section">{{ settings.testimonials_section_heading }}</h2>
+                {% endif %}
+            </div>
+            {% element 'CustomerReview.reviews' %}
+        </div>
+    </section>
+    {% endif %}
+{% endfor %}

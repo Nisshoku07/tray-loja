@@ -1,0 +1,312 @@
+<div class="shadow-float-add-cart"></div>
+
+{% element 'slideshow' %}
+{% if settings.banners_advantages_section_enable %}
+    {% element 'advantages-banner' %}
+{% endif %}
+{% if settings.mini_banners_1_enable %}
+    {% element 'mini-banners-first' %}
+{% endif %}
+{% if settings.categories_list_section_enable %}
+    {% element 'categories-list' %}
+{% endif %}
+{# First showcase #}
+{% if settings.showcase_type_1 == "featured" %}
+    {% set showcaseText = "Destaques" %}
+{% elseif settings.showcase_type_1 == "new" %}
+    {% set showcaseText = "Lan&#x00E7;amentos" %}
+{% elseif settings.showcase_type_1 == "free_shipping" %}
+    {% set showcaseText = "Frete Gr&#x00E1;tis" %}
+{% elseif settings.showcase_type_1 == "promotion" %}
+    {% set showcaseText = "Promo&#x00E7;&#x00F5;es" %}
+{% elseif settings.showcase_type_1 == "top_seller" %}
+    {% set showcaseText = "Mais Vendidos" %}
+{% endif %}
+{% set limitProducts1 = settings.showcase_quantity_1 %}
+{% if settings.showcase_type_1 == "top_seller" %}
+    {% set products = Products({
+        'filter': 'available',
+        'limit': limitProducts1,
+        'order': {'quantity_sold': 'desc'}
+    }) %}
+    {% if settings.brands_section_enable %}
+        {% element 'brands' %}
+    {% endif %}
+{% else %}
+    {% set products = Products({
+        'filter': ['available', settings.showcase_type_1],
+        'limit': limitProducts1,
+        'order': {'id': 'desc'}
+    }) %}
+{% endif %}
+{% if settings.enable_showcase_1 %}
+    {% element 'showcase' { 
+        "products": products,
+        "showcaseTitle": showcaseText,
+        "vitrineID": "showcase-1"
+    } %}
+
+    {% for product in products %}
+        <div class="float-add-cart" data-open="{{product.id}}-showcase-1">
+            {% element 'snippets/add-cart' { 
+                'product': product,
+                'vitrineID' : vitrineID,
+                'float' : true,
+            } %}
+        </div>
+    {% endfor %}
+{% endif %}
+
+
+
+{% if settings.mini_banners_2_enable %}
+    {% element 'mini-banners-second' %}
+{% endif %}
+{# Second showcase #}
+{% if settings.showcase_type_2 == "featured" %}
+    {% set showcaseText2 = "Destaques" %}
+{% elseif settings.showcase_type_2 == "new" %}
+    {% set showcaseText2 = "Lan&#x00E7;amentos" %}
+{% elseif settings.showcase_type_2 == "free_shipping" %}
+    {% set showcaseText2 = "Frete Gr&#x00E1;tis" %}
+{% elseif settings.showcase_type_2 == "promotion" %}
+    {% set showcaseText2 = "Promo&#x00E7;&#x00F5;es" %}
+{% elseif settings.showcase_type_2 == "top_seller" %}
+    {% set showcaseText2 = "Mais Vendidos" %}
+{% elseif settings.showcase_type_2 == "feminino" %}
+    {% set showcaseText2 = "Roupas Femininas" %}
+{% elseif settings.showcase_type_2 == "masculino" %}
+    {% set showcaseText2 = "Masculino" %}
+{% endif %}
+{% set limitProducts2 = settings.showcase_quantity_2 %}
+{% if settings.showcase_type_2 == "top_seller" %}
+    {% set products = Products({
+        'filter': 'available',
+        'limit': limitProducts2,
+        'order': {'quantity_sold': 'desc'}
+    }) %}
+{% else %}
+    {% set products = Products({
+        'categories': [settings.inputIdCategoria_2],
+        'filter': ['available'],
+        'limit': limitProducts2,
+        'order': {'id': 'desc'}
+    }) %}
+{% endif %}
+{% if settings.enable_showcase_2 %}
+    {% element 'showcase' { 
+        "products": products,
+        "showcaseTitle": showcaseText2,
+        "vitrineID": "showcase-2"
+
+    } %}
+
+    
+    {% for product in products %}
+        <div class="float-add-cart" data-open="{{product.id}}-showcase-2">
+            {% element 'snippets/add-cart' { 
+                'product': product,
+                'vitrineID' : vitrineID,
+                'float' : true,
+
+            } %}
+        </div>
+    {% endfor %}
+{% endif %}
+{# Third showcase #}
+{% if settings.showcase_type_3 == "featured" %}
+    {% set showcaseText3 = "Destaques" %}
+{% elseif settings.showcase_type_3 == "new" %}
+    {% set showcaseText3 = "Lan&#x00E7;amentos" %}
+{% elseif settings.showcase_type_3 == "free_shipping" %}
+    {% set showcaseText3 = "Frete Gr&#x00E1;tis" %}
+{% elseif settings.showcase_type_3 == "promotion" %}
+    {% set showcaseText3 = "Promo&#x00E7;&#x00F5;es" %}
+{% elseif settings.showcase_type_3 == "top_seller" %}
+    {% set showcaseText3 = "Mais Vendidos" %}
+{% elseif settings.showcase_type_3 == "feminino" %}
+    {% set showcaseText3 = "Roupas Femininas" %}
+{% elseif settings.showcase_type_3 == "masculino" %}
+    {% set showcaseText3 = "Masculino" %}
+{% endif %}
+{% set limitProducts3 = settings.showcase_quantity_3 %}
+{% if settings.showcase_type_3 == "top_seller" %}
+    {% set products = Products({
+        'filter': 'available',
+        'limit': limitProducts3,
+        'order': {'quantity_sold': 'desc'}
+    }) %}
+{% else %}
+    {% set products = Products({
+        'categories': [settings.inputIdCategoria_3],
+        'filter': ['available'],
+        'limit': limitProducts3,
+        'order':{'id': 'desc'}
+    }) %}
+{% endif %}
+{% if settings.enable_showcase_3 %}
+    {% element 'showcase' { 
+        "products": products,
+        "showcaseTitle": showcaseText3,
+        "vitrineID": "showcase-3"
+
+    } %}
+
+    
+    {% for product in products %}
+        <div class="float-add-cart" data-open="{{product.id}}-showcase-3">
+            {% element 'snippets/add-cart' { 
+                'product': product,
+                'vitrineID' : vitrineID,
+                'float' : true,
+
+            } %}
+        </div>
+    {% endfor %}
+{% endif %}
+{# Fourty showcase #}
+{% if settings.showcase_type_4 == "featured" %}
+    {% set showcaseText4 = "Destaques" %}
+{% elseif settings.showcase_type_4 == "new" %}
+    {% set showcaseText4 = "Lan&#x00E7;amentos" %}
+{% elseif settings.showcase_type_4 == "free_shipping" %}
+    {% set showcaseText4 = "Frete Gr&#x00E1;tis" %}
+{% elseif settings.showcase_type_4 == "promotion" %}
+    {% set showcaseText4 = "Promo&#x00E7;&#x00F5;es" %}
+{% elseif settings.showcase_type_4 == "top_seller" %}
+    {% set showcaseText4 = "Mais Vendidos" %}
+{% endif %}
+{% set limitProducts4 = settings.showcase_quantity_4 %}
+{% if settings.showcase_type_4 == "top_seller" %}
+    {% set products = Products({
+        'filter': 'available',
+        'limit': limitProducts4,
+        'order': {'quantity_sold': 'desc'}
+    }) %}
+{% else %}
+    {% set products = Products({
+        'filter': ['available', settings.showcase_type_4],
+        'limit': limitProducts4,
+        'order': {'id': 'desc'}
+    }) %}
+{% endif %}
+{% if settings.enable_showcase_4 %}
+    {% element 'showcase' { 
+        "products": products,
+        "showcaseTitle": showcaseText4,
+        "vitrineID": "showcase-4"
+
+    } %}
+
+    
+    {% for product in products %}
+        <div class="float-add-cart" data-open="{{product.id}}-showcase-4">
+            {% element 'snippets/add-cart' { 
+                'product': product,
+                'vitrineID' : vitrineID,
+                'float' : true,
+
+            } %}
+        </div>
+    {% endfor %}
+{% endif %}
+{% element 'brands' %}
+{# video #}
+{% if settings.featured_video_section_enable %}
+    {% element 'video' %}
+{% endif %}
+{% if settings.testimonials_section_enable %}
+    {% element 'testimonials' %}
+{% endif %}
+{% if settings.featured_news_section_enable %}
+    {% element 'featured-news' %}
+{% endif %}
+{% if settings.instagram_gallery_section_enable %}
+    {% element 'instagram' %}
+{% endif %}
+
+<!-- POP-UP QUADRADO COM IMAGEM VIA URL EXTERNO -->
+<style>
+  #popup-informativo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+ #popup-informativo .popup {
+  background: transparent;
+  border-radius: 0;
+  position: relative;
+  box-shadow: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  #popup-informativo .popup-content img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .close-btn:hover {
+    background: #444;
+  }
+</style>
+
+<div id="popup-informativo" style="display: none;">
+  <div class="popup">
+    <button class="close-btn" onclick="fecharPopup()">×</button>
+    <div class="popup-content">
+      <img src="https://i.ibb.co/Fq5gNBBp/Whats-App-Image-2025-06-17-at-10-39-20.jpg">
+    </div>
+  </div>
+</div>
+
+<script>
+  const chavePopup = 'popup_informativo_exibido';
+  const hoje = new Date().toDateString();
+
+  // TESTE: força exibição a cada carregamento
+  //localStorage.removeItem(chavePopup);
+
+  if (localStorage.getItem(chavePopup) !== hoje) {
+    document.getElementById('popup-informativo').style.display = 'flex';
+  }
+
+  function fecharPopup() {
+    localStorage.setItem(chavePopup, hoje);
+    document.getElementById('popup-informativo').style.display = 'none';
+  }
+</script>

@@ -1,0 +1,56 @@
+<div class="breadcrumb-wrapper">
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/">
+                <span itemprop="name">Home</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        
+        {% if breadcrumb %}
+        {% for item in breadcrumb %}
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ item.link }}" title="{{ item.name }}">
+                <span itemprop="name">{{ item.name }}</span>
+            </a>
+            <meta itemprop="position" content="{{ loop.index + 1 }}" />
+        </li>
+        
+        {% endfor %}
+        {% endif %}
+        
+        {% set count = breadcrumb | length + 2 %}
+        
+        {% if pages.current == 'product' %}
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name">{{ product.name }}</span>
+            <meta itemprop="position" content="{{ count }}" />
+        </li>
+        
+        {% elseif pages.current == 'search' %}
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name">
+                {% if search.word %}
+                    Resultados para a busca: {{ search.word }}
+                {% else %}
+                    Página de busca
+                {% endif %}
+            </span>
+            <meta itemprop="position" content="{{ count }}" />
+        </li>
+        
+        {% else %}
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name">{{ category.name }}</span>
+            <meta itemprop="position" content="{{ count }}" />
+        </li>
+        
+        {% endif %}
+    
+    </ol>   
+</div>

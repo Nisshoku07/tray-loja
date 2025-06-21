@@ -1,0 +1,54 @@
+{% if products|length > 0 %}
+<section class="showcase">
+    <div class="container">
+        <h2 class="title">
+            <span>{{ showcaseTitle }}</span>
+        </h2>
+    
+        {% if settings.showcase_carousel_enabled %}
+        
+        <ol class="products-grid carroussel" data-products-per-row-mobile="{{ settings.products_per_row_carousel_mobile }}">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    {% for product in products %}
+                    {% set ranking = product.ranking %}
+                    <li class="item swiper-slide">
+                        {% element 'snippets/product' {
+                            "product": product,
+                            "vitrineID" : vitrineID,
+
+                        } %}
+                    </li>
+                    {% endfor %}
+                </div>
+
+                <div class="product-carroussel-pagination swiper-pagination"></div>
+                
+            </div>
+            
+            <div class="product-carroussel-button-prev"><i></i></div>
+            <div class="product-carroussel-button-next"><i></i></div>
+            
+        </ol>
+        
+        {% else %}
+        
+        <ol class="products-grid row">
+            {% for product in products %}
+            {% set ranking = product.ranking %}
+            <li class="item col-6 col-md-4 col-lg-3">
+                {% element 'snippets/product' {
+                    "product": product,
+                    "vitrineID" : vitrineID,
+                } %}
+            </li>
+            {% endfor %}
+        </ol>
+        
+        {% endif %}
+
+    </div>
+</section>
+{% endif %}
+
+

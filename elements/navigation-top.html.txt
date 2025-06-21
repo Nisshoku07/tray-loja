@@ -1,0 +1,208 @@
+{% if settings.submenu_format == "submenu_horizontal" %}
+    {% set submenuDirection = "horizontal" %}
+{% elseif settings.submenu_format == "submenu_vertical" %}
+    {% set submenuDirection = "vertical" %}
+{% endif %}
+
+<nav class="nav-container">
+    <div class="container">
+        <div class="menu row">
+            
+            <ul id="nav">
+                
+                {% for category in categories %}
+                <li class="level-top {{ submenuDirection }}">
+                    
+                    <a href="{{ category.link }}" data-js="{{ category.name }}">
+                        
+                        {{ category.name }}
+                        
+                        {% if category.children %}
+                        <i class="d-lg-none">{% element 'snippets/icon-arrow-right' %}</i>
+                        <i class="d-none d-lg-inline-block">{% element 'snippets/icon-arrow-dawn' %}</i>
+                        {% endif %}
+                        
+                    </a>
+                    
+                    {% if category.children %}
+                    <ul class="{{ submenuDirection }}">
+                        
+                        <div class="subcategory-heading d-lg-none">
+                            <div class="back-button">
+                                <i>{% element 'snippets/icon-arrow-left' %}</i>
+                                Voltar
+                            </div>
+                        </div>
+                        
+                        <div class="container">
+                            <div>
+                                
+                                {% for level2 in category.children %}
+                                <li>
+                                    <a href="{{ level2.link }}" data-js="{{ level2.name }}">
+                                        
+                                        {{ level2.name }}
+                                        
+                                        {% if level2.children %}
+                                        <i>{% element 'snippets/icon-arrow-right' %}</i>
+                                        {% endif %}
+                                    </a>
+                                    
+                                    {% if level2.children %}
+                                    <ul>
+                                        <div class="subcategory-heading d-lg-none">
+                                            <div class="back-button">
+                                                <i>{% element 'snippets/icon-arrow-left' %}</i>
+                                                Voltar
+                                            </div>
+                                        </div>
+                                        
+                                        {% for level3 in level2.children %}
+                                        <li><a href="{{ level3.link }}">{{ level3.name }}</a></li>
+                                        {% endfor %}
+                                        
+                                    </ul>
+                                    {% endif %}
+                                    
+                                </li>
+                                {% endfor %}
+
+                            </div>
+                            
+                        </div>
+                        
+                    </ul>
+                    {% endif %}
+                </li>
+                {% endfor %}
+                <li class="d-none {{ submenuDirection }}" id="more-categories">
+                    <span>+ Categorias</span>
+                    <ul class="{{ submenuDirection }}"><div class="container"><div></div></div></ul>
+                </li>
+                
+            </ul>
+            
+            {% if settings.menu_mobile_fast_tracking_enabled and settings.fast_tracking_enable %}
+            <div class="fast-tracking-mobile d-lg-none">
+                <span>Rastreie seu pedido</span>
+                <div class="fast-tracking-form" data-tracking-site="{{ settings.tracking_sites }}">
+                    <input type="text" autocomplete="off" placeholder="Digite seu código" required="true">
+                    <button>Rastrear</button>
+                </div>
+            </div>
+            {% endif %}
+            
+            <div class="info-menu-mobile d-lg-none">
+                
+                {% if settings.menu_mobile_contacts_enabled %}
+                <div class="contacts">
+                    <div class="heading">Contatos</div>
+                    <ul>
+                        {% if settings.whatsapp_number and settings.header_whatsapp_enable %}
+                        {% set whatsappNumber = settings.whatsapp_number %}
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=55{{ whatsappNumber | replace({ '(' : '', ')' : '', ' ' : '', '-' : '' }) }}{{ settings.whatsapp_btn_text ? '&text=' ~ settings.whatsapp_btn_text }}" target="_blank">
+                                <i>{% element 'snippets/icon-whatsapp' %}</i>
+                                <span>{{ whatsappNumber }}</span>
+                            </a>
+                        </li>
+                        {% endif %}
+                            
+                        {% if settings.header_phone_enable %}
+                        <li>
+                            {% if Translation('ag_telefone_1') %}
+                            {% set telephone_1 = Translation('ag_telefone_1') %}
+                            <a href="tel://{{ telephone_1 | replace({ '(' : '', ')' : '', ' ' : '', '-' : '' }) }}" target="_blank">
+                                <i>{% element 'snippets/icon-phone' %}</i>
+                                <span>{{ telephone_1 }}</span>
+                            </a>
+                            {% endif %}
+                                
+                            {% if Translation('ag_telefone_2') %}
+                            {% set telephone_2 = Translation('ag_telefone_2') %}
+                            <a href="tel://{{ telephone_2 | replace({ '(' : '', ')' : '', ' ' : '', '-' : '' }) }}" target="_blank">
+                                <i>{% element 'snippets/icon-phone' %}</i>
+                                <span>{{ telephone_2 }}</span>
+                            </a>
+                            {% endif %}
+                                
+                            {% if Translation('ag_telefone_3') %}
+                            {% set telephone_3 = Translation('ag_telefone_3') %}
+                            <a href="tel://{{ telephone_3 | replace({ '(' : '', ')' : '', ' ' : '', '-' : '' }) }}" target="_blank">
+                                <i>{% element 'snippets/icon-phone' %}</i>
+                                <span>{{ telephone_3 }}</span>
+                            </a>
+                            {% endif %}
+                            
+                        </li>
+                        {% endif %}
+                            
+                        {% if settings.header_email_enable %}
+                        <li>
+                            {% if Translation('ag_email_1') %}
+                            <a href="mailto:{{ Translation('ag_email_1') }}" target="_blank">
+                                <i>{% element 'snippets/icon-envelope' %}</i>
+                                <span>{{ Translation('ag_email_1') }}</span>
+                            </a>
+                            {% endif %}
+                            
+                            {% if Translation('ag_email_2') %}
+                            <a href="mailto:{{ Translation('ag_email_2') }}" target="_blank">
+                                <i>{% element 'snippets/icon-envelope' %}</i>
+                                <span>{{ Translation('ag_email_2') }}</span>
+                            </a>
+                            {% endif %}
+                        </li>
+                        {% endif %}    
+                        
+                    </ul>
+                    
+                </div>
+                {% endif %}
+                
+                {% if settings.menu_mobile_social_networks_enabled %}
+                <div class="header-social-media-icons-mobile">
+                    <span class="heading">Redes sociais</span>
+                    <ul>
+                        
+                        {% if settings.social_facebook %}
+                        <li><a href="{{ settings.social_facebook }}" target="_blank">{% element 'snippets/icon-facebook' %}</a></li>
+                        {% endif %}
+                        
+                        {% if settings.social_instagram %}
+                        <li><a href="{{ settings.social_instagram }}" target="_blank">{% element 'snippets/icon-instagram' %}</a></li>
+                        {% endif %}
+                        
+                        {% if settings.social_twitter %}
+                        <li><a href="{{ settings.social_twitter }}" target="_blank">{% element 'snippets/icon-twitter' %}</a></li>
+                        {% endif %}
+                        
+                        {% if settings.social_pinterest %}
+                        <li><a href="{{ settings.social_pinterest }}" target="_blank">{% element 'snippets/icon-pinterest' %}</a></li>
+                        {% endif %}
+                        
+                        {% if settings.social_youtube %}
+                        <li><a href="{{ settings.social_youtube }}" target="_blank">{% element 'snippets/icon-youtube' %}</a></li>
+                        {% endif %}
+                        
+                        {% if settings.social_vimeo %}
+                        <li><a href="{{ settings.social_vimeo }}" target="_blank">{% element 'snippets/icon-vimeo' %}</a></li>
+                        {% endif %}
+                        
+                        {% if settings.social_tiktok %}
+                        <li><a href="{{ settings.social_tiktok }}" target="_blank">{% element 'snippets/icon-tiktok' %}</a></li>
+                        {% endif %}
+                        
+                        {% if settings.social_snapchat %}
+                        <li><a href="{{ settings.social_snapchat }}" target="_blank">{% element 'snippets/icon-snapchat' %}</a></li>
+                        {% endif %}
+                        
+                    </ul>
+                    
+                </div>
+                {% endif %}
+                
+            </div>
+        </div>
+    </div>
+</nav>

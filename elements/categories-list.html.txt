@@ -1,0 +1,229 @@
+<section class="featured-categories-container">
+    <div class="container">
+        {% if settings.categories_list_section_heading %}
+        <h2 class="heading">{{ settings.categories_list_section_heading }}</h2>
+        {% endif %}
+        <div class="wrapper">
+            <div class="featured-categories swiper">
+                <div class="featured-categories-list swiper-wrapper">
+                    
+                    {% set imgPath = asset('img/categorias/') | split('?')[0] %}
+                    
+                    {% if settings.category_1_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.category_1_link }}">
+                            <div class="category-image-wrapper">
+                                <img 
+                                data-src="{{ imgPath }}{{ settings.category_1_image_name ? settings.category_1_image_name : 'no-image-1.png' }}"
+                                class="lazyload" 
+                                alt="{{ settings.category_1_title }}"
+                                >
+                            </div>
+                            {% if settings.category_1_title %}
+                            <span class="category-name">{{ settings.category_1_title }}</span>
+                            {% endif %}
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.category_2_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.category_2_link }}">
+                            <div class="category-image-wrapper">
+                                <img 
+                                data-src="{{ imgPath }}{{ settings.category_2_image_name ? settings.category_2_image_name : 'no-image-1.png' }}"
+                                class="lazyload" 
+                                alt="{{ settings.category_2_title }}"
+                                >
+                            </div>
+                            {% if settings.category_2_title %}
+                            <span class="category-name">{{ settings.category_2_title }}</span>
+                            {% endif %}
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.category_3_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.category_3_link }}">
+                            <div class="category-image-wrapper">
+                                <img 
+                                data-src="{{ imgPath }}{{ settings.category_3_image_name ? settings.category_3_image_name : 'no-image-1.png' }}"
+                                class="lazyload" 
+                                alt="{{ settings.category_3_title }}"
+                                >
+                            </div>
+                            {% if settings.category_3_title %}
+                            <span class="category-name">{{ settings.category_3_title }}</span>
+                            {% endif %}
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.category_4_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.category_4_link }}">
+                            <div class="category-image-wrapper">
+                                <img 
+                                data-src="{{ imgPath }}{{ settings.category_4_image_name ? settings.category_4_image_name : 'no-image-1.png' }}"
+                                class="lazyload" 
+                                alt="{{ settings.category_4_title }}"
+                                >
+                            </div>
+                            {% if settings.category_4_title %}
+                            <span class="category-name">{{ settings.category_4_title }}</span>
+                            {% endif %}
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.category_5_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.category_5_link }}">
+                            <div class="category-image-wrapper">
+                                <img 
+                                data-src="{{ imgPath }}{{ settings.category_5_image_name ? settings.category_5_image_name : 'no-image-1.png' }}"
+                                class="lazyload" 
+                                alt="{{ settings.category_5_title }}"
+                                >
+                            </div>
+                            {% if settings.category_5_title %}
+                            <span class="category-name">{{ settings.category_5_title }}</span>
+                            {% endif %}
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.category_6_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.category_6_link }}">
+                            <div class="category-image-wrapper">
+                                <img 
+                                data-src="{{ imgPath }}{{ settings.category_6_image_name ? settings.category_6_image_name : 'no-image-1.png' }}"
+                                class="lazyload" 
+                                alt="{{ settings.category_6_title }}"
+                                >
+                            </div>
+                            {% if settings.category_6_title %}
+                            <span class="category-name">{{ settings.category_6_title }}</span>
+                            {% endif %}
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.category_7_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.category_7_link }}">
+                            <div class="category-image-wrapper">
+                                <img 
+                                data-src="{{ imgPath }}{{ settings.category_7_image_name ? settings.category_7_image_name : 'no-image-1.png' }}"
+                                class="lazyload" 
+                                alt="{{ settings.category_7_title }}"
+                                >
+                            </div>
+                            {% if settings.category_7_title %}
+                            <span class="category-name">{{ settings.category_7_title }}</span>
+                            {% endif %}
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.category_8_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.category_8_link }}">
+                            <div class="category-image-wrapper">
+                                <img 
+                                data-src="{{ imgPath }}{{ settings.category_8_image_name ? settings.category_8_image_name : 'no-image-1.png' }}"
+                                class="lazyload" 
+                                alt="{{ settings.category_8_title }}"
+                                >
+                            </div>
+                            {% if settings.category_8_title %}
+                            <span class="category-name">{{ settings.category_8_title }}</span>
+                            {% endif %}
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.category_9_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.category_9_link }}">
+                            <div class="category-image-wrapper">
+                                <img 
+                                data-src="{{ imgPath }}{{ settings.category_9_image_name ? settings.category_9_image_name : 'no-image-1.png' }}"
+                                class="lazyload" 
+                                alt="{{ settings.category_9_title }}"
+                                >
+                            </div>
+                            {% if settings.category_9_title %}
+                            <span class="category-name">{{ settings.category_9_title }}</span>
+                            {% endif %}
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.category_10_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.category_10_link }}">
+                            <div class="category-image-wrapper">
+                                <img 
+                                data-src="{{ imgPath }}{{ settings.category_10_image_name ? settings.category_10_image_name : 'no-image-1.png' }}"
+                                class="lazyload" 
+                                alt="{{ settings.category_10_title }}"
+                                >
+                            </div>
+                            {% if settings.category_10_title %}
+                            <span class="category-name">{{ settings.category_10_title }}</span>
+                            {% endif %}
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.category_11_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.category_11_link }}">
+                            <div class="category-image-wrapper">
+                                <img 
+                                data-src="{{ imgPath }}{{ settings.category_11_image_name ? settings.category_11_image_name : 'no-image-1.png' }}"
+                                class="lazyload" 
+                                alt="{{ settings.category_11_title }}"
+                                >
+                            </div>
+                            {% if settings.category_11_title %}
+                            <span class="category-name">{{ settings.category_11_title }}</span>
+                            {% endif %}
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.category_12_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.category_12_link }}">
+                            <div class="category-image-wrapper">
+                                <img 
+                                data-src="{{ imgPath }}{{ settings.category_12_image_name ? settings.category_12_image_name : 'no-image-1.png' }}"
+                                class="lazyload" 
+                                alt="{{ settings.category_12_title }}"
+                                >
+                            </div>
+                            {% if settings.category_12_title %}
+                            <span class="category-name">{{ settings.category_12_title }}</span>
+                            {% endif %}
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    
+                </div>
+                
+                <div class="swiper-pagination featured-categories-pagination text-center d-md-none"></div>
+                
+            </div>
+            
+            <div class="featured-categories-button-prev d-none d-md-block"><i></i></div>
+            <div class="featured-categories-button-next d-none d-md-block"><i></i></div>
+                
+        </div>
+    </div>
+    
+</section>

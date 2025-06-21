@@ -1,0 +1,286 @@
+<style>
+
+:root {
+  
+    /* CORES */
+      
+    /* Header e Menu Mobile */
+    --bg-cabecalho: {{ settings.bg_cabecalho }}; 
+    --bg-barra-topo: {{ settings.bg_barra_topo }}; 
+    --color-barra-topo: {{ settings.color_barra_topo }}; 
+    --icones-cabecalho: {{ settings.icones_cabecalho }}; 
+    --color-cabecalho: {{ settings.color_cabecalho }}; 
+    --bg-itens-carrinho: {{ settings.bg_itens_carrinho }};
+    --color-itens-carrinho: {{ settings.color_itens_carrinho }}; 
+    --bg-campo-busca: {{ settings.bg_campo_busca }}; 
+    --color-escritas-campo-busca: {{ settings.color_escritas_campo_busca }};
+    --search-field-border-color: {{ settings.search_field_border_color }};
+    --search-field-border-color-focus: {{ settings.search_field_border_color_focus }};
+    --bg-botao-buscar: {{ settings.bg_botao_buscar }}; 
+    --bg-botao-buscar-hover: {{ settings.bg_botao_buscar_hover }}; 
+    --color-icone-campo-busca: {{ settings.color_icone_campo_busca }}; 
+    --color-icone-campo-busca-hover: {{ settings.color_icone_campo_busca_hover }}; 
+    --color-border-top-menu: {{ settings.color_border_top_menu}};
+    --bg-barra-menu: {{ settings.bg_barra_menu }}; 
+    --color-categ: {{ settings.color_categ }}; 
+    --color-categ-hover: {{ settings.color_categ_hover }}; 
+    --bg-marc-categ-hover: {{ settings.bg_marc_categ_hover }};
+    --bg-submenu: {{ settings.bg_submenu }}; 
+    --cor-borda-submenu: {{ settings.cor_borda_submenu }}; 
+    --cor-subcat-nivel-1: {{ settings.cor_subcat_nivel_1 }}; 
+    --cor-subcat-nivel-1-hover: {{ settings.cor_subcat_nivel_1_hover }}; 
+    --cor-subcat-nivel-2: {{ settings.cor_subcat_nivel_2 }}; 
+    --cor-subcat-nivel-2-hover: {{ settings.cor_subcat_nivel_2_hover }}; 
+    --bg-menu-mobile: {{ settings.bg_menu_mobile }}; 
+    --cor-color-mm: {{ settings.color_mm }}; 
+    --bg-tracking-field-mm: {{ settings.bg_tracking_field_mm }}; 
+    --cor-tracking-field-mm: {{ settings.cor_tracking_field_mm }}; 
+    --bg-tracking-btn-mm: {{ settings.bg_tracking_btn_mm }}; 
+    --cor-tracking-btn-mm: {{ settings.cor_tracking_btn_mm }};  
+      
+    /* Footer */
+    --color-border-top-footer: {{ settings.color_border_top_footer }}; 
+    --bg-barra-newsletter: {{ settings.bg_barra_newsletter }}; 
+    --color-barra-newsletter: {{ settings.color_barra_newsletter }}; 
+    --bg-campo-email: {{ settings.bg_campo_email }}; 
+    --color-campo-email: {{ settings.color_campo_email }}; 
+    --color-botao-cadastrar: {{ settings.color_botao_cadastrar }}; 
+    --bg-footer-meio-cima: {{ settings.bg_footer_meio_cima }};
+    --bg-footer-meio-baixo: {{ settings.bg_footer_meio_baixo }}; 
+    --color-titulos-footer: {{ settings.color_titulos_footer }}; 
+    --bg-separador-titulos-footer: {{ settings.bg_separador_titulos_footer }}; 
+    --color-escritas-footer-meio: {{ settings.color_escritas_footer_meio }}; 
+    --color-escritas-footer-hover: {{ settings.color_escritas_footer_hover }};
+    --bg-footer-inferior: {{ settings.bg_footer_inferior }}; 
+    --color-borda-footer-inferior: {{ settings.color_borda_footer_inferior }}; 
+    --color-escritas-footer-inferior: {{ settings.color_escritas_footer_inferior }}; 
+      
+    /* Botoes */
+    --bg-botao-principal: {{ settings.bg_botao_principal }};
+    --bg-botao-principal-hover: {{ settings.bg_botao_principal_hover }};
+    --color-botao-principal: {{ settings.color_botao_principal }};
+    --color-botao-principal-hover: {{ settings.color_botao_principal_hover }};
+    --bg-botao-secundario: {{ settings.bg_botao_secundario }};
+    --bg-botao-secundario-hover: {{ settings.bg_botao_secundario_hover }};
+    --borda-botao-secundario: {{ settings.borda_botao_secundario }};
+    --borda-botao-secundario-hover: {{ settings.borda_botao_secundario_hover }};
+    --color-botao-secundario: {{ settings.color_botao_secundario }};
+    --color-botao-secundario-hover: {{ settings.color_botao_secundario_hover }};
+    --bg-botao-voltar: {{ settings.bg_botao_voltar }}; 
+    --bg-botao-voltar-hover: {{ settings.bg_botao_voltar_hover }}; 
+    --cor-icone-botao-voltar: {{ settings.cor_icone_botao_voltar }}; 
+    --cor-icone-botao-voltar-hover: {{ settings.cor_icone_botao_voltar_hover }}; 
+    --bg-botao-comprar-listagem: {{ settings.bg_botao_comprar_listagem }}; 
+    --bg-botao-comprar-listagem-hover: {{ settings.bg_botao_comprar_listagem_hover }}; 
+    --color-escrita-botao-comprar-listagem: {{ settings.color_escrita_botao_comprar_listagem }}; 
+    --color-escrita-botao-comprar-listagem-hover: {{ settings.color_escrita_botao_comprar_listagem_hover }};
+    --bg-botao-comprar-produto: {{ settings.bg_botao_comprar_produto }};
+    --bg-botao-comprar-produto-hover: {{ settings.bg_botao_comprar_produto_hover }}; 
+    --color-escrita-botao-comprar-produto: {{ settings.color_escrita_botao_comprar_produto }}; 
+    --color-escrita-botao-comprar-produto-hover: {{ settings.color_escrita_botao_comprar_produto_hover }}; 
+      
+    --color-border-selected-variants: {{ settings.color_border_selected_variants }}; 
+    
+    /* Geral */
+    
+    --bg-promotion-stamp: {{ settings.bg_promotion_stamp }};
+    --color-promotion-stamp: {{ settings.color_promotion_stamp }};
+    --bg-free-shipping-stamp: {{ settings.bg_free_shipping_stamp }};
+    --color-free-shipping-stamp: {{ settings.color_free_shipping_stamp }};
+    --bg-featured-stamp: {{ settings.bg_featured_stamp }};
+    --color-featured-stamp: {{ settings.color_featured_stamp }};
+    --bg-new-stamp: {{ settings.bg_new_stamp }};
+    --color-new-stamp: {{ settings.color_new_stamp }};
+    
+    --video-height-desktop: {{ settings.video_height_desktop }}%;
+    --video-height-mobile: {{ settings.video_height_mobile }}%;
+    
+    --slideshow-height-mobile: {{ settings.slideshow_height_mobile }}%;
+    --slideshow-height-desktop: {{ settings.slideshow_height_desktop }}%;
+    
+    --mini-banners-height-first-section: {{ settings.mini_banners_1_height }}%;
+    --mini-banners-height-second-section: {{ settings.mini_banners_2_height }}%;
+    
+    --logo-height-desktop: {{ settings.logo_height_desktop }}%;
+    --logo-width-desktop: {{ settings.logo_width_desktop }}%;
+    --logo-height-mobile: {{ settings.logo_height_mobile }}%;
+    --logo-width-mobile: {{ settings.logo_width_mobile }}%;
+    
+    --search-field-width: {{ settings.search_field_width }}%; 
+    --search-field-height-desktop: {{ settings.search_field_height_desktop }}px; 
+    --search-field-height-mobile: {{ settings.search_field_height_mobile }}px; 
+    --search-field-border-radius: {{ settings.search_field_border_radius }}; 
+    --search-field-button-border-radius: {{ settings.search_field_button_border_radius }}; 
+    
+    --cor-preco-destaque-listagem: {{ settings.cor_preco_destaque_listagem }};
+    --bg-borda-miniatura-ativa: {{ settings.bg_borda_miniatura_ativa }}; 
+    --cor-preco-destaque-produto: {{ settings.cor_preco_destaque_produto }};
+    --cor-titulos-secoes: {{ settings.cor_titulos_secoes }};
+    --bg-separador-titulos: {{ settings.bg_separador_titulos }}; 
+    --bg-marcador-item-slideshow: {{ settings.bg_marcador_item_slideshow }}; 
+    --bg-setas-slideshow: {{ settings.bg_setas_slideshow }}; 
+    --cor-icone-setas-slideshow: {{ settings.cor_icone_setas_slideshow }}; 
+    --bg-selection: {{ settings.bg_selection }}; 
+    --color-selection: {{ settings.color_selection }}; 
+    --bg-scrollbar-thumb: {{ settings.bg_scrollbar_thumb }}; 
+    --bg-scrollbar-track: {{ settings.bg_scrollbar_track }}; 
+    --cor-borda-campos-formulario-focus: {{ settings.cor_borda_campos_formulario_focus }};
+    --bg-theme-navegador-mobile: {{ settings.bg_theme_navegador_mobile }}; 
+    --bg-cookies-bar: {{ settings.bg_cookies_bar }}; 
+    --color-cookies-bar: {{ settings.color_cookies_bar }}; 
+    --bg-cookies-bar-button: {{ settings.bg_cookies_bar_button }};
+    --color-cookies-bar-button: {{ settings.color_cookies_bar_button }};
+    --bg-cookies-bar-button-hover: {{ settings.bg_cookies_bar_button_hover }};
+    --color-cookies-bar-button-hover: {{ settings.color_cookies_bar_button_hover }};
+    --bg-btn-whatsapp: {{ settings.bg_btn_whatsapp }}; 
+    --color-btn-whatsapp: {{ settings.color_btn_whatsapp }};
+    --color-icon-banner-tarja: {{ settings.color_icon_banner_tarja }};
+    --color-heading-advantages-banner: {{ settings.color_heading_advantages_banner }};
+    --color-subheading-advantages-banner: {{ settings.color_subheading_advantages_banner }};
+    --color-installment-prices: {{ settings.color_installment_prices }};
+    --color-cash-discount: {{ settings.color_cash_discount }};
+      
+      
+    /* FONTES*/
+      
+    /* Geral */
+    --geral-font: "{{ settings.geral_font_name }}", sans-serif;
+    --geral-font-size: {{ settings.geral_font_size }}px;  
+    
+    /* Barra do Topo */
+    --font-size-top-bar: {{ settings.font_size_top_bar }}px;
+    --font-weight-top-bar: {{ settings.font_weight_top_bar }};
+    --letter-spacing-top-bar: {{ settings.letter_spacing_top_bar }};
+    --text-transform-top-bar: {{ settings.text_transform_top_bar }};
+    
+    /* Barra de Busca */
+    --font-size-search-bar: {{ settings.font_size_search_bar }}px;
+    
+    /* Minha Conta */
+    --font-size-my-account: {{ settings.font_size_my_account }}px;
+    --font-weight-my-account: {{ settings.font_weight_my_account }};
+    --letter-spacing-my-account: {{ settings.letter_spacing_my_account }};
+    --text-transform-my-account: {{ settings.text_transform_my_account }}; 
+    
+    /* Menu Principal */
+    --menu-lv1-font-size: {{ settings.font_size_menu_lv1 }}px; 
+    --menu-lv1-font-weight: {{ settings.font_weight_menu_lv1 }};  
+    --menu-lv1-letter-spacing: {{ settings.letter_spacing_menu_lv1 }};  
+    --menu-lv1-text-transform: {{ settings.text_transform_menu_lv1 }};
+    --menu-lv2-font-size: {{ settings.font_size_menu_lv2 }}px; 
+    --menu-lv2-font-weight: {{ settings.font_weight_menu_lv2 }};  
+    --menu-lv2-letter-spacing: {{ settings.letter_spacing_menu_lv2 }};  
+    --menu-lv2-text-transform: {{ settings.text_transform_menu_lv2 }};  
+    --menu-lv3-font-size: {{ settings.font_size_menu_lv3 }}px; 
+    --menu-lv3-font-weight: {{ settings.font_weight_menu_lv3 }};  
+    --menu-lv3-letter-spacing: {{ settings.letter_spacing_menu_lv3 }};  
+    --menu-lv3-text-transform: {{ settings.text_transform_menu_lv3 }}; 
+    
+    /* Footer */
+    --font-size-newsletter-bar-heading: {{ settings.font_size_newsletter_bar_heading }}px;
+    --font-weight-newsletter-bar-heading: {{ settings.font_weight_newsletter_bar_heading }};
+    --letter-spacing-newsletter-bar-heading: {{ settings.letter_spacing_newsletter_bar_heading }};
+    --text-transform-newsletter-bar-heading: {{ settings.text_transform_newsletter_bar_heading }};  
+    --font-size-newsletter-bar-subheading: {{ settings.font_size_newsletter_bar_subheading }}px;
+    --font-weight-newsletter-bar-subheading: {{ settings.font_weight_newsletter_bar_subheading }};
+    --letter-spacing-newsletter-bar-subheading: {{ settings.letter_spacing_newsletter_bar_subheading }};
+    --text-transform-newsletter-bar-subheading: {{ settings.text_transform_newsletter_bar_subheading }};
+    --font-size-email-field: {{ settings.font_size_email_field }}px;
+      
+    --font-size-footer-text: {{ settings.font_size_footer_text }}px;
+    --font-size-footer-headings: {{ settings.font_size_footer_headings }}px;
+    --font-weight-footer-headings: {{ settings.font_weight_footer_headings }};
+    --letter-spacing-footer-headings: {{ settings.letter_spacing_footer_headings }};
+    --text-transform-footer-headings: {{ settings.text_transform_footer_headings }};  
+      
+    /* Botoes */  
+    --font-size-buttons: {{ settings.font_size_buttons }}px;
+    --font-weight-buttons: {{ settings.font_weight_buttons }};
+    --letter-spacing-buttons: {{ settings.letter_spacing_buttons }};
+    --text-transform-buttons: {{ settings.text_transform_buttons }};
+      
+    /* Pagina do Produto */
+    --font-size-product-title: {{ settings.font_size_product_title }}px;
+    --font-weight-product-title: {{ settings.font_weight_product_title }};
+    --letter-spacing-product-title: {{ settings.letter_spacing_product_title }};
+    --text-transform-product-title: {{ settings.text_transform_product_title }};  
+    --font-size-product-call-to-action: {{ settings.font_size_product_call_to_action }}px;
+    --font-weight-product-call-to-action: {{ settings.font_weight_product_call_to_action }};
+    --letter-spacing-product-call-to-action: {{ settings.letter_spacing_product_call_to_action }};
+    --text-transform-product-call-to-action: {{ settings.text_transform_product_call_to_action }};  
+    --font-size-product-variations: {{ settings.font_size_product_variations }}px;
+    --font-weight-product-variations: {{ settings.font_weight_product_variations }};
+    --letter-spacing-product-variations: {{ settings.letter_spacing_product_variations }};
+    --text-transform-product-variations: {{ settings.text_transform_product_variations }};
+    --font-size-product-price-normal: {{ settings.font_size_product_price_normal }}px;
+    --font-weight-product-price-normal: {{ settings.font_weight_product_price_normal }};
+    --font-size-product-price-final: {{ settings.font_size_product_price_final }}px;
+    --font-weight-product-price-final: {{ settings.font_weight_product_price_final }};  
+      
+    /* Listagem de Produtos */
+    --font-size-product-list-title: {{ settings.font_size_product_list_title }}px;
+    --font-weight-product-list-title: {{ settings.font_weight_product_list_title }};
+    --letter-spacing-product-list-title: {{ settings.letter_spacing_product_list_title }};
+    --text-transform-product-list-title: {{ settings.text_transform_product_list_title }}; 
+    --font-size-product-list-price-normal: {{ settings.font_size_product_list_price_normal }}px;
+    --font-weight-product-list-price-normal: {{ settings.font_weight_product_list_price_normal }};  
+    --font-size-product-list-price-final: {{ settings.font_size_product_list_price_final }}px;
+    --font-weight-product-list-price-final: {{ settings.font_weight_product_list_price_final }}; 
+    
+    /* Banner de Vantagens */
+    --font-size-banner-tarja-titulo: {{ settings.font_size_banner_tarja_titulo }}px;
+    --font-weight-banner-tarja-titulo: {{ settings.font_weight_banner_tarja_titulo }};
+    --letter-spacing-banner-tarja-titulo: {{ settings.letter_spacing_banner_tarja_titulo }};
+    --text-transform-banner-tarja-titulo: {{ settings.text_transform_banner_tarja_titulo }};
+    --font-size-banner-tarja-subtitulo: {{ settings.font_size_banner_tarja_subtitulo }}px;
+    --font-weight-banner-tarja-subtitulo: {{ settings.font_weight_banner_tarja_subtitulo }};
+    --letter-spacing-banner-tarja-subtitulo: {{ settings.letter_spacing_banner_tarja_subtitulo }};
+    --text-transform-banner-tarja-subtitulo: {{ settings.text_transform_banner_tarja_subtitulo }};
+      
+    /* Barra Lateral */
+    --font-size-sidebar-headings: {{ settings.font_size_sidebar_headings }}px;
+    --font-weight-sidebar-headings: {{ settings.font_weight_sidebar_headings }};
+    --letter-spacing-sidebar-headings: {{ settings.letter_spacing_sidebar_headings }};
+    --text-transform-sidebar-headings: {{ settings.text_transform_sidebar_headings }}; 
+      
+    /* Titulos das secoes */
+    --font-size-sections-headings: {{ settings.font_size_sections_headings }}px;
+    --font-weight-sections-headings: {{ settings.font_weight_sections_headings }}; 
+    --letter-spacing-sections-headings: {{ settings.letter_spacing_sections_headings }};
+    --text-transform-sections-headings: {{ settings.text_transform_sections_headings }};
+      
+    /* Breadcrumbs */
+    --font-size-breadcrumbs: {{ settings.font_size_breadcrumbs }}px;
+    --font-weight-breadcrumbs: {{ settings.font_weight_breadcrumbs }};
+    --letter-spacing-breadcrumbs: {{ settings.letter_spacing_breadcrumbs }};
+    --text-transform-breadcrumbs: {{ settings.text_transform_breadcrumbs }};
+      
+    /* Outros */
+    
+    --product-list-image-height: {{ settings.product_list_image_height }}%;
+    --altura-imagem-produto-pagina-produto: {{ settings.product_image_height }}%;
+      
+    /* Botao WhatsApp */
+    --whatsapp-btn-margin-bottom-desktop: {{ settings.whatsapp_btn_margin_bottom_desktop }}px;
+    --whatsapp-btn-margin-bottom-mobile: {{ settings.whatsapp_btn_margin_bottom_mobile }}px;
+    --whatsapp-btn-margin-left-desktop: {{ settings.whatsapp_btn_margin_left_desktop }}px;
+    --whatsapp-btn-margin-left-mobile: {{ settings.whatsapp_btn_margin_left_mobile }}px;
+    --whatsapp-btn-margin-right-desktop: {{ settings.whatsapp_btn_margin_right_desktop }}px;
+    --whatsapp-btn-margin-right-mobile: {{ settings.whatsapp_btn_margin_right_mobile }}px;
+      
+    /* Botao Voltar ao Topo */
+    --back-to-top-btn-margin-bottom-desktop: {{ settings.back_to_top_btn_margin_bottom_desktop }}px;
+    --back-to-top-btn-margin-bottom-mobile: {{ settings.back_to_top_btn_margin_bottom_mobile }}px;
+    --back-to-top-btn-margin-left-desktop: {{ settings.back_to_top_btn_margin_left_desktop }}px;
+    --back-to-top-btn-margin-left-mobile: {{ settings.back_to_top_btn_margin_left_mobile }}px;
+    --back-to-top-btn-margin-right-desktop: {{ settings.back_to_top_btn_margin_right_desktop }}px;
+    --back-to-top-btn-margin-right-mobile: {{ settings.back_to_top_btn_margin_right_mobile }}px;
+      
+    /* Banner da colecao */  
+    --collection-image-height: 25%;
+      
+    --bs-gutter-x: 15px;	
+  
+}
+  
+</style>

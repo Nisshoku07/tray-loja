@@ -1,0 +1,8 @@
+<aside class="col-left col-lg-3 sidebar">
+    <div class="close-filters d-lg-none"><i></i></div>
+    <div class="filters">
+        {% element 'smartfilter' %}
+    </div>
+    <div class="filters-overlay"></div>
+</aside>
+

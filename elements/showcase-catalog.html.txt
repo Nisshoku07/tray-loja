@@ -1,0 +1,47 @@
+{% if products|length > 0 %}
+{% if not settings.enable_filter %}
+<div class="category-products">
+    <ol class="products-grid row">
+        {% for product in products %}
+        {% set ranking = product.ranking %}
+        <li class="item col-6 {{ settings.enable_filter ? 'col-md-4' : 'col-md-3' }}">
+            {% element 'snippets/product' {"product": product, "vitrineID" : 'catalogo'} %}
+
+        </li>
+        {% endfor %}
+
+        {% for product in products %}
+            <div class="float-add-cart" data-open="{{product.id}}-catalogo">
+                {% element 'snippets/add-cart' { 
+                    'product': product,
+                    'vitrineID' : 'catalogo',
+                    'float' : true,
+                } %}
+            </div>
+        {% endfor %}
+    </ol>
+</div>
+{% else %}
+<div class="category-products">
+    <ol class="products-grid row">
+        {% for product in products %}
+        {% set ranking = product.ranking %}
+        <li class="item col-6 {{ settings.enable_filter ? 'col-md-4' : 'col-md-3' }}">
+            {% element 'snippets/product' {"product": product, "vitrineID" : 'catalogo'} %}
+        </li>
+        {% endfor %}
+
+        {% for product in products %}
+            <div class="float-add-cart" data-open="{{product.id}}-catalogo">
+                {% element 'snippets/add-cart' { 
+                    'product': product,
+                    'vitrineID' : 'catalogo',
+                    'float' : true,
+                } %}
+            </div>
+        {% endfor %}
+    </ol>
+</div>
+{% endif %}
+{% endif %}
+

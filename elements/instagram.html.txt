@@ -1,0 +1,101 @@
+<section class="instagram-gallery">
+    
+    {% if settings.instagram_gallery_section_heading != blank %}
+    <h2 class="insta-title">
+        <span>
+            <i>{% element 'snippets/icon-instagram' %}</i>
+            <span>{{ settings.instagram_gallery_section_heading }}</span>    
+        </span>
+    </h2>
+    {% endif %}
+    
+    <div class="container">
+        
+        <div class="swiper">
+
+            <div class="swiper-wrapper">
+                
+                {% set imgPath = asset('img/instagram/') | split('?')[0] %}
+
+                {% if settings.instagram_post_1_enable %}
+                <div class="item swiper-slide">
+                    <div class="wrap">
+                        <a href="{{ settings.instagram_post_1_link ? settings.instagram_post_1_link : '#' }}" target="_blank">
+                            <img 
+                            data-src="{{ imgPath }}{{ settings.instagram_post_1_image_name ? settings.instagram_post_1_image_name : 'no-image-1.png' }}" 
+                            class="lazyload" 
+                            alt="{{ settings.instagram_post_1_img_alt_txt }}"
+                            >
+                            <i class="icon-instagram">{% element 'snippets/icon-instagram' %}</i>
+                        </a>
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if settings.instagram_post_2_enable %}
+                <div class="item swiper-slide">
+                    <div class="wrap">
+                        <a href="{{ settings.instagram_post_2_link ? settings.instagram_post_2_link : '#' }}" target="_blank">
+                            <img 
+                            data-src="{{ imgPath }}{{ settings.instagram_post_2_image_name ? settings.instagram_post_2_image_name : 'no-image-1.png' }}" 
+                            class="lazyload" 
+                            alt="{{ settings.instagram_post_2_img_alt_txt }}"
+                            >
+                            <i class="icon-instagram">{% element 'snippets/icon-instagram' %}</i>
+                        </a>
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if settings.instagram_post_3_enable %}
+                <div class="item swiper-slide">
+                    <div class="wrap">
+                        <a href="{{ settings.instagram_post_3_link ? settings.instagram_post_3_link : '#' }}" target="_blank">
+                            <img 
+                            data-src="{{ imgPath }}{{ settings.instagram_post_3_image_name ? settings.instagram_post_3_image_name : 'no-image-1.png' }}" 
+                            class="lazyload" 
+                            alt="{{ settings.instagram_post_3_img_alt_txt }}"
+                            >
+                            <i class="icon-instagram">{% element 'snippets/icon-instagram' %}</i>
+                        </a>
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if settings.instagram_post_4_enable %}
+                <div class="item swiper-slide">
+                    <div class="wrap">
+                        <a href="{{ settings.instagram_post_4_link ? settings.instagram_post_4_link : '#' }}" target="_blank">
+                            <img 
+                            data-src="{{ imgPath }}{{ settings.instagram_post_4_image_name ? settings.instagram_post_4_image_name : 'no-image-1.png' }}" 
+                            class="lazyload" 
+                            alt="{{ settings.instagram_post_4_img_alt_txt }}"
+                            >
+                            <i class="icon-instagram">{% element 'snippets/icon-instagram' %}</i>
+                        </a>
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if settings.instagram_post_5_enable %}
+                <div class="item swiper-slide">
+                    <div class="wrap">
+                        <a href="{{ settings.instagram_post_5_link ? settings.instagram_post_5_link : '#' }}" target="_blank">
+                            <img 
+                            data-src="{{ imgPath }}{{ settings.instagram_post_5_image_name ? settings.instagram_post_5_image_name : 'no-image-1.png' }}" 
+                            class="lazyload" 
+                            alt="{{ settings.instagram_post_5_img_alt_txt }}"
+                            >
+                            <i class="icon-instagram">{% element 'snippets/icon-instagram' %}</i>
+                        </a>
+                    </div>
+                </div>
+                {% endif %}
+
+            </div>
+
+            <div class="swiper-pagination instagram-gallery-pagination text-center d-md-none"></div>
+            
+        </div>
+    </div>
+</section>

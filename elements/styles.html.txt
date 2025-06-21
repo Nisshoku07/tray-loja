@@ -1,0 +1,10 @@
+{% if settings.font_type == 'google_fonts' %}
+{% set font_name = settings.geral_font_name | replace(" ", "+") %}
+{% set font_weight = settings.font_weight | replace(",", ";") %}
+<link href="https://fonts.googleapis.com/css2?family={{ font_name }}:wght@{{ font_weight }}&display=swap" rel="stylesheet">
+{% endif %}
+
+<link href="{{ asset('css/theme-styles-1.css') }}" rel="stylesheet" type="text/css" media="all">
+<link href="{{ asset('css/theme-styles-2.css') }}" rel="stylesheet" type="text/css" media="all">
+<link href="{{ asset('css/custom-styles.css') }}" rel="stylesheet" type="text/css" media="all">
+

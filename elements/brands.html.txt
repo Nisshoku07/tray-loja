@@ -1,0 +1,168 @@
+<section class="brands-container">
+    <div class="container">
+        {% if settings.brands_section_heading != blank %}
+        <h2 class="heading">{{ settings.brands_section_heading }}</h2>
+        {% endif %}
+        <div class="wrapper">
+            <div class="brands swiper">
+                <div class="brands-list swiper-wrapper">
+                    
+                    {% set imgPath = asset('img/marcas/') | split('?')[0] %}
+                    
+                    {% if settings.brand_1_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.brand_1_link ? settings.brand_1_link : '#' }}" target="_blank">
+                            <img 
+                            data-src="{{ imgPath }}{{ settings.brand_1_image_name ? settings.brand_1_image_name : 'no-image-1.png' }}" 
+                            class="lazyload" 
+                            alt="{{ settings.brand_1_img_alt_txt }}"
+                            >
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.brand_2_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.brand_2_link ? settings.brand_2_link : '#' }}" target="_blank">
+                            <img 
+                            data-src="{{ imgPath }}{{ settings.brand_2_image_name ? settings.brand_2_image_name : 'no-image-1.png' }}" 
+                            class="lazyload" 
+                            alt="{{ settings.brand_2_img_alt_txt }}"
+                            >
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.brand_3_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.brand_3_link ? settings.brand_3_link : '#' }}" target="_blank">
+                            <img 
+                            data-src="{{ imgPath }}{{ settings.brand_3_image_name ? settings.brand_3_image_name : 'no-image-1.png' }}" 
+                            class="lazyload" 
+                            alt="{{ settings.brand_3_img_alt_txt }}"
+                            >
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.brand_4_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.brand_4_link ? settings.brand_4_link : '#' }}" target="_blank">
+                            <img 
+                            data-src="{{ imgPath }}{{ settings.brand_4_image_name ? settings.brand_4_image_name : 'no-image-1.png' }}" 
+                            class="lazyload" 
+                            alt="{{ settings.brand_4_img_alt_txt }}"
+                            >
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.brand_5_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.brand_5_link ? settings.brand_5_link : '#' }}" target="_blank">
+                            <img 
+                            data-src="{{ imgPath }}{{ settings.brand_5_image_name ? settings.brand_5_image_name : 'no-image-1.png' }}" 
+                            class="lazyload" 
+                            alt="{{ settings.brand_5_img_alt_txt }}"
+                            >
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.brand_6_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.brand_6_link ? settings.brand_6_link : '#' }}" target="_blank">
+                            <img 
+                            data-src="{{ imgPath }}{{ settings.brand_6_image_name ? settings.brand_6_image_name : 'no-image-1.png' }}" 
+                            class="lazyload" 
+                            alt="{{ settings.brand_6_img_alt_txt }}"
+                            >
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.brand_7_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.brand_7_link ? settings.brand_7_link : '#' }}" target="_blank">
+                            <img 
+                            data-src="{{ imgPath }}{{ settings.brand_7_image_name ? settings.brand_7_image_name : 'no-image-1.png' }}" 
+                            class="lazyload" 
+                            alt="{{ settings.brand_7_img_alt_txt }}"
+                            >
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.brand_8_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.brand_8_link ? settings.brand_8_link : '#' }}" target="_blank">
+                            <img 
+                            data-src="{{ imgPath }}{{ settings.brand_8_image_name ? settings.brand_8_image_name : 'no-image-1.png' }}" 
+                            class="lazyload" 
+                            alt="{{ settings.brand_8_img_alt_txt }}"
+                            >
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.brand_9_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.brand_9_link ? settings.brand_9_link : '#' }}" target="_blank">
+                            <img 
+                            data-src="{{ imgPath }}{{ settings.brand_9_image_name ? settings.brand_9_image_name : 'no-image-1.png' }}" 
+                            class="lazyload" 
+                            alt="{{ settings.brand_9_img_alt_txt }}"
+                            >
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.brand_10_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.brand_10_link ? settings.brand_10_link : '#' }}" target="_blank">
+                            <img 
+                            data-src="{{ imgPath }}{{ settings.brand_10_image_name ? settings.brand_10_image_name : 'no-image-1.png' }}" 
+                            class="lazyload" 
+                            alt="{{ settings.brand_10_img_alt_txt }}"
+                            >
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.brand_11_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.brand_11_link ? settings.brand_11_link : '#' }}" target="_blank">
+                            <img 
+                            data-src="{{ imgPath }}{{ settings.brand_11_image_name ? settings.brand_11_image_name : 'no-image-1.png' }}" 
+                            class="lazyload" 
+                            alt="{{ settings.brand_11_img_alt_txt }}"
+                            >
+                        </a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.brand_12_enable %}
+                    <div class="item swiper-slide">
+                        <a href="{{ settings.brand_12_link ? settings.brand_12_link : '#' }}" target="_blank">
+                            <img 
+                            data-src="{{ imgPath }}{{ settings.brand_12_image_name ? settings.brand_12_image_name : 'no-image-1.png' }}" 
+                            class="lazyload" 
+                            alt="{{ settings.brand_12_img_alt_txt }}"
+                            >
+                        </a>
+                    </div>
+                    {% endif %}
+
+                </div>
+
+                <div class="swiper-pagination brands-pagination text-center d-md-none"></div>
+                    
+            </div>
+            
+            <div class="brands-button-prev d-none d-md-block"><i></i></div>
+            <div class="brands-button-next d-none d-md-block"><i></i></div>
+                
+        </div>
+    </div>
+
+</section>

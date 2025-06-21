@@ -1,0 +1,7 @@
+{% element 'snippets/price' {"product": product} %}
+    
+{% if product.available and (product.stock > 0 or settings.without_stock_sale) and not product.upon_request %}
+<div class="product-payment">
+    {{ product.payment }}
+</div>
+{% endif %}

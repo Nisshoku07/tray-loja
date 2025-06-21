@@ -1,0 +1,63 @@
+<section class="mini-banners first">
+    <div class="container">
+        <div class="swiper">
+            <div class="wrapper swiper-wrapper">
+                
+                {% if banner.extra2 %}
+                <div class="swiper-slide">
+                    <div class="wrap">
+                        
+                        {% if banners.extra2.link %}
+                        <a href="{{ banners.extra2.link }}" target="{{ banners.extra2.target }}">
+                        {% endif %}
+                        
+                        <img data-src="{{ banners.extra2.src }}" alt="{{ banners.extra2.alt }}" class="lazyload">
+                        
+                        {% if banners.extra2.link %}
+                        </a>
+                        {% endif %}
+
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if banner.extra3 %}
+                <div class="swiper-slide">
+                    <div class="wrap">
+                        
+                        {% if banners.extra3.link %}
+                        <a href="{{ banners.extra3.link }}" target="{{ banners.extra3.target }}">
+                        {% endif %}
+                        
+                        <img data-src="{{ banners.extra3.src }}" alt="{{ banners.extra3.alt }}" class="lazyload">
+                        
+                        {% if banners.extra3.link %}
+                        </a>
+                        {% endif %}
+                        
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if banner.extra4 %}
+                <div class="swiper-slide">
+                    <div class="wrap">
+                        
+                        {% if banners.extra4.link %}
+                        <a href="{{ banners.extra4.link }}" target="{{ banners.extra4.target }}">
+                        {% endif %}
+                        
+                        <img data-src="{{ banners.extra4.src }}" alt="{{ banners.extra4.alt }}" class="lazyload">
+                        
+                        {% if banners.extra4.link %}
+                        </a>
+                        {% endif %}
+
+                    </div>
+                </div>
+                {% endif %}
+                
+            </div>
+        </div>
+    </div>
+</section>

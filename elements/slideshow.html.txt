@@ -1,0 +1,70 @@
+{% if settings.slideshow_width == "full_page" %}
+    {% set slideshowWidthClass = "full" %}
+{% elseif settings.slideshow_width == "boxed" %}
+    {% set slideshowWidthClass = "boxed" %}
+{% endif %}
+
+{% if banner.home and settings.slideshow_desktop_enable %}
+<section class="slideshow-container-desktop d-none d-md-block {{ slideshowWidthClass }} {{ settings.slideshow_width == 'boxed' ? 'container' }}">
+    <div class="slideshow">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                
+                {% if banners.home.type == 'javascript' %}
+                    {% for slide in banners.home.slides %}
+                    <div class="item swiper-slide">
+                        <a href="{{ slide.link }}" target="{{ slide.target }}">
+                            <img data-src="{{ slide.image }}" alt="{{ slide.label }}" class="lazyload" width="1920" height="547">
+                        </a>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="item swiper-slide">
+                        <a href="{{ banners.home.link }}" target="{{ banners.home.target }}">
+                            <img data-src="{{ banners.home.src }}" alt="{{ banners.home.alt }}" class="lazyload" width="1920" height="547">
+                        </a>
+                    </div>
+                {% endif %}
+                
+            </div>
+            
+            <div class="slideshow-button-prev d-none d-lg-block"><i></i></div>
+            <div class="slideshow-button-next d-none d-lg-block"><i></i></div>
+            
+            <div class="swiper-pagination slideshow-desktop-pagination"></div>
+            
+        </div>
+    </div>
+</section>
+{% endif %}
+    
+{% if banner.extra1 and settings.slideshow_mobile_enable %}
+<section class="slideshow-container-mobile d-block d-md-none">
+    <div class="slideshow">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                
+                {% if banners.extra1.type == 'javascript' %}
+                    {% for slide in banners.extra1.slides %}
+                    <div class="item swiper-slide">
+                        <a href="{{ slide.link }}" target="{{ slide.target }}">
+                            <img data-src="{{ slide.image }}" alt="{{ slide.label }}" class="lazyload" width="767" height="767">
+                        </a>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="item swiper-slide">
+                        <a href="{{ banners.extra1.link }}" target="{{ banners.extra1.target }}">
+                            <img data-src="{{ banners.extra1.src }}" alt="{{ banners.extra1.alt }}" class="lazyload" width="767" height="767">
+                        </a>
+                    </div>
+                {% endif %}
+                
+            </div>
+            
+            <div class="swiper-pagination slideshow-mobile-pagination"></div>
+            
+        </div>
+    </div>
+</section>
+{% endif %}

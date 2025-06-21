@@ -1,0 +1,214 @@
+{% set fixedMenuClass = settings.enable_fixed_menu ? "fixed-menu-enabled" : "fixed-menu-disabled" %}
+{% set menuEnabledDisabledClass = settings.enable_main_menu ? "with-menu" : "no-menu" %}
+
+<header id="header" class="header-container {{ fixedMenuClass }} {{ menuEnabledDisabledClass }}">
+
+    {% if settings.featured_bar_enable %}
+    <div class="top-bar">
+        {% if settings.featured_bar_icon %}
+        <i>{{ settings.featured_bar_icon }}</i>
+        {% endif %}
+        {% if settings.featured_bar_text %}
+        <span>{{ settings.featured_bar_text }}</span>
+        {% endif %}
+        {% if settings.featured_bar_button %}
+        {% set target = settings.featured_bar_button_link_target ? "_blank" : "_self" %}
+        {% set link = settings.featured_bar_button_link %}
+        <a href="{{ link }}" target="{{ target }}">{{ settings.featured_bar_button_text }}</a>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                
+                {% if settings.enable_main_menu %}
+                <div class="mobile-menu-trigger">
+                    <span class="icon">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </span>
+                </div>
+                {% endif %}
+                    
+                <div class="logo-container">
+
+                    {% set storeName %}<span>{{ store.name }}</span>{% endset %}
+                    {% set storeLogo %}
+                    <a href="{{ store.url }}" title="{{ store.name }}">
+                        {{ Image('logo_loja') ? Image('logo_loja') : storeName }}
+                    </a>
+                    {% endset %}
+                    
+                    {% if pages.current == 'home' %} 
+                    <h1 class="logo">{{ storeLogo }}</h1>
+                    {% else %}
+                    <div class="logo">{{ storeLogo }}</div>
+                    {% endif %}
+                   
+                </div>
+
+                <div class="search-container">
+                    {% element 'snippets/search' %}
+                </div>
+                    
+                <div class="header-right">
+
+                    {% if settings.enable_header_support %}
+                    <div class="call-center d-none d-md-flex">
+                    
+                        {% if settings.header_support_icon %}
+                        <i>{{ settings.header_support_icon }}</i>
+                        {% endif %}
+                        
+                        <span class="d-none d-lg-block">{{ settings.header_support_title }}</span>
+                        
+                        <i class="d-none d-lg-block">{% element 'snippets/icon-arrow-dawn' %}</i>
+
+                        <ul class="d-none d-md-block">
+
+                            {% if settings.whatsapp_number and settings.header_whatsapp_enable %}
+                            {% set whatsappNumber = settings.whatsapp_number %}
+                            <li class="contact">
+                                <a href="https://api.whatsapp.com/send?phone=55{{ whatsappNumber | replace({ '(' : '', ')' : '', ' ' : '', '-' : '' }) }}{{ settings.whatsapp_btn_text ? '&text=' ~ settings.whatsapp_btn_text }}" target="_blank">
+                                    <i>{% element 'snippets/icon-whatsapp' %}</i>
+                                    <span>{{ whatsappNumber }}</span>
+                                </a>
+                            </li>
+                            {% endif %}
+                        
+                            {% if settings.header_phone_enable %}
+                            <li class="contact">
+                                
+                                    {% if Translation('ag_telefone_1') %}
+                                    {% set telephone_1 = Translation('ag_telefone_1') %}
+                                    <a href="tel://{{ telephone_1 | replace({ '(' : '', ')' : '', ' ' : '', '-' : '' }) }}" target="_blank">
+                                        <i>{% element 'snippets/icon-phone' %}</i>
+                                        <span>{{ telephone_1 }}</span>
+                                    </a>
+                                    {% endif %}
+                                    
+                                    {% if Translation('ag_telefone_2') %}
+                                    {% set telephone_2 = Translation('ag_telefone_2') %}
+                                    <a href="tel://{{ telephone_2 | replace({ '(' : '', ')' : '', ' ' : '', '-' : '' }) }}" target="_blank">
+                                        <i>{% element 'snippets/icon-phone' %}</i>
+                                        <span>{{ telephone_2 }}</span>
+                                    </a>
+                                    {% endif %}
+                                    
+                                    {% if Translation('ag_telefone_3') %}
+                                    {% set telephone_3 = Translation('ag_telefone_3') %}
+                                    <a href="tel://{{ telephone_3 | replace({ '(' : '', ')' : '', ' ' : '', '-' : '' }) }}" target="_blank">
+                                        <i>{% element 'snippets/icon-phone' %}</i>
+                                        <span>{{ telephone_3 }}</span>
+                                    </a>
+                                    {% endif %}
+                            </li>
+                            {% endif %}
+                        
+                            {% if settings.header_email_enable %}
+                            <li class="contact">
+                                
+                                {% if Translation('ag_email_1') %}
+                                <a href="mailto:{{ Translation('ag_email_1') }}" target="_blank">
+                                    <i>{% element 'snippets/icon-envelope' %}</i>
+                                    <span>{{ Translation('ag_email_1') }}</span>
+                                </a>
+                                {% endif %}
+                                
+                                {% if Translation('ag_email_2') %}
+                                <a href="mailto:{{ Translation('ag_email_2') }}" target="_blank">
+                                    <i>{% element 'snippets/icon-envelope' %}</i>
+                                    <span>{{ Translation('ag_email_2') }}</span>
+                                </a>
+                                {% endif %}
+                                
+                            </li>
+                            {% endif %}
+                        
+                            {% if settings.header_opening_hours_enable %}
+                            <li class="opening-hours">
+                                <span class="heading">Hor&#x00E1;rio de atendimento:</span>
+                                <p>{{ Translation('ag_atendimento') }}</p>
+                            </li>
+                            {% endif %}
+                        
+                            {% if settings.header_fast_tracking_enable and settings.fast_tracking_enable %}
+                            <li class="fast-tracking">
+                                <span class="heading">Rastreio R&#x00E1;pido</span>
+                                <div class="fast-tracking-form" data-tracking-site="{{ settings.tracking_sites }}">
+                                    <input type="text" autocomplete="off" placeholder="Digite seu c&#x00F3;digo" required="true">
+                                    <button>
+                                        <i>{% element 'snippets/icon-arrow-right' %}</i>
+                                    </button>
+                                </div>
+                            </li>
+                            {% endif %}
+                        
+                        </ul>
+                    </div>
+                    {% endif %}
+            
+                    <div class="top-account">
+                        
+                        <span>
+                            
+                            {% if settings.header_account_icon %}
+                            <i>{{ settings.header_account_icon }}</i>
+                            {% endif %}
+                            
+                            <span class="d-none d-lg-block">Minha conta</span>
+                            
+                            <i class="d-none d-lg-block">{% element 'snippets/icon-arrow-dawn' %}</i>
+                            
+                        </span>
+                        
+                        <div class="account-links">
+                            
+                            <div class="hello-message">
+                                <span>Ol&#x00E1;,
+                                    <strong class="tray-hide" data-logged-user="true" data-customer="name"></strong>
+                                    <strong data-logged-user="false">visitante!</strong>
+                                </span>
+                            </div>
+                            
+                            <div class="tray-hide" data-logged-user="true">
+                                <a class="logout" href="{{ links.logout }}">sair</a>
+                                <a class="my-account-link" href="{{ links.central }}">Minha conta</a>
+                            </div>
+                            
+                            <div data-logged-user="false">
+                                <a class="login" href="{{ links.login }}">entrar</a>
+                                <a class="register" href="{{ links.register }}">cliente novo? cadastrar</a>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="top-cart">
+                        <div class="cart cart-1 cart-header">
+                            
+                            {% if settings.header_cart_icon %}
+                            <i>{{ settings.header_cart_icon }}</i>
+                            {% endif %}
+                            
+                            <div class="cart-count">
+                                <span data-cart="amount">{{ cart.amount }}</span>
+                            </div>
+                        </div>
+                    </div> 
+
+                </div>
+                   
+            </div>
+        </div>
+    </div>
+    
+    {% if settings.enable_main_menu %}
+        {% element 'navigation-top' %}
+    {% endif %}
+
+</header>

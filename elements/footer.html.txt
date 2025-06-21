@@ -1,0 +1,18 @@
+{% for page in pages.custom %}
+    {% if page.slug == "noticias" %}
+        <section class="section-news {{ settings.featured_news_section_images ? 'with-images' : 'no-images' }}">
+            <div class="container">
+                {% if settings.featured_news_section_heading %}
+                <div class="section-header">
+                    <h2 class="title-section">{{ settings.featured_news_section_heading }}</h2>
+                </div>
+                {% endif %}
+                <div class="swiper">
+                    <div class="news-content swiper-wrapper"></div>
+                    <div class="swiper-pagination news-pagination text-center d-md-none"></div>
+                </div>
+                <a href="/noticias" class="botao-commerce flex align-center justify-center" title="Ver mais notícias">Ver mais</a>
+            </div>
+        </section>
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,43 @@
+<div class="product-price">
+    {% if not product.available %}
+    <p class="product-price unavailable">Indisponível</p>
+    {% if settings.product_list_notify_me %}
+    <span class="notify-me">
+        Avise-me quando chegar >
+    </span>
+    {% endif %}
+    {% elseif product.stock <= 0 and settings.without_stock_sale <= 0 %}
+    <p class="product-price sold-out">Esgotado</p>
+    {% if settings.product_list_notify_me %}
+    <span class="notify-me">
+        Avise-me quando chegar >
+    </span>
+    {% endif %}
+    {% elseif product.upon_request %}
+    <p class="product-price upon-request">Sob Consulta</p>
+    <span class="know-more">
+        Saiba mais >
+    </span>
+    {% else %}
+    <div class="product-price">
+        {% if product.price_offer > 0 %}
+        <span class="price-before" >
+            <span>{{ settings.currency }}</span>
+            <span>{{ product.price | currency }}</span>
+        </span>
+        {% endif %}
+        {% if settings.store_main_price_boleto  %}
+        <div class="price-offer price-payment">{{ product.payment }}</div>
+        {% else %}
+        {% set price = product.price_offer > 0 ? product.price_offer : product.price %}
+        {% if product.has_other_prices %}
+            <span>A partir de </span>
+        {% endif %}
+        <span class="price-offer">
+            <span>{{ settings.currency }}</span>
+            <span>{{ price | currency }}</span>            
+        </span>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>

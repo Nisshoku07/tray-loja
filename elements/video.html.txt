@@ -1,0 +1,42 @@
+<section class="video-container">
+    <div class="container">
+        
+        {% if settings.video_heading %}
+        <h2 class="heading"><span>{{ settings.video_heading }}</span></h2>
+        {% endif %}
+        
+        <div class="video" data-video-url="{{ settings.video_url }}">
+            
+            {% set imgPath = asset('img/video/') | split('?')[0] %}
+            
+            {% if settings.video_cover_name %}
+            <img 
+            data-src="{{ imgPath }}{{ settings.video_cover_name }}"
+            class="lazyload" 
+            alt="Vídeo"
+            > 
+            {% endif %}
+            
+            <div class="video-play">
+                <i>{% element 'snippets/icon-play-video' %}</i>
+            </div>
+            
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

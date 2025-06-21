@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR" data-store="{{ store.id }}" prefix="og: http://ogp.me/ns#" data="{{ settings.id_k }}">
+
+<head>
+   
+    {{ html.charset() }}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% element 'head-metas' %}
+    <meta name="theme-color" content="{{ settings.bg_theme_navegador_mobile }}">
+    
+    {% element 'preload-preconnect' %}
+    
+    {{ tray.styles }}
+    
+    {% element 'snippets/css-variables' %}
+
+    <link rel="stylesheet" href="{{asset('css/cart_ar8.css')}}"  />
+    
+    {% element 'styles' %}
+    
+    {{ tray.analytics }}
+    {{ googleTagManager.header(pages.current, tagManagerData) }}
+
+</head>
+
+<body class="page-{{ pages.current }}">
+    
+    {{ googleTagManager.top(pages.current, tagManagerData) }}
+
+    {% element 'snippets/messages' %}
+
+
+    <div class="application">
+
+        {% element 'header' %}
+
+        <main class="site-main">
+            
+            <div class="page-content">
+                
+                {% if not ('home' in pages.current) %}
+                    <div class="container">
+                        <div class="row">
+                {% endif %}
+                
+                {% if "central" in pages.current %}
+                    {%  element 'sidebar-central' %}
+                {% endif %}
+                
+                {% set title = '' %}
+                {% for page in pages.custom %}
+                    {% if ('empresa' in page.slug and pages.current == 'company') or (pages.current == page.slug and page.slug not in special_pages) %}
+                        {% set title = page.name %}
+                    {% endif %}
+                {% endfor %}
+                {% if title != '' %}
+                    <h1 class="custom-page-title">
+                        {{ title }}
+                    </h1>
+                {% endif %}
+                
+                {{ content_for_layout }} 
+                
+                {% if not ('home' in pages.current) %}
+                        </div>
+                    </div>
+                {% endif %}
+              
+            </div>
+            
+        </main>
+        
+        {% element 'footer' %}
+        
+    </div>
+    {% element 'snippets/cart-sidebar' %}
+
+    {% element 'modal-add-to-cart' %}
+
+    {% if settings.whatsapp_btn_enable %}
+    {% set whatsapp = settings.whatsapp_number | replace( { "(" : "", ")": "", " " : "", "-": "" } ) %}
+    <a class="btn-whats {{ settings.whatsapp_btn_side }}" href="https://api.whatsapp.com/send?phone=55{{ whatsapp }}{% if settings.whatsapp_btn_text != blank %}&text={{ settings.whatsapp_btn_text }}{% endif %}" target="_blank">
+        <i>{% element 'snippets/icon-whatsapp' %}</i>
+    </a>
+    {% endif %}
+    
+    {% element 'snippets/button-back-to-top' %}
+
+    {% if settings.cookies_notice_bar %}
+    <div id="notice-cookie-block">
+        <div class="container">
+            <div class="txt">
+                <p>
+                    {{ settings.cookies_notice_bar_text }}
+                    {% if settings.cookies_notice_bar_page_link %}
+                    <a href="{{ settings.cookies_notice_bar_page_link }}" target="_blank">{{ settings.cookies_notice_bar_link_text }}</a>
+                    {% endif %}
+                </p>
+            </div>
+            <div class="actions">
+                <button><span>Entendi</span></button>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% element 'snippets/modal' %} 
+    {% element 'snippets/pageview' %}
+    
+    {% element 'scripts' %}
+
+    {{ store.chat }}
+    
+
+    <script src="{{asset('js/cart_ar8.js')}}"></script>
+    <script src="{{ asset('js/custom-scripts.js') }}">
+
+    {{ googleTagManager.bottom(pages.current, tagManagerData) }}
+    
+    <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/47570276.js"></script>
+<!-- End of HubSpot Embed Code -->
+
+</body>
+</html>
