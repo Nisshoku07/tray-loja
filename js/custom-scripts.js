@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
             minInput.classList.remove('input-error');
             maxInput.classList.remove('input-error');
 
-            // ValidaÃ§Ã£o: nenhum campo preenchido
+            // Validação: nenhum campo preenchido
             if (isNaN(min) && isNaN(max)) {
                 errorBox.classList.remove('hidden');
                 errorBox.textContent = 'Informe pelo menos um valor para filtrar.';
                 return;
             }
 
-            // ValidaÃ§Ã£o: mínimo >= máximo
+            // Validação: mínimo >= máximo
             if (!isNaN(min) && !isNaN(max) && min >= max) {
                 errorBox.classList.remove('hidden');
                 errorBox.textContent = 'O mínimo deve ser menor que o máximo.';
@@ -31,18 +31,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            // Redireciona sempre para a busca
-            let url = new URL('/loja/busca.php', window.location.origin);
+            // --- INÍCIO DA MUDANÇA RECOMENDADA ---
 
-            // Preserva a categoria atual (se existir)
-            const categoriaInput = document.querySelector('input[name="categoria"]');
-            if (categoriaInput && categoriaInput.value) {
-                url.searchParams.append('categoria', categoriaInput.value);
-            }
+            // Crie um objeto URL com base na URL ATUAL da página
+            // Isso garante que todos os parâmetros existentes sejam preservados
+            let url = new URL(window.location.href);
 
-            // Aplica o filtro de preÃ§o
+            // Remove o parâmetro de preço existente para substituí-lo
             url.searchParams.delete('prices[]');
 
+            // Adiciona os novos valores de preço
             if (!isNaN(min) && !isNaN(max)) {
                 url.searchParams.append('prices[]', `${min},${max}`);
             } else if (!isNaN(min)) {
@@ -51,7 +49,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 url.searchParams.append('prices[]', `0,${max}`);
             }
 
-            // Redireciona com os parametros finais
+            // --- FIM DA MUDANÇA RECOMENDADA ---
+
+            // Redireciona com os parâmetros finais (que agora incluem os antigos e os novos de preço)
             window.location.href = url.toString();
         });
     }
