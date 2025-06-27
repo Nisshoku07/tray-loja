@@ -1,58 +1,95 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const btn = document.getElementById('apply-price-filter');
-    const errorBox = document.getElementById('price-error');
+    const filterForm = document.querySelector('form.smart-filter');
+    // Renomeei o botão para evitar conflito de nome com a função `submit` do formulário.
+    const submitButton = document.getElementById('main-filter-button'); 
+    const clearFiltersLink = document.getElementById('clear-all-filters');
 
-    if (btn) {
-        btn.addEventListener('click', function () {
+    // --- LÓGICA DO BOTÃO PRINCIPAL "APLICAR FILTROS" ---
+    if (submitButton) {
+        submitButton.addEventListener('click', function (event) {
+            // Previne o envio padrão do formulário para podermos adicionar a lógica de preço.
+            event.preventDefault();
+
             const minInput = document.getElementById('price-min');
             const maxInput = document.getElementById('price-max');
-
-            const min = parseInt(minInput.value, 10);
-            const max = parseInt(maxInput.value, 10);
-
-            // Resetar mensagens e estilos de erro
+            const errorBox = document.getElementById('price-error');
+            
             errorBox.classList.add('hidden');
             minInput.classList.remove('input-error');
             maxInput.classList.remove('input-error');
+            
+            const min = parseFloat(minInput.value);
+            const max = parseFloat(maxInput.value);
 
-            // Validação: nenhum campo preenchido
-            if (isNaN(min) && isNaN(max)) {
-                errorBox.classList.remove('hidden');
-                errorBox.textContent = 'Informe pelo menos um valor para filtrar.';
-                return;
-            }
-
-            // Validação: mínimo >= máximo
             if (!isNaN(min) && !isNaN(max) && min >= max) {
+                errorBox.textContent = 'O minimo deve ser menor que o maximo.';
                 errorBox.classList.remove('hidden');
-                errorBox.textContent = 'O mínimo deve ser menor que o máximo.';
                 minInput.classList.add('input-error');
                 maxInput.classList.add('input-error');
                 return;
             }
+            
+            // Pega todos os parâmetros do formulário (checkboxes, etc.)
+            const formData = new FormData(filterForm);
+            const params = new URLSearchParams(formData);
 
-            // --- INÍCIO DA MUDANÇA RECOMENDADA ---
+            // --- LÓGICA DE PREÇO CORRIGIDA ---
+            // Deleta qualquer filtro de preço existente para não duplicar.
+            params.delete('prices[]');
 
-            // Crie um objeto URL com base na URL ATUAL da página
-            // Isso garante que todos os parâmetros existentes sejam preservados
-            let url = new URL(window.location.href);
-
-            // Remove o parâmetro de preço existente para substituí-lo
-            url.searchParams.delete('prices[]');
-
-            // Adiciona os novos valores de preço
             if (!isNaN(min) && !isNaN(max)) {
-                url.searchParams.append('prices[]', `${min},${max}`);
+                // Cenário 1: Mínimo e Máximo preenchidos.
+                params.set('prices[]', `${min},${max}`);
             } else if (!isNaN(min)) {
-                url.searchParams.append('prices[]', `${min},999999`);
+                // Cenário 2: Apenas Mínimo preenchido. Usa um valor máximo muito alto.
+                params.set('prices[]', `${min},999999`);
             } else if (!isNaN(max)) {
-                url.searchParams.append('prices[]', `0,${max}`);
+                // Cenário 3: Apenas Máximo preenchido. Usa 0 como mínimo.
+                params.set('prices[]', `0,${max}`);
             }
+            // Se nenhum campo de preço foi preenchido, ele simplesmente não adiciona o parâmetro `prices[]`.
 
-            // --- FIM DA MUDANÇA RECOMENDADA ---
+            // Redireciona para a URL com todos os filtros corretos.
+            window.location.href = window.location.pathname + '?' + params.toString();
+        });
+    }
 
-            // Redireciona com os parâmetros finais (que agora incluem os antigos e os novos de preço)
-            window.location.href = url.toString();
+    // --- LÓGICA DO BOTÃO "LIMPAR FILTROS" ---
+    if (clearFiltersLink) {
+        clearFiltersLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            // Redireciona para a URL da página atual, sem NENHUM parâmetro de filtro.
+            window.location.href = window.location.pathname;
         });
     }
 });
+
+
+// Remover as marcas do filtro categorias
+const limparCategoriasMarcas = setInterval(() => {
+    const checkboxes = document.querySelectorAll('.filter-block-categories input[type="checkbox"]');
+
+    if (checkboxes.length > 0) {
+        const nomesMarcasExibir = [
+            "Amarante", "Amissima", "Anacapri", "Ana do Céu", "Anne Fernandes", "Betelgeuse", "Bfly",
+            "Calvin Klein", "Cantão", "Caos", "Carrano", "Charth", "City Class", "Cleo Carvalho",
+            "Decencia", "Delight", "Duplo Sentido", "Ellen Baptista", "Esquire", "Fleche Dor", "For Yetts",
+            "Frutacor", "Graf", "Hush", "Inocence", "Iodice", "Iorane", "Isla", "Jorge Bischoff", "Lacoste",
+            "Liuzzi", "Lina Brand", "Lore", "Loucos e Santos", "Lovit", "Luiza Barcelos", "Mamô", "Maracujá¡",
+            "Maria Valentina", "M Nacional", "Mia Brand", "MM Especial", "MN Maxnino", "Modelan", "Morena Rosa",
+            "Morena Rosa Beach", "Morena Rosa Living", "Patchoulee", "Plié", "Reserva", "Rosa Dahlia", "Ryzí",
+            "Santa Lolla", "Schutz", "Seiki", "Sis Brand", "Skazi", "Skunk", "Strass", "Thamara Capelão",
+            "Tommy Hilfiger", "Vicenza", "Victor Dzenk", "Wink", "YTCOM", "Zinco", "MARCAS", "ROUPAS"
+        ];
+
+        checkboxes.forEach(el => {
+            const labelText = el.nextElementSibling?.querySelector('.filter-name')?.innerText.trim();
+            if (nomesMarcasExibir.includes(labelText)) {
+                const item = el.closest('.filter-item');
+                if (item) item.remove();
+            }
+        });
+
+        clearInterval(limparCategoriasMarcas);
+    }
+}, 300);

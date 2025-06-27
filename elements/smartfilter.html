@@ -30,23 +30,18 @@
         
         {% for filter_type, filter_data in filters_available %}
             {% if filter_type == 'properties' %}
-
                 {% for property in filter_data.values %}
                     <section class="filter-block filter-block-properties" data-filter-type="{{ property.key | lower }}">
-
                         <div class="filter-title active">
                             <span>{{ property.key }}</span>
                             <i></i>
                         </div>
-                        
                         <ul class="filter-list">
                             {% for item in property.values %}
                                 {% set item_type = item.entity == 'variants' ? 'variant' : 'propertie' %}
                                 {% set label_for = 'property-' ~ property.key ~ '||' ~ item.key %}
-
                                 {% set value = property.key ~ '||' ~ item.key %}
                                 {% set value_encoded = property.key_encoded ~ '||' ~ item.key_encoded %}
-
                                 <li class="filter-item">
                                     <div class="filter-checkbox">
                                         <input type="checkbox" class="filter-input" id="{{ label_for | lower }}" name="{{ item.entity }}[]" value="{{ value_encoded }}" {% if value in applied_filters[item_type] -%} checked {%- endif %}>
@@ -58,19 +53,14 @@
                                 </li>
                             {% endfor %}
                         </ul>
-
                     </section>
                 {% endfor %}
-
             {% else %}
-
                 <section class="filter-block filter-block-{{ filter_type }}">
-
                     <div class="filter-title active">
                         <span>{{ filter_titles[filter_type] }}</span>
                         <i></i>
                     </div>
-                    
                     <ul class="filter-list">
                         {% for item in filter_data %}
                             <li class="filter-item">
@@ -84,50 +74,36 @@
                             </li>
                         {% endfor %}
                     </ul>
-
-             
-    
+                </section>
             {% endif %}
         {% endfor %}
-        
-   </section>
-           <button type="submit" class="filter-button">
-        Filtrar
-    </button>
-    
-        {# Filtro de preço adaptado - inspirado na Dafiti #}
-        <section class="filter-block filter-block-prices">
-            <div class="filter-title active">
-                <span>Preço</span>
-                <i></i>
-            </div>
-            
+    </div>
 
-      <!-- Filtros clicáveis removidos; mantido somente o filtro manual -->
-
-            <div class="manual-price-filter">
-                <p><strong>Filtrar por valor:</strong></p>
-
-                <div class="price-inputs">
-                    <div class="input-wrapper">
-                       
-                        <input type="number" id="price-min" placeholder="mínimo" min="0">
-                    </div>
-                    <div class="input-wrapper">
-                    
-                        <input type="number" id="price-max" placeholder="máximo" min="0">
-                    </div>
+    {# Filtro de preço manual #}
+    <section class="filter-block filter-block-prices">
+        <div class="filter-title active">
+            <span>Preço</span>
+            <i></i>
+        </div>
+        <div class="manual-price-filter">
+            <p><strong>Filtrar por valor:</strong></p>
+            <div class="price-inputs">
+                <div class="input-wrapper">
+                    <input type="number" id="price-min" placeholder="mínimo" min="0">
                 </div>
-
-                <div class="filter-buttons">
-                         <button type="button" id="apply-price-filter">Filtrar por valor</button>
-                         <a href="{{ url_path }}" class="filter-clear">Limpar</a>
+                <div class="input-wrapper">
+                    <input type="number" id="price-max" placeholder="máximo" min="0">
                 </div>
-
-                <div id="price-error" class="price-error hidden">Insira valores válidos. O mínimo deve ser menor que o máximo.</div>
             </div>
-        </section>
+            <div id="price-error" class="price-error hidden"></div>
+        </div>
+    </section>
 
+    {# Botões principais de ação #}
+    <div class="main-filter-buttons">
+        <button type="submit" id="main-filter-button" class="filter-button">Aplicar Filtros</button>
+        {# O href="#" impede o redirecionamento. O JavaScript vai controlar este botão. #}
+        <a href="#" id="clear-all-filters" class="filter-clear">Limpar Filtros</a>
     </div>
 
 </form>
