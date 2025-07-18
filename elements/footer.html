@@ -1,18 +1,290 @@
-{% for page in pages.custom %}
-    {% if page.slug == "noticias" %}
-        <section class="section-news {{ settings.featured_news_section_images ? 'with-images' : 'no-images' }}">
+{% if banner.footer %}
+    {% element 'banners-footer' %}
+{% endif %}
+
+<footer class="footer-container">
+    
+    {% if settings.newsletter_enable %}
+    <div class="footer-top">
+        <div class="footer-newsletter">
             <div class="container">
-                {% if settings.featured_news_section_heading %}
-                <div class="section-header">
-                    <h2 class="title-section">{{ settings.featured_news_section_heading }}</h2>
+                <div class="row">
+                    <div class="newsletter-text">
+                        <div>
+                            {% if settings.newsletter_heading %}
+                            <span>{{ settings.newsletter_heading }}</span>
+                            {% endif %}
+                            {% if settings.newsletter_subheading %}
+                            <span>{{ settings.newsletter_subheading }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <form action="{{ links.newsletter }}" method="post" name="newsletter">
+                        <div class="newsletter-form-field-wrapper">
+                            <input name="email" type="email" class="newsletter-email" placeholder="E-mail" required>
+                            <button>{% element 'snippets/icon-arrow-right' %}</button>
+                        </div>
+                    </form>
                 </div>
-                {% endif %}
-                <div class="swiper">
-                    <div class="news-content swiper-wrapper"></div>
-                    <div class="swiper-pagination news-pagination text-center d-md-none"></div>
-                </div>
-                <a href="/noticias" class="botao-commerce flex align-center justify-center" title="Ver mais notícias">Ver mais</a>
             </div>
-        </section>
+        </div>
+    </div>
     {% endif %}
-{% endfor %}
+    
+    <div class="footer-middle">
+        
+        <div class="row-top">
+            <div class="container">
+                <div class="row">
+                    
+                    {% if settings.footer_about_shop_enable %}
+                    <div class="footer-block col-md about">
+                        {% if settings.footer_about_shop_heading %}
+                        <div class="block-heading">{{ settings.footer_about_shop_heading }}</div>
+                        {% endif %}
+                        <div class="block-content">
+                            <p>{{ settings.footer_about_shop_text }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.footer_links_enable %}
+                    <div class="footer-block col-md footer-links">
+                        {% if settings.footer_links_heading %}
+                        <div class="block-heading">{{ settings.footer_links_heading }}</div>
+                        {% endif %}
+                        <div class="block-content">
+                            <ul>
+                                {% for custom in pages.custom %}
+                                <li><a href="{{ custom.url }}">{{ custom.name }}</a></li>
+                                {% endfor %}
+                                {% if settings.enable_affiliate_link %}
+                                <li><a href="{{ settings.affiliate_url }}">{{ settings.affiliate_link_text }}</a></li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.footer_contacts_enable %}
+                    <div class="footer-block col-md contacts-info">
+                        {% if settings.footer_contacts_heading %}
+                        <div class="block-heading">{{ settings.footer_contacts_heading }}</div>
+                        {% endif %}
+                        <div class="block-content">
+                            <ul>
+                                {% if settings.whatsapp_number and settings.footer_whatsapp_enable %}
+                                <li>
+                                    {% set whatsappNumber = settings.whatsapp_number %}
+                                    <a href="https://api.whatsapp.com/send?phone=55{{ whatsappNumber | replace({ '(' : '', ')' : '', ' ' : '', '-' : '' }) }}{{ settings.whatsapp_btn_text ? '&text=' ~ settings.whatsapp_btn_text }}" target="_blank">
+                                        <i>{% element 'snippets/icon-whatsapp' %}</i>
+                                        <span>{{ whatsappNumber }}</span>
+                                    </a>
+                                </li>
+                                {% endif %}
+                                {% if settings.footer_phone_enable %}
+                                <li>
+                                    {% if Translation('ag_telefone_1') %}
+                                    {% set telephone_1 = Translation('ag_telefone_1') %}
+                                    <a href="tel://{{ telephone_1 | replace({ '(' : '', ')' : '', ' ' : '', '-' : '' }) }}" target="_blank">
+                                        <i>{% element 'snippets/icon-phone' %}</i>
+                                        <span>{{ telephone_1 }}</span>
+                                    </a>
+                                    {% endif %}
+                                    
+                                    {% if Translation('ag_telefone_2') %}
+                                    {% set telephone_2 = Translation('ag_telefone_2') %}
+                                    <a href="tel://{{ telephone_2 | replace({ '(' : '', ')' : '', ' ' : '', '-' : '' }) }}" target="_blank">
+                                        <i>{% element 'snippets/icon-phone' %}</i>
+                                        <span>{{ telephone_2 }}</span>
+                                    </a>
+                                    {% endif %}
+                                    
+                                    {% if Translation('ag_telefone_3') %}
+                                    {% set telephone_3 = Translation('ag_telefone_3') %}
+                                    <a href="tel://{{ telephone_3 | replace({ '(' : '', ')' : '', ' ' : '', '-' : '' }) }}" target="_blank">
+                                        <i>{% element 'snippets/icon-phone' %}</i>
+                                        <span>{{ telephone_3 }}</span>
+                                    </a>
+                                    {% endif %}
+                                </li>
+                                {% endif %}
+                                {% if settings.footer_email_enable %}
+                                <li>
+                                    {% if Translation('ag_email_1') %}
+                                    <a href="mailto:{{ Translation('ag_email_1') }}" target="_blank">
+                                        <i>{% element 'snippets/icon-envelope' %}</i>
+                                        <span>{{ Translation('ag_email_1') }}</span>
+                                    </a>
+                                    {% endif %}
+                                    
+                                    {% if Translation('ag_email_2') %}
+                                    <a href="mailto:{{ Translation('ag_email_2') }}" target="_blank">
+                                        <i>{% element 'snippets/icon-envelope' %}</i>
+                                        <span>{{ Translation('ag_email_2') }}</span>
+                                    </a>
+                                    {% endif %}
+                                </li>
+                                {% endif %}
+                                <li>
+                                    <a href="{{ links.contact }}" data-tray-tst="fale_conosco">
+                                        <i>{% element 'snippets/icon-contact-form' %}</i>
+                                        <span>Fale conosco</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            {% if Translation('ag_atendimento') %}
+                            <div class="opening-hours">
+                                <p>Hor&#x00E1;rio de atendimento: {{ Translation('ag_atendimento') }}</p>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.footer_social_enable %}
+                    <div class="footer-block col-md social">
+                        {% if settings.footer_social_heading %}
+                        <div class="block-heading">{{ settings.footer_social_heading }}</div>
+                        {% endif %}
+                        <div class="block-content">
+                            <div class="social-media-icons">
+                                <ul>
+                                    
+                                    {% if settings.social_facebook %}
+                                    <li><a href="{{ settings.social_facebook }}" target="_blank">{% element 'snippets/icon-facebook' %}</a></li>
+                                    {% endif %}
+                                    
+                                    {% if settings.social_instagram %}
+                                    <li><a href="{{ settings.social_instagram }}" target="_blank">{% element 'snippets/icon-instagram' %}</a></li>
+                                    {% endif %}
+                                    
+                                    {% if settings.social_twitter %}
+                                    <li><a href="{{ settings.social_twitter }}" target="_blank">{% element 'snippets/icon-twitter' %}</a></li>
+                                    {% endif %}
+                                    
+                                    {% if settings.social_pinterest %}
+                                    <li><a href="{{ settings.social_pinterest }}" target="_blank">{% element 'snippets/icon-pinterest' %}</a></li>
+                                    {% endif %}
+                                    
+                                    {% if settings.social_youtube %}
+                                    <li><a href="{{ settings.social_youtube }}" target="_blank">{% element 'snippets/icon-youtube' %}</a></li>
+                                    {% endif %}
+                                    
+                                    {% if settings.social_vimeo %}
+                                    <li><a href="{{ settings.social_vimeo }}" target="_blank">{% element 'snippets/icon-vimeo' %}</a></li>
+                                    {% endif %}
+                                    
+                                    {% if settings.social_tiktok %}
+                                    <li><a href="{{ settings.social_tiktok }}" target="_blank">{% element 'snippets/icon-tiktok' %}</a></li>
+                                    {% endif %}
+                                    
+                                    {% if settings.social_snapchat %}
+                                    <li><a href="{{ settings.social_snapchat }}" target="_blank">{% element 'snippets/icon-snapchat' %}</a></li>
+                                    {% endif %}
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row-bottom">
+            <div class="container">
+                <div class="row">
+                    
+                    {% if settings.footer_payments_enable %}
+                    <div class="footer-block col-md payment-methods">
+                        {% if settings.footer_payments_heading %}
+                        <div class="block-heading">{{ settings.footer_payments_heading }}</div>
+                        {% endif %}
+                        <div class="block-content">
+                            {% element 'payment-list' %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.footer_security_seals_enable %}
+                    
+                    {% if settings.google_safe_browsing_type == "light" %}
+                        {% set googleSafeBrowsingImg = asset('img/footer/google-safe-light.png') %}
+                    {% elseif settings.google_safe_browsing_type == "dark" %}
+                        {% set googleSafeBrowsingImg = asset('img/footer/google-safe-dark.png') %}
+                    {% endif %}
+                    
+                    <div class="footer-block col-md security-seals">
+                        {% if settings.footer_security_seals_heading %}
+                        <div class="block-heading">{{ settings.footer_security_seals_heading }}</div>
+                        {% endif %}
+                        <div class="block-content">
+                            <ul>
+                                <li>
+                                    <a href="https://www.google.com/transparencyreport/safebrowsing/diagnostic/?hl=pt-BR#url={{ store.url }}" 
+                                    class="google-safe" 
+                                    target="_blank">
+                                        <img data-src="{{ googleSafeBrowsingImg }}" alt="Google Safe Browsing" class="lazyload" height="50" width="100">
+                                    </a>
+                                </li>
+                                <a href="https://http2.mlstatic.com/">
+  <img
+    src="https://http2.mlstatic.com/D_NQ_NP_676917-MLB31092048543_062019-O.webp"
+    alt="Visit the MDN site" />
+</a>
+                                {% if seals.ebit %}
+                                <li class="seal-ebit">{{ seals.ebit }}</li>
+                                {% endif %}
+                                {% if seals.hackersafe %}
+                                <li>{{ seals.hackersafe }}</li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if settings.footer_shipping_methods %}
+                    
+                    {% set imgPath = asset('img/footer/') | split('?')[0] %}
+                    
+                    {% if settings.footer_shipping_methods_img %}
+                        {% set shippingMethodsImg = imgPath ~ settings.footer_shipping_methods_img %}
+                    {% else %}
+                        {% set shippingMethodsImg = asset('img/footer/formas-envio-default.png') %}
+                    {% endif %}
+
+                    <div class="footer-block col-md shipping-methods">
+                        {% if settings.footer_shipping_methods_heading %}
+                        <div class="block-heading">{{ settings.footer_shipping_methods_heading }}</div>
+                        {% endif %}
+                        <div class="block-content">
+                            <ul>
+                                <li>
+                                    <img data-src="{{ shippingMethodsImg }}" class="lazyload" height="50" width="100">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="message-footer">
+                {{ Translation('ag_mensagem_rodape') }}
+            </div>
+            <div class="theme-author-platform-copyright">
+                <div>{{ settings.theme_developer_signature }}</div>
+                <div>{% element 'snippets/credits' %}</div>
+            </div>
+        </div>
+    </div>
+    
+</footer>

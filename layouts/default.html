@@ -19,6 +19,8 @@
     
     {% element 'styles' %}
     
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/popup-entrada.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/popup-saida.css') }}">
     {{ tray.analytics }}
     {{ googleTagManager.header(pages.current, tagManagerData) }}
 
@@ -74,7 +76,11 @@
         {% element 'footer' %}
         
     </div>
-    {% element 'snippets/cart-sidebar' %}
+
+    {% if pages.current != 'product' %}
+        {% element 'snippets/cart-sidebar' %}
+    {% endif %}
+    
 
     {% element 'modal-add-to-cart' %}
 
@@ -88,21 +94,21 @@
     {% element 'snippets/button-back-to-top' %}
 
     {% if settings.cookies_notice_bar %}
-    <div id="notice-cookie-block">
-        <div class="container">
-            <div class="txt">
-                <p>
-                    {{ settings.cookies_notice_bar_text }}
-                    {% if settings.cookies_notice_bar_page_link %}
-                    <a href="{{ settings.cookies_notice_bar_page_link }}" target="_blank">{{ settings.cookies_notice_bar_link_text }}</a>
-                    {% endif %}
-                </p>
-            </div>
-            <div class="actions">
-                <button><span>Entendi</span></button>
+        <div id="notice-cookie-block">
+            <div class="container">
+                <div class="txt">
+                    <p>
+                        {{ settings.cookies_notice_bar_text }}
+                        {% if settings.cookies_notice_bar_page_link %}
+                        <a href="{{ settings.cookies_notice_bar_page_link }}" target="_blank">{{ settings.cookies_notice_bar_link_text }}</a>
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="actions">
+                    <button><span>Entendi</span></button>
+                </div>
             </div>
         </div>
-    </div>
     {% endif %}
 
     {% element 'snippets/modal' %} 
@@ -114,9 +120,21 @@
     
 
     <script src="{{asset('js/cart_ar8.js')}}"></script>
-    <script src="{{ asset('js/custom-scripts.js') }}">
 
     {{ googleTagManager.bottom(pages.current, tagManagerData) }}
+    
+    <div id="popup-saida">
+      <div class="popup">
+        <button class="close-btn">×</button>
+        <div class="popup-content">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScyr0FfRq8ks0WgYeaxZ1Q6XjwNymbMlOAD--xC_017Q2tyUg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+            <img src="https://i.ibb.co/Kp5JHVMg/LAURA-1.png" alt="Ganhe 10% de Desconto - Clique aqui">
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="{{ asset('js/gerenciador-popups.js') }}" defer></script>
+    
     
     <!-- Start of HubSpot Embed Code -->
   <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/47570276.js"></script>

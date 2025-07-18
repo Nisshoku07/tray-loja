@@ -1,13 +1,13 @@
 [
     {
-        "label": "Chave de Licen√ßa",
+        "label": "Chave de LicenÁa",
         "icon": "cog",
         "sessions": [
             {
-                "label": "Chave de Licen√ßa",
+                "label": "Chave de LicenÁa",
                 "fields": [
                     {
-                        "label": "Insira a sua chave de licen√ßa",
+                        "label": "Insira a sua chave de licenÁa",
                         "type": "text",
                         "field": "id_k",
                         "validation": "required:false"
@@ -21,34 +21,34 @@
         "icon": "cog",
         "sessions": [
             {
-                "label": "Configura√ß√µes gerais",
+                "label": "ConfiguraÁıes gerais",
                 "fields": [
                     {
-                        "label": "Cache no infopre√ßo",
+                        "label": "Cache no infopreÁo",
                         "type": "toggle",
-                        "description": "Ser√° exibindo 'carregando...' no pre√ßo do produto.",
+                        "description": "Ser· exibindo 'carregando...' no preÁo do produto.",
                         "field": "cache_infopreco"
                     },
                     {
                         "label": "Filtro Inteligente",
                         "type": "toggle",
-                        "description": "Ativa a exibi√ß√£o do filtro inteligente",
+                        "description": "Ativa a exibiÁ„o do filtro inteligente",
                         "field": "enable_filter"
                     },
                     {
-                        "label": "Exibir link da p√°gina de afiliados no rodap√©",
+                        "label": "Exibir link da p·gina de afiliados no rodapÈ",
                         "type": "toggle",
-                        "description": "Ativa a exibi√ß√£o do link da p√°gina de afiliados no rodap√©",
+                        "description": "Ativa a exibiÁ„o do link da p·gina de afiliados no rodapÈ",
                         "field": "enable_affiliate_link"
                     },
                     {
-                        "label": "URL da p√°gina de afiliados",
+                        "label": "URL da p·gina de afiliados",
                         "type": "text",
                         "field": "affiliate_url",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Texto do link para a p√°gina de afiliados",
+                        "label": "Texto do link para a p·gina de afiliados",
                         "type": "text",
                         "field": "affiliate_link_text",
                         "validation": "required:false"
@@ -58,11 +58,11 @@
         ]
     },
     {
-        "label": "Se√ß√µes",
+        "label": "SeÁıes",
         "icon": "bars",
         "sessions": [
             {
-                "label": "Cabe√ßalho",
+                "label": "CabeÁalho",
                 "fields": [
                     {
                         "label": "Barra do Topo - Exibir barra",
@@ -76,24 +76,24 @@
                         "validation": "required:false"
                     },
                     {
-                        "label": "Barra do Topo - √çcone",
+                        "label": "Barra do Topo - Õcone",
                         "type": "text",
                         "field": "featured_bar_icon",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Barra do Topo - Habilitar bot√£o",
+                        "label": "Barra do Topo - Habilitar bot„o",
                         "type": "toggle",
                         "field": "featured_bar_button"
                     },
                     {
-                        "label": "Barra do Topo - Texto do bot√£o",
+                        "label": "Barra do Topo - Texto do bot„o",
                         "type": "text",
                         "field": "featured_bar_button_text",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Barra do Topo - Link do bot√£o",
+                        "label": "Barra do Topo - Link do bot„o",
                         "type": "text",
                         "field": "featured_bar_button_link",
                         "validation": "required:false"
@@ -105,31 +105,31 @@
                         "content": "Abrir link em uma nova aba"
                     },
                     {
-                        "label": "Logo - Ajuste altura √°rea do logo (Desktop)",
+                        "label": "Logo - Ajuste altura ·rea do logo (Desktop)",
                         "type": "text",
                         "field": "logo_height_desktop",
-                        "description": "Valor em porcentagem, insira apenas o n√∫mero",
+                        "description": "Valor em porcentagem, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Logo - Ajuste altura √°rea do logo (Mobile)",
+                        "label": "Logo - Ajuste altura ·rea do logo (Mobile)",
                         "type": "text",
                         "field": "logo_height_mobile",
-                        "description": "Valor em porcentagem, insira apenas o n√∫mero",
+                        "description": "Valor em porcentagem, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Logo - Ajuste largura √°rea do logo (Desktop)",
+                        "label": "Logo - Ajuste largura ·rea do logo (Desktop)",
                         "type": "text",
                         "field": "logo_width_desktop",
-                        "description": "Valor em porcentagem, insira apenas o n√∫mero",
+                        "description": "Valor em porcentagem, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Logo - Ajuste largura √°rea do logo (Mobile)",
+                        "label": "Logo - Ajuste largura ·rea do logo (Mobile)",
                         "type": "text",
                         "field": "logo_width_mobile",
-                        "description": "Valor em porcentagem, insira apenas o n√∫mero",
+                        "description": "Valor em porcentagem, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
@@ -142,28 +142,28 @@
                         "label": "Campo de Busca - Ajuste de largura (Apenas desktop)",
                         "type": "text",
                         "field": "search_field_width",
-                        "description": "Valor em porcentagem, insira apenas o n√∫mero",
+                        "description": "Valor em porcentagem, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
                         "label": "Campo de Busca - Ajuste de altura (Mobile)",
                         "type": "text",
                         "field": "search_field_height_mobile",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
                         "label": "Campo de Busca - Ajuste de altura (Desktop)",
                         "type": "text",
                         "field": "search_field_height_desktop",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
                         "label": "Campo de Busca - Arredondar os cantos",
                         "type": "text",
                         "field": "search_field_border_radius",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "validation": "required:false"
                     },
                     {
@@ -186,10 +186,10 @@
                         ]
                     },
                     {
-                        "label": "Campo de Busca - Arredondar cantos do bot√£o buscar",
+                        "label": "Campo de Busca - Arredondar cantos do bot„o buscar",
                         "type": "text",
                         "field": "search_field_button_border_radius",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "validation": "required:false"
                     },
                     {
@@ -215,7 +215,7 @@
                     {
                         "label": "Menu Principal - Habilitar menu fixo",
                         "type": "toggle",
-                        "description": "O menu principal fica fixado no topo ao rolar a p√°gina (Apenas desktop)",
+                        "description": "O menu principal fica fixado no topo ao rolar a p·gina (Apenas desktop)",
                         "field": "enable_fixed_menu"
                     },
                     {
@@ -224,7 +224,7 @@
                         "field": "enable_header_support"
                     },
                     {
-                        "label": "Central de Atendimento - T√≠tulo",
+                        "label": "Central de Atendimento - TÌtulo",
                         "type": "text",
                         "field": "header_support_title",
                         "validation": "required:false"
@@ -245,7 +245,7 @@
                         "field": "header_email_enable"
                     },
                     {
-                        "label": "Central de Atendimento - Exibir hor√°rio de atendimento",
+                        "label": "Central de Atendimento - Exibir hor·rio de atendimento",
                         "type": "toggle",
                         "field": "header_opening_hours_enable"
                     },
@@ -275,34 +275,34 @@
                         "options": [
                             {
                                 "value": "tab_header_support_icon",
-                                "content": "√çcone central de atendimento"
+                                "content": "Õcone central de atendimento"
                             },
                             {
                                 "value": "tab_header_account_icon",
-                                "content": "√çcone minha conta"
+                                "content": "Õcone minha conta"
                             },
                             {
                                 "value": "tab_header_cart_icon",
-                                "content": "√çcone carrinho de compras"
+                                "content": "Õcone carrinho de compras"
                             }
                         ]
                     },
                     {
-                        "label": "√çcone",
+                        "label": "Õcone",
                         "type": "text",
                         "tab": "tab_header_support_icon",
                         "field": "header_support_icon",
                         "validation": "required:false"
                     },
                     {
-                        "label": "√çcone",
+                        "label": "Õcone",
                         "type": "text",
                         "tab": "tab_header_account_icon",
                         "field": "header_account_icon",
                         "validation": "required:false"
                     },
                     {
-                        "label": "√çcone",
+                        "label": "Õcone",
                         "type": "text",
                         "tab": "tab_header_cart_icon",
                         "field": "header_cart_icon",
@@ -311,7 +311,7 @@
                 ]
             },
             {
-                "label": "Rodap√©",
+                "label": "RodapÈ",
                 "fields": [
                     {
                         "label": "Barra de Newsletter - Exibir barra",
@@ -319,13 +319,13 @@
                         "field": "newsletter_enable"
                     },
                     {
-                        "label": "Barra de Newsletter - T√≠tulo",
+                        "label": "Barra de Newsletter - TÌtulo",
                         "type": "text",
                         "field": "newsletter_heading",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Barra de Newsletter - Subt√≠tulo",
+                        "label": "Barra de Newsletter - SubtÌtulo",
                         "type": "text",
                         "field": "newsletter_subheading",
                         "validation": "required:false"
@@ -340,7 +340,7 @@
                             },
                             {
                                 "value": "tab_footer_links",
-                                "content": "Bloco: Links do rodap√©"
+                                "content": "Bloco: Links do rodapÈ"
                             },
                             {
                                 "value": "tab_footer_contacts",
@@ -359,7 +359,7 @@
                         "field": "footer_about_shop_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "footer_about_shop_heading",
                         "tab": "tab_footer_about_shop",
@@ -373,13 +373,13 @@
                         "validation": "required:false"
                     },
                     {
-                        "label": "Exibir bloco Links do rodap√©",
+                        "label": "Exibir bloco Links do rodapÈ",
                         "type": "toggle",
                         "tab": "tab_footer_links",
                         "field": "footer_links_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "footer_links_heading",
                         "tab": "tab_footer_links",
@@ -392,7 +392,7 @@
                         "field": "footer_contacts_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "footer_contacts_heading",
                         "tab": "tab_footer_contacts",
@@ -423,7 +423,7 @@
                         "field": "footer_social_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "footer_social_heading",
                         "tab": "tab_footer_social",
@@ -439,7 +439,7 @@
                             },
                             {
                                 "value": "tab_footer_security_seals",
-                                "content": "Bloco: Selos de seguran√ßa"
+                                "content": "Bloco: Selos de seguranÁa"
                             },
                             {
                                 "value": "tab_footer_shipping_methods",
@@ -454,20 +454,20 @@
                         "field": "footer_payments_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "footer_payments_heading",
                         "tab": "tab_footer_payments",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Exibir bloco Selos de seguran√ßa",
+                        "label": "Exibir bloco Selos de seguranÁa",
                         "type": "toggle",
                         "tab": "tab_footer_security_seals",
                         "field": "footer_security_seals_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "footer_security_seals_heading",
                         "tab": "tab_footer_security_seals",
@@ -496,7 +496,7 @@
                         "field": "footer_shipping_methods"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "footer_shipping_methods_heading",
                         "tab": "tab_footer_shipping_methods",
@@ -506,7 +506,7 @@
                         "label": "Nome da Imagem",
                         "type": "text",
                         "field": "footer_shipping_methods_img",
-                        "description": "Insira o nome e extens√£o da sua imagem de formas de envio",
+                        "description": "Insira o nome e extens„o da sua imagem de formas de envio",
                         "placeholder": "Ex: formas-envio.png",
                         "tab": "tab_footer_shipping_methods",
                         "validation": "required:false"
@@ -545,7 +545,7 @@
                     {
                         "label": "Altura do slideshow",
                         "type": "text",
-                        "description": "Valor em porcentagem, insira apenas o n√∫mero",
+                        "description": "Valor em porcentagem, insira apenas o n˙mero",
                         "field": "slideshow_height_desktop",
                         "tab": "tab_slideshow_desktop",
                         "validation": "required:false"
@@ -558,11 +558,11 @@
                         "options": [
                             {
                                 "value": "full_page",
-                                "content": "100% da p√°gina"
+                                "content": "100% da p·gina"
                             },
                             {
                                 "value": "boxed",
-                                "content": "Cont√™iner da p√°gina"
+                                "content": "ContÍiner da p·gina"
                             }
                         ]
                     },
@@ -575,7 +575,7 @@
                     {
                         "label": "Altura do slideshow",
                         "type": "text",
-                        "description": "Valor em porcentagem, insira apenas o n√∫mero",
+                        "description": "Valor em porcentagem, insira apenas o n˙mero",
                         "field": "slideshow_height_mobile",
                         "tab": "tab_slideshow_mobile",
                         "validation": "required:false"
@@ -611,7 +611,7 @@
                         ]
                     },
                     {
-                        "label": "Exibir produtos em ordem aleat√≥ria",
+                        "label": "Exibir produtos em ordem aleatÛria",
                         "type": "toggle",
                         "description": "",
                         "field": "showcase_rand_products"
@@ -622,11 +622,11 @@
                         "options": [
                             {
                                 "value": "tab_showcase_1",
-                                "content": "1¬™ vitrine de produtos"
+                                "content": "1™ vitrine de produtos"
                             },
                             {
                                 "value": "tab_showcase_2",
-                                "content": "2¬™ vitrine de produtos"
+                                "content": "2™ vitrine de produtos"
                             }
                         ]
                     },
@@ -649,7 +649,7 @@
                             },
                             {
                                 "value": "new",
-                                "content": "Lan√ßamentos"
+                                "content": "LanÁamentos"
                             },
                             {
                                 "value": "featured",
@@ -657,16 +657,16 @@
                             },
                             {
                                 "value": "free_shipping",
-                                "content": "Frete Gr√°tis"
+                                "content": "Frete Gr·tis"
                             },
                             {
                                 "value": "promotion",
-                                "content": "Promo√ß√£o"
+                                "content": "PromoÁ„o"
                             }
                         ]
                     },
                     {
-                        "label": "Quantidade m√°xima de produtos a ser exibido na vitrine",
+                        "label": "Quantidade m·xima de produtos a ser exibido na vitrine",
                         "type": "radio",
                         "description": "",
                         "field": "showcase_quantity_1",
@@ -717,7 +717,7 @@
                             },
                             {
                                 "value": "new",
-                                "content": "Lan√ßamentos"
+                                "content": "LanÁamentos"
                             },
                             {
                                 "value": "featured",
@@ -725,16 +725,16 @@
                             },
                             {
                                 "value": "free_shipping",
-                                "content": "Frete Gr√°tis"
+                                "content": "Frete Gr·tis"
                             },
                             {
                                 "value": "promotion",
-                                "content": "Promo√ß√£o"
+                                "content": "PromoÁ„o"
                             }
                         ]
                     },
                     {
-                        "label": "Quantidade m√°xima de produtos a ser exibido na vitrine",
+                        "label": "Quantidade m·xima de produtos a ser exibido na vitrine",
                         "type": "radio",
                         "description": "",
                         "field": "showcase_quantity_2",
@@ -769,24 +769,24 @@
                 ]
             },
             {
-                "label": "V√≠deo",
+                "label": "VÌdeo",
                 "fields": [
                     {
-                        "label": "Exibir se√ß√£o v√≠deo em destaque",
+                        "label": "Exibir seÁ„o vÌdeo em destaque",
                         "type": "toggle",
                         "field": "featured_video_section_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "video_heading",
                         "validation": "required:false"
                     },
                     {
-                        "label": "URL do v√≠deo",
+                        "label": "URL do vÌdeo",
                         "type": "text",
                         "field": "video_url",
-                        "description": "Insira a url do seu v√≠deo",
+                        "description": "Insira a url do seu vÌdeo",
                         "placeholder": "(Ex: https://www.youtube.com/watch?v=K0u_kAWLJOA)",
                         "validation": "required:false"
                     },
@@ -794,22 +794,22 @@
                         "label": "Nome da Imagem de Capa",
                         "type": "text",
                         "field": "video_cover_name",
-                        "description": "Insira o nome e extens√£o da sua imagem de capa do v√≠deo",
+                        "description": "Insira o nome e extens„o da sua imagem de capa do vÌdeo",
                         "placeholder": "Ex: capa-video.png",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Altura do V√≠deo (Desktop)",
+                        "label": "Altura do VÌdeo (Desktop)",
                         "type": "text",
                         "field": "video_height_desktop",
-                        "description": "Valor em porcentagem, insira apenas o n√∫mero",
+                        "description": "Valor em porcentagem, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Altura do V√≠deo (Mobile)",
+                        "label": "Altura do VÌdeo (Mobile)",
                         "type": "text",
                         "field": "video_height_mobile",
-                        "description": "Valor em porcentagem, insira apenas o n√∫mero",
+                        "description": "Valor em porcentagem, insira apenas o n˙mero",
                         "validation": "required:false"
                     }
                 ]
@@ -818,7 +818,7 @@
                 "label": "Banner de vantagens",
                 "fields": [
                     {
-                        "label": "Exibir se√ß√£o banners de vantagens",
+                        "label": "Exibir seÁ„o banners de vantagens",
                         "type": "toggle",
                         "field": "banners_advantages_section_enable"
                     },
@@ -855,21 +855,21 @@
                         "field": "banners_advantages_1_enable"
                     },
                     {
-                        "label": "√çcone",
+                        "label": "Õcone",
                         "type": "text",
                         "field": "banners_advantages_1_icon",
                         "tab": "tab_banners_advantages_1",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "banners_advantages_1_heading",
                         "tab": "tab_banners_advantages_1",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Subt√≠tulo",
+                        "label": "SubtÌtulo",
                         "type": "text",
                         "field": "banners_advantages_1_subheading",
                         "tab": "tab_banners_advantages_1",
@@ -896,21 +896,21 @@
                         "field": "banners_advantages_2_enable"
                     },
                     {
-                        "label": "√çcone",
+                        "label": "Õcone",
                         "type": "text",
                         "field": "banners_advantages_2_icon",
                         "tab": "tab_banners_advantages_2",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "banners_advantages_2_heading",
                         "tab": "tab_banners_advantages_2",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Subt√≠tulo",
+                        "label": "SubtÌtulo",
                         "type": "text",
                         "field": "banners_advantages_2_subheading",
                         "tab": "tab_banners_advantages_2",
@@ -937,21 +937,21 @@
                         "field": "banners_advantages_3_enable"
                     },
                     {
-                        "label": "√çcone",
+                        "label": "Õcone",
                         "type": "text",
                         "field": "banners_advantages_3_icon",
                         "tab": "tab_banners_advantages_3",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "banners_advantages_3_heading",
                         "tab": "tab_banners_advantages_3",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Subt√≠tulo",
+                        "label": "SubtÌtulo",
                         "type": "text",
                         "field": "banners_advantages_3_subheading",
                         "tab": "tab_banners_advantages_3",
@@ -978,21 +978,21 @@
                         "field": "banners_advantages_4_enable"
                     },
                     {
-                        "label": "√çcone",
+                        "label": "Õcone",
                         "type": "text",
                         "field": "banners_advantages_4_icon",
                         "tab": "tab_banners_advantages_4",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "banners_advantages_4_heading",
                         "tab": "tab_banners_advantages_4",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Subt√≠tulo",
+                        "label": "SubtÌtulo",
                         "type": "text",
                         "field": "banners_advantages_4_subheading",
                         "tab": "tab_banners_advantages_4",
@@ -1019,21 +1019,21 @@
                         "field": "banners_advantages_5_enable"
                     },
                     {
-                        "label": "√çcone",
+                        "label": "Õcone",
                         "type": "text",
                         "field": "banners_advantages_5_icon",
                         "tab": "tab_banners_advantages_5",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "banners_advantages_5_heading",
                         "tab": "tab_banners_advantages_5",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Subt√≠tulo",
+                        "label": "SubtÌtulo",
                         "type": "text",
                         "field": "banners_advantages_5_subheading",
                         "tab": "tab_banners_advantages_5",
@@ -1064,11 +1064,11 @@
                         "options": [
                             {
                                 "value": "tab_mini_banners_1",
-                                "content": "Mini Banners: 1¬™ se√ß√£o"
+                                "content": "Mini Banners: 1™ seÁ„o"
                             },
                             {
                                 "value": "tab_mini_banners_2",
-                                "content": "Mini Banners: 2¬™ se√ß√£o"
+                                "content": "Mini Banners: 2™ seÁ„o"
                             }
                         ]
                     },
@@ -1083,7 +1083,7 @@
                         "type": "text",
                         "field": "mini_banners_1_height",
                         "tab": "tab_mini_banners_1",
-                        "description": "Valor em porcentagem, insira apenas o n√∫mero",
+                        "description": "Valor em porcentagem, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
@@ -1097,7 +1097,7 @@
                         "type": "text",
                         "field": "mini_banners_2_height",
                         "tab": "tab_mini_banners_2",
-                        "description": "Valor em porcentagem, insira apenas o n√∫mero",
+                        "description": "Valor em porcentagem, insira apenas o n˙mero",
                         "validation": "required:false"
                     }
                 ]
@@ -1106,12 +1106,12 @@
                 "label": "Lista de categorias",
                 "fields": [
                     {
-                        "label": "Exibir se√ß√£o lista de categorias",
+                        "label": "Exibir seÁ„o lista de categorias",
                         "type": "toggle",
                         "field": "categories_list_section_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "categories_list_section_heading",
                         "validation": "required:false"
@@ -1145,7 +1145,7 @@
                         "field": "category_1_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "category_1_title",
                         "tab": "tab_category_1",
@@ -1156,7 +1156,7 @@
                         "type": "text",
                         "field": "category_1_image_name",
                         "tab": "tab_category_1",
-                        "description": "Insira o nome e extens√£o da imagem dessa categoria",
+                        "description": "Insira o nome e extens„o da imagem dessa categoria",
                         "placeholder": "Ex: categoria-1.png",
                         "validation": "required:false"
                     },
@@ -1174,7 +1174,7 @@
                         "field": "category_2_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "category_2_title",
                         "tab": "tab_category_2",
@@ -1185,7 +1185,7 @@
                         "type": "text",
                         "field": "category_2_image_name",
                         "tab": "tab_category_2",
-                        "description": "Insira o nome e extens√£o da imagem dessa categoria",
+                        "description": "Insira o nome e extens„o da imagem dessa categoria",
                         "placeholder": "Ex: categoria-2.png",
                         "validation": "required:false"
                     },
@@ -1203,7 +1203,7 @@
                         "field": "category_3_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "category_3_title",
                         "tab": "tab_category_3",
@@ -1214,7 +1214,7 @@
                         "type": "text",
                         "field": "category_3_image_name",
                         "tab": "tab_category_3",
-                        "description": "Insira o nome e extens√£o da imagem dessa categoria",
+                        "description": "Insira o nome e extens„o da imagem dessa categoria",
                         "placeholder": "Ex: categoria-3.png",
                         "validation": "required:false"
                     },
@@ -1232,7 +1232,7 @@
                         "field": "category_4_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "category_4_title",
                         "tab": "tab_category_4",
@@ -1243,7 +1243,7 @@
                         "type": "text",
                         "field": "category_4_image_name",
                         "tab": "tab_category_4",
-                        "description": "Insira o nome e extens√£o da imagem dessa categoria",
+                        "description": "Insira o nome e extens„o da imagem dessa categoria",
                         "placeholder": "Ex: categoria-4.png",
                         "validation": "required:false"
                     },
@@ -1283,7 +1283,7 @@
                         "field": "category_5_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "category_5_title",
                         "tab": "tab_category_5",
@@ -1294,7 +1294,7 @@
                         "type": "text",
                         "field": "category_5_image_name",
                         "tab": "tab_category_5",
-                        "description": "Insira o nome e extens√£o da imagem dessa categoria",
+                        "description": "Insira o nome e extens„o da imagem dessa categoria",
                         "placeholder": "Ex: categoria-5.png",
                         "validation": "required:false"
                     },
@@ -1312,7 +1312,7 @@
                         "field": "category_6_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "category_6_title",
                         "tab": "tab_category_6",
@@ -1323,7 +1323,7 @@
                         "type": "text",
                         "field": "category_6_image_name",
                         "tab": "tab_category_6",
-                        "description": "Insira o nome e extens√£o da imagem dessa categoria",
+                        "description": "Insira o nome e extens„o da imagem dessa categoria",
                         "placeholder": "Ex: categoria-6.png",
                         "validation": "required:false"
                     },
@@ -1341,7 +1341,7 @@
                         "field": "category_7_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "category_7_title",
                         "tab": "tab_category_7",
@@ -1352,7 +1352,7 @@
                         "type": "text",
                         "field": "category_7_image_name",
                         "tab": "tab_category_7",
-                        "description": "Insira o nome e extens√£o da imagem dessa categoria",
+                        "description": "Insira o nome e extens„o da imagem dessa categoria",
                         "placeholder": "Ex: categoria-7.png",
                         "validation": "required:false"
                     },
@@ -1370,7 +1370,7 @@
                         "field": "category_8_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "category_8_title",
                         "tab": "tab_category_8",
@@ -1381,7 +1381,7 @@
                         "type": "text",
                         "field": "category_8_image_name",
                         "tab": "tab_category_8",
-                        "description": "Insira o nome e extens√£o da imagem dessa categoria",
+                        "description": "Insira o nome e extens„o da imagem dessa categoria",
                         "placeholder": "Ex: categoria-8.png",
                         "validation": "required:false"
                     },
@@ -1421,7 +1421,7 @@
                         "field": "category_9_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "category_9_title",
                         "tab": "tab_category_9",
@@ -1432,7 +1432,7 @@
                         "type": "text",
                         "field": "category_9_image_name",
                         "tab": "tab_category_9",
-                        "description": "Insira o nome e extens√£o da imagem dessa categoria",
+                        "description": "Insira o nome e extens„o da imagem dessa categoria",
                         "placeholder": "Ex: categoria-9.png",
                         "validation": "required:false"
                     },
@@ -1450,7 +1450,7 @@
                         "field": "category_10_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "category_10_title",
                         "tab": "tab_category_10",
@@ -1461,7 +1461,7 @@
                         "type": "text",
                         "field": "category_10_image_name",
                         "tab": "tab_category_10",
-                        "description": "Insira o nome e extens√£o da imagem dessa categoria",
+                        "description": "Insira o nome e extens„o da imagem dessa categoria",
                         "placeholder": "Ex: categoria-10.png",
                         "validation": "required:false"
                     },
@@ -1479,7 +1479,7 @@
                         "field": "category_11_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "category_11_title",
                         "tab": "tab_category_11",
@@ -1490,7 +1490,7 @@
                         "type": "text",
                         "field": "category_11_image_name",
                         "tab": "tab_category_11",
-                        "description": "Insira o nome e extens√£o da imagem dessa categoria",
+                        "description": "Insira o nome e extens„o da imagem dessa categoria",
                         "placeholder": "Ex: categoria-11.png",
                         "validation": "required:false"
                     },
@@ -1508,7 +1508,7 @@
                         "field": "category_12_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "category_12_title",
                         "tab": "tab_category_12",
@@ -1519,7 +1519,7 @@
                         "type": "text",
                         "field": "category_12_image_name",
                         "tab": "tab_category_12",
-                        "description": "Insira o nome e extens√£o da imagem dessa categoria",
+                        "description": "Insira o nome e extens„o da imagem dessa categoria",
                         "placeholder": "Ex: categoria-12.png",
                         "validation": "required:false"
                     },
@@ -1536,12 +1536,12 @@
                 "label": "Marcas",
                 "fields": [
                     {
-                        "label": "Exibir se√ß√£o marcas",
+                        "label": "Exibir seÁ„o marcas",
                         "type": "toggle",
                         "field": "brands_section_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "brands_section_heading",
                         "validation": "required:false"
@@ -1579,7 +1579,7 @@
                         "type": "text",
                         "field": "brand_1_image_name",
                         "tab": "tab_brand_1",
-                        "description": "Insira o nome e extens√£o da imagem dessa marca",
+                        "description": "Insira o nome e extens„o da imagem dessa marca",
                         "placeholder": "Ex: marca-1.png",
                         "validation": "required:false"
                     },
@@ -1588,7 +1588,7 @@
                         "type": "text",
                         "field": "brand_1_img_alt_txt",
                         "tab": "tab_brand_1",
-                        "description": "O nome especificado aqui ser√° utilizado no Alt text da imagem da marca",
+                        "description": "O nome especificado aqui ser· utilizado no Alt text da imagem da marca",
                         "validation": "required:false"
                     },
                     {
@@ -1609,7 +1609,7 @@
                         "type": "text",
                         "field": "brand_2_image_name",
                         "tab": "tab_brand_2",
-                        "description": "Insira o nome e extens√£o da imagem dessa marca",
+                        "description": "Insira o nome e extens„o da imagem dessa marca",
                         "placeholder": "Ex: marca-2.png",
                         "validation": "required:false"
                     },
@@ -1618,7 +1618,7 @@
                         "type": "text",
                         "field": "brand_2_img_alt_txt",
                         "tab": "tab_brand_2",
-                        "description": "O nome especificado aqui ser√° utilizado no Alt text da imagem da marca",
+                        "description": "O nome especificado aqui ser· utilizado no Alt text da imagem da marca",
                         "validation": "required:false"
                     },
                     {
@@ -1639,7 +1639,7 @@
                         "type": "text",
                         "field": "brand_3_image_name",
                         "tab": "tab_brand_3",
-                        "description": "Insira o nome e extens√£o da imagem dessa marca",
+                        "description": "Insira o nome e extens„o da imagem dessa marca",
                         "placeholder": "Ex: marca-3.png",
                         "validation": "required:false"
                     },
@@ -1648,7 +1648,7 @@
                         "type": "text",
                         "field": "brand_3_img_alt_txt",
                         "tab": "tab_brand_3",
-                        "description": "O nome especificado aqui ser√° utilizado no Alt text da imagem da marca",
+                        "description": "O nome especificado aqui ser· utilizado no Alt text da imagem da marca",
                         "validation": "required:false"
                     },
                     {
@@ -1669,7 +1669,7 @@
                         "type": "text",
                         "field": "brand_4_image_name",
                         "tab": "tab_brand_4",
-                        "description": "Insira o nome e extens√£o da imagem dessa marca",
+                        "description": "Insira o nome e extens„o da imagem dessa marca",
                         "placeholder": "Ex: marca-4.png",
                         "validation": "required:false"
                     },
@@ -1678,7 +1678,7 @@
                         "type": "text",
                         "field": "brand_4_img_alt_txt",
                         "tab": "tab_brand_4",
-                        "description": "O nome especificado aqui ser√° utilizado no Alt text da imagem da marca",
+                        "description": "O nome especificado aqui ser· utilizado no Alt text da imagem da marca",
                         "validation": "required:false"
                     },
                     {
@@ -1721,7 +1721,7 @@
                         "type": "text",
                         "field": "brand_5_image_name",
                         "tab": "tab_brand_5",
-                        "description": "Insira o nome e extens√£o da imagem dessa marca",
+                        "description": "Insira o nome e extens„o da imagem dessa marca",
                         "placeholder": "Ex: marca-5.png",
                         "validation": "required:false"
                     },
@@ -1730,7 +1730,7 @@
                         "type": "text",
                         "field": "brand_5_img_alt_txt",
                         "tab": "tab_brand_5",
-                        "description": "O nome especificado aqui ser√° utilizado no Alt text da imagem da marca",
+                        "description": "O nome especificado aqui ser· utilizado no Alt text da imagem da marca",
                         "validation": "required:false"
                     },
                     {
@@ -1751,7 +1751,7 @@
                         "type": "text",
                         "field": "brand_6_image_name",
                         "tab": "tab_brand_6",
-                        "description": "Insira o nome e extens√£o da imagem dessa marca",
+                        "description": "Insira o nome e extens„o da imagem dessa marca",
                         "placeholder": "Ex: marca-6.png",
                         "validation": "required:false"
                     },
@@ -1760,7 +1760,7 @@
                         "type": "text",
                         "field": "brand_6_img_alt_txt",
                         "tab": "tab_brand_6",
-                        "description": "O nome especificado aqui ser√° utilizado no Alt text da imagem da marca",
+                        "description": "O nome especificado aqui ser· utilizado no Alt text da imagem da marca",
                         "validation": "required:false"
                     },
                     {
@@ -1781,7 +1781,7 @@
                         "type": "text",
                         "field": "brand_7_image_name",
                         "tab": "tab_brand_7",
-                        "description": "Insira o nome e extens√£o da imagem dessa marca",
+                        "description": "Insira o nome e extens„o da imagem dessa marca",
                         "placeholder": "Ex: marca-7.png",
                         "validation": "required:false"
                     },
@@ -1790,7 +1790,7 @@
                         "type": "text",
                         "field": "brand_7_img_alt_txt",
                         "tab": "tab_brand_7",
-                        "description": "O nome especificado aqui ser√° utilizado no Alt text da imagem da marca",
+                        "description": "O nome especificado aqui ser· utilizado no Alt text da imagem da marca",
                         "validation": "required:false"
                     },
                     {
@@ -1811,7 +1811,7 @@
                         "type": "text",
                         "field": "brand_8_image_name",
                         "tab": "tab_brand_8",
-                        "description": "Insira o nome e extens√£o da imagem dessa marca",
+                        "description": "Insira o nome e extens„o da imagem dessa marca",
                         "placeholder": "Ex: marca-8.png",
                         "validation": "required:false"
                     },
@@ -1820,7 +1820,7 @@
                         "type": "text",
                         "field": "brand_8_img_alt_txt",
                         "tab": "tab_brand_8",
-                        "description": "O nome especificado aqui ser√° utilizado no Alt text da imagem da marca",
+                        "description": "O nome especificado aqui ser· utilizado no Alt text da imagem da marca",
                         "validation": "required:false"
                     },
                     {
@@ -1863,7 +1863,7 @@
                         "type": "text",
                         "field": "brand_9_image_name",
                         "tab": "tab_brand_9",
-                        "description": "Insira o nome e extens√£o da imagem dessa marca",
+                        "description": "Insira o nome e extens„o da imagem dessa marca",
                         "placeholder": "Ex: marca-9.png",
                         "validation": "required:false"
                     },
@@ -1872,7 +1872,7 @@
                         "type": "text",
                         "field": "brand_9_img_alt_txt",
                         "tab": "tab_brand_9",
-                        "description": "O nome especificado aqui ser√° utilizado no Alt text da imagem da marca",
+                        "description": "O nome especificado aqui ser· utilizado no Alt text da imagem da marca",
                         "validation": "required:false"
                     },
                     {
@@ -1893,7 +1893,7 @@
                         "type": "text",
                         "field": "brand_10_image_name",
                         "tab": "tab_brand_10",
-                        "description": "Insira o nome e extens√£o da imagem dessa marca",
+                        "description": "Insira o nome e extens„o da imagem dessa marca",
                         "placeholder": "Ex: marca-10.png",
                         "validation": "required:false"
                     },
@@ -1902,7 +1902,7 @@
                         "type": "text",
                         "field": "brand_10_img_alt_txt",
                         "tab": "tab_brand_10",
-                        "description": "O nome especificado aqui ser√° utilizado no Alt text da imagem da marca",
+                        "description": "O nome especificado aqui ser· utilizado no Alt text da imagem da marca",
                         "validation": "required:false"
                     },
                     {
@@ -1923,7 +1923,7 @@
                         "type": "text",
                         "field": "brand_11_image_name",
                         "tab": "tab_brand_11",
-                        "description": "Insira o nome e extens√£o da imagem dessa marca",
+                        "description": "Insira o nome e extens„o da imagem dessa marca",
                         "placeholder": "Ex: marca-11.png",
                         "validation": "required:false"
                     },
@@ -1932,7 +1932,7 @@
                         "type": "text",
                         "field": "brand_11_img_alt_txt",
                         "tab": "tab_brand_11",
-                        "description": "O nome especificado aqui ser√° utilizado no Alt text da imagem da marca",
+                        "description": "O nome especificado aqui ser· utilizado no Alt text da imagem da marca",
                         "validation": "required:false"
                     },
                     {
@@ -1953,7 +1953,7 @@
                         "type": "text",
                         "field": "brand_12_image_name",
                         "tab": "tab_brand_12",
-                        "description": "Insira o nome e extens√£o da imagem dessa marca",
+                        "description": "Insira o nome e extens„o da imagem dessa marca",
                         "placeholder": "Ex: marca-12.png",
                         "validation": "required:false"
                     },
@@ -1962,7 +1962,7 @@
                         "type": "text",
                         "field": "brand_12_img_alt_txt",
                         "tab": "tab_brand_12",
-                        "description": "O nome especificado aqui ser√° utilizado no Alt text da imagem da marca",
+                        "description": "O nome especificado aqui ser· utilizado no Alt text da imagem da marca",
                         "validation": "required:false"
                     },
                     {
@@ -1978,12 +1978,12 @@
                 "label": "Depoimentos",
                 "fields": [
                     {
-                        "label": "Exibir se√ß√£o depoimentos",
+                        "label": "Exibir seÁ„o depoimentos",
                         "type": "toggle",
                         "field": "testimonials_section_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "testimonials_section_heading",
                         "validation": "required:false"
@@ -1994,12 +1994,12 @@
                 "label": "Instagram",
                 "fields": [
                     {
-                        "label": "Exibir se√ß√£o Instagram",
+                        "label": "Exibir seÁ„o Instagram",
                         "type": "toggle",
                         "field": "instagram_gallery_section_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "instagram_gallery_section_heading",
                         "validation": "required:false"
@@ -2041,7 +2041,7 @@
                         "type": "text",
                         "field": "instagram_post_1_image_name",
                         "tab": "tab_instagram_post_1",
-                        "description": "Insira o nome e extens√£o da imagem do post",
+                        "description": "Insira o nome e extens„o da imagem do post",
                         "placeholder": "Ex: post-1.png",
                         "validation": "required:false"
                     },
@@ -2050,7 +2050,7 @@
                         "type": "text",
                         "field": "instagram_post_1_img_alt_txt",
                         "tab": "tab_instagram_post_1",
-                        "description": "O texto especificado aqui ser√° utilizado no Alt text da imagem do post",
+                        "description": "O texto especificado aqui ser· utilizado no Alt text da imagem do post",
                         "validation": "required:false"
                     },
                     {
@@ -2071,7 +2071,7 @@
                         "type": "text",
                         "field": "instagram_post_2_image_name",
                         "tab": "tab_instagram_post_2",
-                        "description": "Insira o nome e extens√£o da imagem do post",
+                        "description": "Insira o nome e extens„o da imagem do post",
                         "placeholder": "Ex: post-2.png",
                         "validation": "required:false"
                     },
@@ -2080,7 +2080,7 @@
                         "type": "text",
                         "field": "instagram_post_2_img_alt_txt",
                         "tab": "tab_instagram_post_2",
-                        "description": "O texto especificado aqui ser√° utilizado no Alt text da imagem do post",
+                        "description": "O texto especificado aqui ser· utilizado no Alt text da imagem do post",
                         "validation": "required:false"
                     },
                     {
@@ -2101,7 +2101,7 @@
                         "type": "text",
                         "field": "instagram_post_3_image_name",
                         "tab": "tab_instagram_post_3",
-                        "description": "Insira o nome e extens√£o da imagem do post",
+                        "description": "Insira o nome e extens„o da imagem do post",
                         "placeholder": "Ex: post-3.png",
                         "validation": "required:false"
                     },
@@ -2110,7 +2110,7 @@
                         "type": "text",
                         "field": "instagram_post_3_img_alt_txt",
                         "tab": "tab_instagram_post_3",
-                        "description": "O texto especificado aqui ser√° utilizado no Alt text da imagem do post",
+                        "description": "O texto especificado aqui ser· utilizado no Alt text da imagem do post",
                         "validation": "required:false"
                     },
                     {
@@ -2131,7 +2131,7 @@
                         "type": "text",
                         "field": "instagram_post_4_image_name",
                         "tab": "tab_instagram_post_4",
-                        "description": "Insira o nome e extens√£o da imagem do post",
+                        "description": "Insira o nome e extens„o da imagem do post",
                         "placeholder": "Ex: post-4.png",
                         "validation": "required:false"
                     },
@@ -2140,7 +2140,7 @@
                         "type": "text",
                         "field": "instagram_post_4_img_alt_txt",
                         "tab": "tab_instagram_post_4",
-                        "description": "O texto especificado aqui ser√° utilizado no Alt text da imagem do post",
+                        "description": "O texto especificado aqui ser· utilizado no Alt text da imagem do post",
                         "validation": "required:false"
                     },
                     {
@@ -2161,7 +2161,7 @@
                         "type": "text",
                         "field": "instagram_post_5_image_name",
                         "tab": "tab_instagram_post_5",
-                        "description": "Insira o nome e extens√£o da imagem do post",
+                        "description": "Insira o nome e extens„o da imagem do post",
                         "placeholder": "Ex: post-5.png",
                         "validation": "required:false"
                     },
@@ -2170,7 +2170,7 @@
                         "type": "text",
                         "field": "instagram_post_5_img_alt_txt",
                         "tab": "tab_instagram_post_5",
-                        "description": "O texto especificado aqui ser√° utilizado no Alt text da imagem do post",
+                        "description": "O texto especificado aqui ser· utilizado no Alt text da imagem do post",
                         "validation": "required:false"
                     },
                     {
@@ -2183,21 +2183,21 @@
                 ]
             },
             {
-                "label": "Not√≠cias em destaque",
+                "label": "NotÌcias em destaque",
                 "fields": [
                     {
-                        "label": "Exibir se√ß√£o not√≠cias em destaque",
+                        "label": "Exibir seÁ„o notÌcias em destaque",
                         "type": "toggle",
                         "field": "featured_news_section_enable"
                     },
                     {
-                        "label": "T√≠tulo",
+                        "label": "TÌtulo",
                         "type": "text",
                         "field": "featured_news_section_heading",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Exibir imagens das not√≠cias",
+                        "label": "Exibir imagens das notÌcias",
                         "type": "toggle",
                         "field": "featured_news_section_images"
                     }
@@ -2210,10 +2210,10 @@
         "icon": "swatchbook",
         "sessions": [
             {
-                "label": "Cabe√ßalho",
+                "label": "CabeÁalho",
                 "fields": [
                     {
-                        "label": "Fundo Cabe√ßalho",
+                        "label": "Fundo CabeÁalho",
                         "type": "color",
                         "field": "bg_cabecalho",
                         "validation": "required:false"
@@ -2231,13 +2231,13 @@
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor √≠cones do cabe√ßalho",
+                        "label": "Cor Ìcones do cabeÁalho",
                         "type": "color",
                         "field": "icones_cabecalho",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor escritas do cabe√ßalho",
+                        "label": "Cor escritas do cabeÁalho",
                         "type": "color",
                         "field": "color_cabecalho",
                         "validation": "required:false"
@@ -2279,25 +2279,25 @@
                         "validation": "required:false"
                     },
                     {
-                        "label": "Fundo bot√£o buscar",
+                        "label": "Fundo bot„o buscar",
                         "type": "color",
                         "field": "bg_botao_buscar",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Fundo bot√£o buscar - Hover",
+                        "label": "Fundo bot„o buscar - Hover",
                         "type": "color",
                         "field": "bg_botao_buscar_hover",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor √≠cone bot√£o buscar",
+                        "label": "Cor Ìcone bot„o buscar",
                         "type": "color",
                         "field": "color_icone_campo_busca",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor √≠cone bot√£o buscar - Hover",
+                        "label": "Cor Ìcone bot„o buscar - Hover",
                         "type": "color",
                         "field": "color_icone_campo_busca_hover",
                         "validation": "required:false"
@@ -2350,25 +2350,25 @@
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor itens submenu 1¬∞ n√≠vel",
+                        "label": "Cor itens submenu 1∞ nÌvel",
                         "type": "color",
                         "field": "cor_subcat_nivel_1",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Itens submenu 1¬∞ n√≠vel - Hover",
+                        "label": "Itens submenu 1∞ nÌvel - Hover",
                         "type": "color",
                         "field": "cor_subcat_nivel_1_hover",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor itens submenu 2¬∞ n√≠vel",
+                        "label": "Cor itens submenu 2∞ nÌvel",
                         "type": "color",
                         "field": "cor_subcat_nivel_2",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Itens submenu 2¬∞ n√≠vel - Hover",
+                        "label": "Itens submenu 2∞ nÌvel - Hover",
                         "type": "color",
                         "field": "cor_subcat_nivel_2_hover",
                         "validation": "required:false"
@@ -2403,13 +2403,13 @@
                         "validation": "required:false"
                     },
                     {
-                        "label": "Fundo do bot√£o de rastreio",
+                        "label": "Fundo do bot„o de rastreio",
                         "type": "color",
                         "field": "bg_tracking_btn_mm",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor escrita bot√£o de rastreio",
+                        "label": "Cor escrita bot„o de rastreio",
                         "type": "color",
                         "field": "cor_tracking_btn_mm",
                         "validation": "required:false"
@@ -2417,10 +2417,10 @@
                 ]
             },
             {
-                "label": "Rodap√©",
+                "label": "RodapÈ",
                 "fields": [
                     {
-                        "label": "Cor borda superior rodap√©",
+                        "label": "Cor borda superior rodapÈ",
                         "type": "color",
                         "field": "color_border_top_footer",
                         "validation": "required:false"
@@ -2450,61 +2450,61 @@
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor √≠cone bot√£o cadastrar",
+                        "label": "Cor Ìcone bot„o cadastrar",
                         "type": "color",
                         "field": "color_botao_cadastrar",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Fundo √°rea central (cima)",
+                        "label": "Fundo ·rea central (cima)",
                         "type": "color",
                         "field": "bg_footer_meio_cima",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Fundo √°rea central (baixo)",
+                        "label": "Fundo ·rea central (baixo)",
                         "type": "color",
                         "field": "bg_footer_meio_baixo",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor dos t√≠tulos √°rea central",
+                        "label": "Cor dos tÌtulos ·rea central",
                         "type": "color",
                         "field": "color_titulos_footer",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Fundo separador de t√≠tulos",
+                        "label": "Fundo separador de tÌtulos",
                         "type": "color",
                         "field": "bg_separador_titulos_footer",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Escritas √°rea central",
+                        "label": "Escritas ·rea central",
                         "type": "color",
                         "field": "color_escritas_footer_meio",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Escritas √°rea central - Hover",
+                        "label": "Escritas ·rea central - Hover",
                         "type": "color",
                         "field": "color_escritas_footer_hover",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Fundo √°rea inferior",
+                        "label": "Fundo ·rea inferior",
                         "type": "color",
                         "field": "bg_footer_inferior",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor borda √°rea inferior",
+                        "label": "Cor borda ·rea inferior",
                         "type": "color",
                         "field": "color_borda_footer_inferior",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor das escritas √°rea inferior",
+                        "label": "Cor das escritas ·rea inferior",
                         "type": "color",
                         "field": "color_escritas_footer_inferior",
                         "validation": "required:false"
@@ -2512,88 +2512,88 @@
                 ]
             },
             {
-                "label": "Bot√µes - Geral",
+                "label": "Botıes - Geral",
                 "fields": [
                     {
-                        "label": "Fundo bot√£o principal",
+                        "label": "Fundo bot„o principal",
                         "type": "color",
                         "field": "bg_botao_principal",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Fundo bot√£o principal - Hover",
+                        "label": "Fundo bot„o principal - Hover",
                         "type": "color",
                         "field": "bg_botao_principal_hover",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Escrita bot√£o principal",
+                        "label": "Escrita bot„o principal",
                         "type": "color",
                         "field": "color_botao_principal",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Escrita bot√£o principal - Hover",
+                        "label": "Escrita bot„o principal - Hover",
                         "type": "color",
                         "field": "color_botao_principal_hover",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Fundo bot√£o secund√°rio",
+                        "label": "Fundo bot„o secund·rio",
                         "type": "color",
                         "field": "bg_botao_secundario",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Fundo bot√£o secund√°rio - Hover",
+                        "label": "Fundo bot„o secund·rio - Hover",
                         "type": "color",
                         "field": "bg_botao_secundario_hover",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Borda bot√£o secund√°rio",
+                        "label": "Borda bot„o secund·rio",
                         "type": "color",
                         "field": "borda_botao_secundario",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Borda bot√£o secund√°rio - Hover",
+                        "label": "Borda bot„o secund·rio - Hover",
                         "type": "color",
                         "field": "borda_botao_secundario_hover",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Escrita bot√£o secund√°rio",
+                        "label": "Escrita bot„o secund·rio",
                         "type": "color",
                         "field": "color_botao_secundario",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Escrita bot√£o secund√°rio - Hover",
+                        "label": "Escrita bot„o secund·rio - Hover",
                         "type": "color",
                         "field": "color_botao_secundario_hover",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Bot√£o voltar ao topo",
+                        "label": "Bot„o voltar ao topo",
                         "type": "color",
                         "field": "bg_botao_voltar",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Bot√£o voltar ao topo - Hover",
+                        "label": "Bot„o voltar ao topo - Hover",
                         "type": "color",
                         "field": "bg_botao_voltar_hover",
                         "validation": "required:false"
                     },
                     {
-                        "label": "√çcone bot√£o voltar ao topo",
+                        "label": "Õcone bot„o voltar ao topo",
                         "type": "color",
                         "field": "cor_icone_botao_voltar",
                         "validation": "required:false"
                     },
                     {
-                        "label": "√çcone bot√£o voltar ao topo - Hover",
+                        "label": "Õcone bot„o voltar ao topo - Hover",
                         "type": "color",
                         "field": "cor_icone_botao_voltar_hover",
                         "validation": "required:false"
@@ -2604,31 +2604,31 @@
                 "label": "Listagem de Produtos",
                 "fields": [
                     {
-                        "label": "Cor pre√ßo em destaque",
+                        "label": "Cor preÁo em destaque",
                         "type": "color",
                         "field": "cor_preco_destaque_listagem",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor bot√£o comprar",
+                        "label": "Cor bot„o comprar",
                         "type": "color",
                         "field": "bg_botao_comprar_listagem",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor bot√£o comprar - Hover",
+                        "label": "Cor bot„o comprar - Hover",
                         "type": "color",
                         "field": "bg_botao_comprar_listagem_hover",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor escrita bot√£o comprar",
+                        "label": "Cor escrita bot„o comprar",
                         "type": "color",
                         "field": "color_escrita_botao_comprar_listagem",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor escrita bot√£o comprar - Hover",
+                        "label": "Cor escrita bot„o comprar - Hover",
                         "type": "color",
                         "field": "color_escrita_botao_comprar_listagem_hover",
                         "validation": "required:false"
@@ -2636,28 +2636,28 @@
                 ]
             },
             {
-                "label": "P√°gina do Produto",
+                "label": "P·gina do Produto",
                 "fields": [
                     {
-                        "label": "Fundo bot√£o comprar",
+                        "label": "Fundo bot„o comprar",
                         "type": "color",
                         "field": "bg_botao_comprar_produto",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Fundo bot√£o comprar - Hover",
+                        "label": "Fundo bot„o comprar - Hover",
                         "type": "color",
                         "field": "bg_botao_comprar_produto_hover",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Escrita bot√£o comprar",
+                        "label": "Escrita bot„o comprar",
                         "type": "color",
                         "field": "color_escrita_botao_comprar_produto",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Escrita bot√£o comprar - Hover",
+                        "label": "Escrita bot„o comprar - Hover",
                         "type": "color",
                         "field": "color_escrita_botao_comprar_produto_hover",
                         "validation": "required:false"
@@ -2669,13 +2669,13 @@
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor pre√ßo em destaque",
+                        "label": "Cor preÁo em destaque",
                         "type": "color",
                         "field": "cor_preco_destaque_produto",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor borda varia√ß√µes selecionadas",
+                        "label": "Cor borda variaÁıes selecionadas",
                         "type": "color",
                         "field": "color_border_selected_variants",
                         "validation": "required:false"
@@ -2686,25 +2686,25 @@
                 "label": "Geral",
                 "fields": [
                     {
-                        "label": "Fundo selo promo√ß√£o",
+                        "label": "Fundo selo promoÁ„o",
                         "type": "color",
                         "field": "bg_promotion_stamp",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Escrita selo promo√ß√£o",
+                        "label": "Escrita selo promoÁ„o",
                         "type": "color",
                         "field": "color_promotion_stamp",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Fundo selo frete gr√°tis",
+                        "label": "Fundo selo frete gr·tis",
                         "type": "color",
                         "field": "bg_free_shipping_stamp",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Escrita selo frete gr√°tis",
+                        "label": "Escrita selo frete gr·tis",
                         "type": "color",
                         "field": "color_free_shipping_stamp",
                         "validation": "required:false"
@@ -2722,25 +2722,25 @@
                         "validation": "required:false"
                     },
                     {
-                        "label": "Fundo selo lan√ßamento",
+                        "label": "Fundo selo lanÁamento",
                         "type": "color",
                         "field": "bg_new_stamp",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Escrita selo lan√ßamento",
+                        "label": "Escrita selo lanÁamento",
                         "type": "color",
                         "field": "color_new_stamp",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulos das se√ß√µes",
+                        "label": "TÌtulos das seÁıes",
                         "type": "color",
                         "field": "cor_titulos_secoes",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Separador t√≠tulos das se√ß√µes",
+                        "label": "Separador tÌtulos das seÁıes",
                         "type": "color",
                         "field": "bg_separador_titulos",
                         "validation": "required:false"
@@ -2758,19 +2758,19 @@
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor √≠cone setas slideshow",
+                        "label": "Cor Ìcone setas slideshow",
                         "type": "color",
                         "field": "cor_icone_setas_slideshow",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Fundo sele√ß√£o de texto",
+                        "label": "Fundo seleÁ„o de texto",
                         "type": "color",
                         "field": "bg_selection",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor sele√ß√£o de texto",
+                        "label": "Cor seleÁ„o de texto",
                         "type": "color",
                         "field": "color_selection",
                         "validation": "required:false"
@@ -2788,7 +2788,7 @@
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor borda campos formul√°rio - focus",
+                        "label": "Cor borda campos formul·rio - focus",
                         "type": "color",
                         "field": "cor_borda_campos_formulario_focus",
                         "validation": "required:false"
@@ -2812,67 +2812,67 @@
                         "validation": "required:false"
                     },
                     {
-                        "label": "Fundo bot√£o barra cookies",
+                        "label": "Fundo bot„o barra cookies",
                         "type": "color",
                         "field": "bg_cookies_bar_button",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Escrita bot√£o barra cookies",
+                        "label": "Escrita bot„o barra cookies",
                         "type": "color",
                         "field": "color_cookies_bar_button",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Fundo bot√£o cookies - Hover",
+                        "label": "Fundo bot„o cookies - Hover",
                         "type": "color",
                         "field": "bg_cookies_bar_button_hover",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Escrita bot√£o cookies - Hover",
+                        "label": "Escrita bot„o cookies - Hover",
                         "type": "color",
                         "field": "color_cookies_bar_button_hover",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Fundo bot√£o WhatsApp",
+                        "label": "Fundo bot„o WhatsApp",
                         "type": "color",
                         "field": "bg_btn_whatsapp",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor √≠cone bot√£o WhatsApp",
+                        "label": "Cor Ìcone bot„o WhatsApp",
                         "type": "color",
                         "field": "color_btn_whatsapp",
                         "validation": "required:false"
                     },
                     {
-                        "label": "√çcones banner de vantagens",
+                        "label": "Õcones banner de vantagens",
                         "type": "color",
                         "field": "color_icon_banner_tarja",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulo banner de vantagens",
+                        "label": "TÌtulo banner de vantagens",
                         "type": "color",
                         "field": "color_heading_advantages_banner",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Subt√≠tulo banner de vantagens",
+                        "label": "SubtÌtulo banner de vantagens",
                         "type": "color",
                         "field": "color_subheading_advantages_banner",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor pre√ßos parcelados",
+                        "label": "Cor preÁos parcelados",
                         "type": "color",
                         "field": "color_installment_prices",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Cor pre√ßo √† vista com desconto",
+                        "label": "Cor preÁo ‡ vista com desconto",
                         "type": "color",
                         "field": "color_cash_discount",
                         "validation": "required:false"
@@ -2886,12 +2886,12 @@
         "icon": "cog",
         "sessions": [
             {
-                "label": "Op√ß√µes da listagem de produtos",
+                "label": "OpÁıes da listagem de produtos",
                 "fields": [
                     {
                         "label": "Altura da imagem do produto",
                         "type": "text",
-                        "description": "Valor em porcentagem, insira apenas o n√∫mero",
+                        "description": "Valor em porcentagem, insira apenas o n˙mero",
                         "field": "product_list_image_height",
                         "validation": "required:false"
                     },
@@ -2916,48 +2916,48 @@
                         "field": "product_list_notify_me"
                     },
                     {
-                        "label": "Exibir bot√£o de a√ß√£o",
+                        "label": "Exibir bot„o de aÁ„o",
                         "type": "toggle",
                         "field": "product_list_action_button_enabled"
                     },
                     {
-                        "label": "Defina a a√ß√£o do bot√£o",
+                        "label": "Defina a aÁ„o do bot„o",
                         "type": "select",
                         "field": "product_list_action_button_definition",
                         "options": [
                             {
                                 "value": "add-to-cart-and-stay-on-page",
-                                "content": "Adicionar ao carrinho e permanecer na p√°gina"
+                                "content": "Adicionar ao carrinho e permanecer na p·gina"
                             },
                             {
                                 "value": "go-to-product",
-                                "content": "Ir para a p√°gina do produto"
+                                "content": "Ir para a p·gina do produto"
                             }
                         ]
                     },
                     {
-                        "label": "Modo de exibi√ß√£o do bot√£o de a√ß√£o",
+                        "label": "Modo de exibiÁ„o do bot„o de aÁ„o",
                         "type": "select",
                         "field": "product_list_action_button_view_mode",
                         "options": [
                             {
                                 "value": "always-visible",
-                                "content": "Sempre vis√≠vel"
+                                "content": "Sempre visÌvel"
                             },
                             {
                                 "value": "visible-mouse-over",
-                                "content": "Vis√≠vel ao passar o mouse sobre o produto"
+                                "content": "VisÌvel ao passar o mouse sobre o produto"
                             }
                         ]
                     },
                     {
                         "label": "Importante:",
                         "type": "alert",
-                        "description": "Se a a√ß√£o do bot√£o estiver definida para 'Adicionar ao carrinho e permanecer na p√°gina' e se existir varia√ß√µes no produto, ao clicar no bot√£o de a√ß√£o, o usu√°rio ser√° redirecionado para a p√°gina do produto para selecionar as varia√ß√µes do produto.",
+                        "description": "Se a aÁ„o do bot„o estiver definida para 'Adicionar ao carrinho e permanecer na p·gina' e se existir variaÁıes no produto, ao clicar no bot„o de aÁ„o, o usu·rio ser· redirecionado para a p·gina do produto para selecionar as variaÁıes do produto.",
                         "field": "alert_1"
                     },
                     {
-                        "label": "Texto do bot√£o de a√ß√£o",
+                        "label": "Texto do bot„o de aÁ„o",
                         "type": "text",
                         "field": "product_list_action_button_text",
                         "validation": "required:false"
@@ -2967,16 +2967,16 @@
         ]
     },
     {
-        "label": "P√°gina do produto",
+        "label": "P·gina do produto",
         "icon": "cog",
         "sessions": [
             {
-                "label": "Configura√ß√µes da p√°gina do produto",
+                "label": "ConfiguraÁıes da p·gina do produto",
                 "fields": [
                     {
                         "label": "Altura da imagem do produto",
                         "type": "text",
-                        "description": "Valor em porcentagem, insira apenas o n√∫mero",
+                        "description": "Valor em porcentagem, insira apenas o n˙mero",
                         "field": "product_image_height",
                         "validation": "required:false"
                     },
@@ -2999,7 +2999,7 @@
         "icon": "cog",
         "sessions": [
             {
-                "label": "Defini√ß√£o de Fontes",
+                "label": "DefiniÁ„o de Fontes",
                 "fields": [
                     {
                         "label": "Link Fontes do Google",
@@ -3041,7 +3041,7 @@
                         "label": "Tamanho base da fonte",
                         "type": "text",
                         "field": "geral_font_size",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "validation": "required:false"
                     }
                 ]
@@ -3052,7 +3052,7 @@
                     {
                         "label": "Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_top_bar",
                         "validation": "required:false"
                     },
@@ -3100,14 +3100,14 @@
                         ]
                     },
                     {
-                        "label": "Espa√ßamento das letras",
+                        "label": "EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_top_bar",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Transforma√ß√£o do texto",
+                        "label": "TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_top_bar",
                         "options": [
@@ -3117,7 +3117,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -3125,7 +3125,7 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     }
@@ -3137,7 +3137,7 @@
                     {
                         "label": "Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_search_bar",
                         "validation": "required:false"
                     }
@@ -3149,7 +3149,7 @@
                     {
                         "label": "Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_my_account",
                         "validation": "required:false"
                     },
@@ -3197,14 +3197,14 @@
                         ]
                     },
                     {
-                        "label": "Espa√ßamento das letras",
+                        "label": "EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_my_account",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Transforma√ß√£o do texto",
+                        "label": "TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_my_account",
                         "options": [
@@ -3214,7 +3214,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -3222,7 +3222,7 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     }
@@ -3232,14 +3232,14 @@
                 "label": "Menu Principal",
                 "fields": [
                     {
-                        "label": "Menu 1¬∞ N√≠vel - Tamanho da fonte",
+                        "label": "Menu 1∞ NÌvel - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_menu_lv1",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Menu 1¬∞ N√≠vel - Peso da fonte",
+                        "label": "Menu 1∞ NÌvel - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_menu_lv1",
                         "options": [
@@ -3282,14 +3282,14 @@
                         ]
                     },
                     {
-                        "label": "Menu 1¬∞ N√≠vel - Espa√ßamento das letras",
+                        "label": "Menu 1∞ NÌvel - EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_menu_lv1",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Menu 1¬∞ N√≠vel - Transforma√ß√£o do texto",
+                        "label": "Menu 1∞ NÌvel - TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_menu_lv1",
                         "options": [
@@ -3299,7 +3299,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -3307,19 +3307,19 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     },
                     {
-                        "label": "Menu 2¬∞ N√≠vel - Tamanho da fonte",
+                        "label": "Menu 2∞ NÌvel - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_menu_lv2",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Menu 2¬∞ N√≠vel - Peso da fonte",
+                        "label": "Menu 2∞ NÌvel - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_menu_lv2",
                         "options": [
@@ -3362,14 +3362,14 @@
                         ]
                     },
                     {
-                        "label": "Menu 2¬∞ N√≠vel - Espa√ßamento das letras",
+                        "label": "Menu 2∞ NÌvel - EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_menu_lv2",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Menu 2¬∞ N√≠vel - Transforma√ß√£o do texto",
+                        "label": "Menu 2∞ NÌvel - TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_menu_lv2",
                         "options": [
@@ -3379,7 +3379,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -3387,19 +3387,19 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     },
                     {
-                        "label": "Menu 3¬∞ N√≠vel - Tamanho da fonte",
+                        "label": "Menu 3∞ NÌvel - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_menu_lv3",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Menu 3¬∞ N√≠vel - Peso da fonte",
+                        "label": "Menu 3∞ NÌvel - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_menu_lv3",
                         "options": [
@@ -3442,14 +3442,14 @@
                         ]
                     },
                     {
-                        "label": "Menu 3¬∞ N√≠vel - Espa√ßamento das letras",
+                        "label": "Menu 3∞ NÌvel - EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_menu_lv3",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Menu 3¬∞ N√≠vel - Transforma√ß√£o do texto",
+                        "label": "Menu 3∞ NÌvel - TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_menu_lv3",
                         "options": [
@@ -3459,7 +3459,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -3467,7 +3467,7 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     }
@@ -3477,14 +3477,14 @@
                 "label": "Barra Newsletter",
                 "fields": [
                     {
-                        "label": "T√≠tulo - Tamanho da fonte",
+                        "label": "TÌtulo - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_newsletter_bar_heading",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulo - Peso da fonte",
+                        "label": "TÌtulo - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_newsletter_bar_heading",
                         "options": [
@@ -3527,14 +3527,14 @@
                         ]
                     },
                     {
-                        "label": "T√≠tulo - Espa√ßamento das letras",
+                        "label": "TÌtulo - EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_newsletter_bar_heading",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulo - Transforma√ß√£o do texto",
+                        "label": "TÌtulo - TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_newsletter_bar_heading",
                         "options": [
@@ -3544,7 +3544,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -3552,19 +3552,19 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     },
                     {
-                        "label": "Subt√≠tulo - Tamanho da fonte",
+                        "label": "SubtÌtulo - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_newsletter_bar_subheading",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Subt√≠tulo - Peso da fonte",
+                        "label": "SubtÌtulo - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_newsletter_bar_subheading",
                         "options": [
@@ -3607,14 +3607,14 @@
                         ]
                     },
                     {
-                        "label": "Subt√≠tulo - Espa√ßamento das letras",
+                        "label": "SubtÌtulo - EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_newsletter_bar_subheading",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Subt√≠tulo - Transforma√ß√£o do texto",
+                        "label": "SubtÌtulo - TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_newsletter_bar_subheading",
                         "options": [
@@ -3624,7 +3624,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -3632,38 +3632,38 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     },
                     {
                         "label": "Campo de e-mail - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_email_field",
                         "validation": "required:false"
                     }
                 ]
             },
             {
-                "label": "Rodap√©",
+                "label": "RodapÈ",
                 "fields": [
                     {
                         "label": "Texto e Links - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_footer_text",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulos - Tamanho da fonte",
+                        "label": "TÌtulos - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_footer_headings",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulos - Peso da fonte",
+                        "label": "TÌtulos - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_footer_headings",
                         "options": [
@@ -3706,14 +3706,14 @@
                         ]
                     },
                     {
-                        "label": "T√≠tulos - Espa√ßamento das letras",
+                        "label": "TÌtulos - EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_footer_headings",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulos - Transforma√ß√£o do texto",
+                        "label": "TÌtulos - TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_footer_headings",
                         "options": [
@@ -3723,7 +3723,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -3731,19 +3731,19 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     }
                 ]
             },
             {
-                "label": "Bot√µes",
+                "label": "Botıes",
                 "fields": [
                     {
                         "label": "Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_buttons",
                         "validation": "required:false"
                     },
@@ -3791,14 +3791,14 @@
                         ]
                     },
                     {
-                        "label": "Espa√ßamento das letras",
+                        "label": "EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_buttons",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Transforma√ß√£o do texto",
+                        "label": "TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_buttons",
                         "options": [
@@ -3808,7 +3808,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -3816,24 +3816,24 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     }
                 ]
             },
             {
-                "label": "P√°gina do Produto",
+                "label": "P·gina do Produto",
                 "fields": [
                     {
-                        "label": "T√≠tulo do produto - Tamanho da fonte",
+                        "label": "TÌtulo do produto - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_product_title",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulo do produto - Peso da fonte",
+                        "label": "TÌtulo do produto - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_product_title",
                         "options": [
@@ -3876,14 +3876,14 @@
                         ]
                     },
                     {
-                        "label": "T√≠tulo do produto - Espa√ßamento das letras",
+                        "label": "TÌtulo do produto - EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_product_title",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulo do produto - Transforma√ß√£o do texto",
+                        "label": "TÌtulo do produto - TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_product_title",
                         "options": [
@@ -3893,7 +3893,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -3901,19 +3901,19 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     },
                     {
-                        "label": "Varia√ß√µes - Tamanho da fonte",
+                        "label": "VariaÁıes - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_product_variations",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Varia√ß√µes - Peso da fonte",
+                        "label": "VariaÁıes - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_product_variations",
                         "options": [
@@ -3956,14 +3956,14 @@
                         ]
                     },
                     {
-                        "label": "Varia√ß√µes - Espa√ßamento das letras",
+                        "label": "VariaÁıes - EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_product_variations",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Varia√ß√µes - Transforma√ß√£o do texto",
+                        "label": "VariaÁıes - TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_product_variations",
                         "options": [
@@ -3973,7 +3973,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -3981,19 +3981,19 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     },
                     {
-                        "label": "Pre√ßo do Produto (Final) - Tamanho da fonte",
+                        "label": "PreÁo do Produto (Final) - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_product_price_final",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Pre√ßo do Produto (Final) - Peso da fonte",
+                        "label": "PreÁo do Produto (Final) - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_product_price_final",
                         "options": [
@@ -4036,14 +4036,14 @@
                         ]
                     },
                     {
-                        "label": "Pre√ßo do Produto (Normal) - Tamanho da fonte",
+                        "label": "PreÁo do Produto (Normal) - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_product_price_normal",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Pre√ßo do Produto (Normal) - Peso da fonte",
+                        "label": "PreÁo do Produto (Normal) - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_product_price_normal",
                         "options": [
@@ -4086,14 +4086,14 @@
                         ]
                     },
                     {
-                        "label": "Bot√£o comprar/adicionar ao carrinho - Tamanho da fonte",
+                        "label": "Bot„o comprar/adicionar ao carrinho - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_product_call_to_action",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Bot√£o comprar/adicionar ao carrinho - Peso da fonte",
+                        "label": "Bot„o comprar/adicionar ao carrinho - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_product_call_to_action",
                         "options": [
@@ -4136,14 +4136,14 @@
                         ]
                     },
                     {
-                        "label": "Bot√£o comprar/adicionar ao carrinho - Espa√ßamento das letras",
+                        "label": "Bot„o comprar/adicionar ao carrinho - EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_product_call_to_action",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Bot√£o comprar/adicionar ao carrinho - Transforma√ß√£o do texto",
+                        "label": "Bot„o comprar/adicionar ao carrinho - TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_product_call_to_action",
                         "options": [
@@ -4153,7 +4153,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -4161,7 +4161,7 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     }
@@ -4171,14 +4171,14 @@
                 "label": "Listagem de Produtos",
                 "fields": [
                     {
-                        "label": "T√≠tulo do produto - Tamanho da fonte",
+                        "label": "TÌtulo do produto - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_product_list_title",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulo do produto - Peso da fonte",
+                        "label": "TÌtulo do produto - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_product_list_title",
                         "options": [
@@ -4221,14 +4221,14 @@
                         ]
                     },
                     {
-                        "label": "T√≠tulo do produto - Espa√ßamento das letras",
+                        "label": "TÌtulo do produto - EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_product_list_title",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulo do produto - Transforma√ß√£o do texto",
+                        "label": "TÌtulo do produto - TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_product_list_title",
                         "options": [
@@ -4238,7 +4238,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -4246,19 +4246,19 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     },
                     {
-                        "label": "Pre√ßo do Produto (Final) - Tamanho da fonte",
+                        "label": "PreÁo do Produto (Final) - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_product_list_price_final",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Pre√ßo do Produto (Final) - Peso da fonte",
+                        "label": "PreÁo do Produto (Final) - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_product_list_price_final",
                         "options": [
@@ -4301,14 +4301,14 @@
                         ]
                     },
                     {
-                        "label": "Pre√ßo do Produto (Normal) - Tamanho da fonte",
+                        "label": "PreÁo do Produto (Normal) - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_product_list_price_normal",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Pre√ßo do Produto (Normal) - Peso da fonte",
+                        "label": "PreÁo do Produto (Normal) - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_product_list_price_normal",
                         "options": [
@@ -4356,14 +4356,14 @@
                 "label": "Banner de Vantagens",
                 "fields": [
                     {
-                        "label": "T√≠tulo - Tamanho da fonte",
+                        "label": "TÌtulo - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_banner_tarja_titulo",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulo - Peso da fonte",
+                        "label": "TÌtulo - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_banner_tarja_titulo",
                         "options": [
@@ -4406,14 +4406,14 @@
                         ]
                     },
                     {
-                        "label": "T√≠tulo - Espa√ßamento das letras",
+                        "label": "TÌtulo - EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_banner_tarja_titulo",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulo - Transforma√ß√£o do texto",
+                        "label": "TÌtulo - TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_banner_tarja_titulo",
                         "options": [
@@ -4423,7 +4423,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -4431,19 +4431,19 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     },
                     {
-                        "label": "Subt√≠tulo - Tamanho da fonte",
+                        "label": "SubtÌtulo - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_banner_tarja_subtitulo",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Subt√≠tulo - Peso da fonte",
+                        "label": "SubtÌtulo - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_banner_tarja_subtitulo",
                         "options": [
@@ -4486,14 +4486,14 @@
                         ]
                     },
                     {
-                        "label": "Subt√≠tulo - Espa√ßamento das letras",
+                        "label": "SubtÌtulo - EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_banner_tarja_subtitulo",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Subt√≠tulo - Transforma√ß√£o do texto",
+                        "label": "SubtÌtulo - TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_banner_tarja_subtitulo",
                         "options": [
@@ -4503,7 +4503,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -4511,7 +4511,7 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     }
@@ -4521,14 +4521,14 @@
                 "label": "Barra Lateral",
                 "fields": [
                     {
-                        "label": "T√≠tulos - Tamanho da fonte",
+                        "label": "TÌtulos - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_sidebar_headings",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulos - Peso da fonte",
+                        "label": "TÌtulos - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_sidebar_headings",
                         "options": [
@@ -4571,14 +4571,14 @@
                         ]
                     },
                     {
-                        "label": "T√≠tulos - Espa√ßamento das letras",
+                        "label": "TÌtulos - EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_sidebar_headings",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulos - Transforma√ß√£o do texto",
+                        "label": "TÌtulos - TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_sidebar_headings",
                         "options": [
@@ -4588,7 +4588,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -4596,7 +4596,7 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     }
@@ -4606,14 +4606,14 @@
                 "label": "Outros",
                 "fields": [
                     {
-                        "label": "T√≠tulo das se√ß√µes - Tamanho da fonte",
+                        "label": "TÌtulo das seÁıes - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_sections_headings",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulo das se√ß√µes - Peso da fonte",
+                        "label": "TÌtulo das seÁıes - Peso da fonte",
                         "type": "select",
                         "field": "font_weight_sections_headings",
                         "options": [
@@ -4656,14 +4656,14 @@
                         ]
                     },
                     {
-                        "label": "T√≠tulo das se√ß√µes - Espa√ßamento das letras",
+                        "label": "TÌtulo das seÁıes - EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_sections_headings",
                         "validation": "required:false"
                     },
                     {
-                        "label": "T√≠tulo das se√ß√µes - Transforma√ß√£o do texto",
+                        "label": "TÌtulo das seÁıes - TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_sections_headings",
                         "options": [
@@ -4673,7 +4673,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -4681,14 +4681,14 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     },
                     {
                         "label": "Breadcrumbs - Tamanho da fonte",
                         "type": "text",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "field": "font_size_breadcrumbs",
                         "validation": "required:false"
                     },
@@ -4736,14 +4736,14 @@
                         ]
                     },
                     {
-                        "label": "Breadcrumbs - Espa√ßamento das letras",
+                        "label": "Breadcrumbs - EspaÁamento das letras",
                         "type": "text",
-                        "description": "Valor em pixels, insira o n√∫mero seguido das letras px",
+                        "description": "Valor em pixels, insira o n˙mero seguido das letras px",
                         "field": "letter_spacing_breadcrumbs",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Breadcrumbs - Transforma√ß√£o do texto",
+                        "label": "Breadcrumbs - TransformaÁ„o do texto",
                         "type": "select",
                         "field": "text_transform_breadcrumbs",
                         "options": [
@@ -4753,7 +4753,7 @@
                             },
                             {
                                 "value": "uppercase",
-                                "content": "Mai√∫scula"
+                                "content": "Mai˙scula"
                             },
                             {
                                 "value": "capitalize",
@@ -4761,7 +4761,7 @@
                             },
                             {
                                 "value": "lowercase",
-                                "content": "Min√∫scula"
+                                "content": "Min˙scula"
                             }
                         ]
                     }
@@ -4774,22 +4774,22 @@
         "icon": "whatsapp",
         "sessions": [
             {
-                "label": "Configura√ß√µes de WhatsApp",
+                "label": "ConfiguraÁıes de WhatsApp",
                 "fields": [
                     {
-                        "label": "N√∫mero de WhatsApp",
+                        "label": "N˙mero de WhatsApp",
                         "type": "text",
                         "field": "whatsapp_number",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Exibir bot√£o flutuante do WhatsApp",
+                        "label": "Exibir bot„o flutuante do WhatsApp",
                         "type": "toggle",
                         "description": "",
                         "field": "whatsapp_btn_enable"
                     },
                     {
-                        "label": "Em qual lado o bot√£o do WhatsApp deve aparecer",
+                        "label": "Em qual lado o bot„o do WhatsApp deve aparecer",
                         "type": "select",
                         "field": "whatsapp_btn_side",
                         "options": [
@@ -4804,7 +4804,7 @@
                         ]
                     },
                     {
-                        "label": "Texto do bot√£o",
+                        "label": "Texto do bot„o",
                         "type": "textarea",
                         "field": "whatsapp_btn_text",
                         "validation": "required:false"
@@ -4813,14 +4813,14 @@
                         "label": "Margem inferior - Desktop",
                         "type": "text",
                         "field": "whatsapp_btn_margin_bottom_desktop",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
                         "label": "Margem inferior - Mobile",
                         "type": "text",
                         "field": "whatsapp_btn_margin_bottom_mobile",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
@@ -4833,21 +4833,21 @@
                         "label": "Margem esquerda - Mobile",
                         "type": "text",
                         "field": "whatsapp_btn_margin_left_mobile",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
                         "label": "Margem direita - Desktop",
                         "type": "text",
                         "field": "whatsapp_btn_margin_right_desktop",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
                         "label": "Margem direita - Mobile",
                         "type": "text",
                         "field": "whatsapp_btn_margin_right_mobile",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "validation": "required:false"
                     }
                 ]
@@ -4939,19 +4939,19 @@
         ]
     },
     {
-        "label": "Bot√£o voltar ao topo",
+        "label": "Bot„o voltar ao topo",
         "icon": "cog",
         "sessions": [
             {
-                "label": "Configura√ß√µes do bot√£o voltar ao topo",
+                "label": "ConfiguraÁıes do bot„o voltar ao topo",
                 "fields": [
                     {
-                        "label": "Exibir bot√£o voltar ao topo",
+                        "label": "Exibir bot„o voltar ao topo",
                         "type": "toggle",
                         "field": "back_to_top_btn_enable"
                     },
                     {
-                        "label": "Em qual lado o bot√£o voltar ao topo deve aparecer",
+                        "label": "Em qual lado o bot„o voltar ao topo deve aparecer",
                         "type": "select",
                         "field": "back_to_top_btn_side",
                         "options": [
@@ -4969,42 +4969,42 @@
                         "label": "Margem inferior - Desktop",
                         "type": "text",
                         "field": "back_to_top_btn_margin_bottom_desktop",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
                         "label": "Margem inferior - Mobile",
                         "type": "text",
                         "field": "back_to_top_btn_margin_bottom_mobile",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
                         "label": "Margem esquerda - Desktop",
                         "type": "text",
                         "field": "back_to_top_btn_margin_left_desktop",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
                         "label": "Margem esquerda - Mobile",
                         "type": "text",
                         "field": "back_to_top_btn_margin_left_mobile",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
                         "label": "Margem direita - Desktop",
                         "type": "text",
                         "field": "back_to_top_btn_margin_right_desktop",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "validation": "required:false"
                     },
                     {
                         "label": "Margem direita - Mobile",
                         "type": "text",
                         "field": "back_to_top_btn_margin_right_mobile",
-                        "description": "Valor em pixels, insira apenas o n√∫mero",
+                        "description": "Valor em pixels, insira apenas o n˙mero",
                         "validation": "required:false"
                     }
                 ]
@@ -5012,19 +5012,19 @@
         ]
     },
     {
-        "label": "Rastreio r√°pido",
+        "label": "Rastreio r·pido",
         "icon": "cog",
         "sessions": [
             {
-                "label": "Configura√ß√µes do rastreio r√°pido",
+                "label": "ConfiguraÁıes do rastreio r·pido",
                 "fields": [
                     {
-                        "label": "Exibir rastreio r√°pido",
+                        "label": "Exibir rastreio r·pido",
                         "type": "toggle",
                         "field": "fast_tracking_enable"
                     },
                     {
-                        "label": "Vincular o rastreio r√°pido ao site:",
+                        "label": "Vincular o rastreio r·pido ao site:",
                         "type": "select",
                         "field": "tracking_sites",
                         "options": [
@@ -5034,7 +5034,7 @@
                             },
                             {
                                 "value": "2",
-                                "content": "Tray Frete F√°cil"
+                                "content": "Tray Frete F·cil"
                             },
                             {
                                 "value": "3",
@@ -5055,7 +5055,7 @@
         "icon": "cog",
         "sessions": [
             {
-                "label": "Configura√ß√µes da barra de cookies",
+                "label": "ConfiguraÁıes da barra de cookies",
                 "fields": [
                     {
                         "label": "Exibir barra de cookies",
@@ -5069,13 +5069,13 @@
                         "validation": "required:false"
                     },
                     {
-                        "label": "Texto do link para a p√°gina de pol√≠tica de privacidade",
+                        "label": "Texto do link para a p·gina de polÌtica de privacidade",
                         "type": "text",
                         "field": "cookies_notice_bar_link_text",
                         "validation": "required:false"
                     },
                     {
-                        "label": "Link para a p√°gina de pol√≠tica de privacidade",
+                        "label": "Link para a p·gina de polÌtica de privacidade",
                         "type": "text",
                         "field": "cookies_notice_bar_page_link",
                         "validation": "required:false"

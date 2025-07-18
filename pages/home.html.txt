@@ -225,11 +225,88 @@
     {% element 'instagram' %}
 {% endif %}
 
-<div id="popup-entrada">
+<!-- POP-UP QUADRADO COM IMAGEM VIA URL EXTERNO -->
+<style>
+  #popup-informativo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+ #popup-informativo .popup {
+  background: transparent;
+  border-radius: 0;
+  position: relative;
+  box-shadow: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  #popup-informativo .popup-content img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .close-btn:hover {
+    background: #444;
+  }
+</style>
+
+<div id="popup-informativo" style="display: none;">
   <div class="popup">
-    <button class="close-btn">�</button>
+    <button class="close-btn" onclick="fecharPopup()">×</button>
     <div class="popup-content">
       <img src="https://i.ibb.co/Fq5gNBBp/Whats-App-Image-2025-06-17-at-10-39-20.jpg">
     </div>
   </div>
 </div>
+
+<script>
+  const chavePopup = 'popup_informativo_exibido';
+  const hoje = new Date().toDateString();
+
+  // TESTE: força exibição a cada carregamento
+  //localStorage.removeItem(chavePopup);
+
+  if (localStorage.getItem(chavePopup) !== hoje) {
+    document.getElementById('popup-informativo').style.display = 'flex';
+  }
+
+  function fecharPopup() {
+    localStorage.setItem(chavePopup, hoje);
+    document.getElementById('popup-informativo').style.display = 'none';
+  }
+</script>

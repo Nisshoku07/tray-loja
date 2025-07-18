@@ -400,7 +400,6 @@ var cart = {
     },
     checkQuantCart: function (prodId, variantId, quantyImput, variantStock, button) {
         button.addClass('load-stock');
-
         jQuery.ajax({
             method: 'GET',
             url: '/checkout/cart/api?session_id=' + cart.session() + '&store_id=' + cart.idStore() + '&nocache=0.' + new Date().getTime(),
@@ -457,13 +456,13 @@ var cart = {
     initAdd: function () {
         const $body = jQuery('body');
 
-        // Garante que a quantidade mÃ­nima Ã© 1
+        // Garante que a quantidade mínima é 1
         $body.on('change', '.add-cart input', function () {
             let total = Number(jQuery(this).val());
             jQuery(this).val(total > 0 ? total : 1);
         });
 
-        // Lida com seleÃ§Ã£o de variantes
+        // Lida com seleção de variantes
         $body.on('change', '.list-variants input', function () {
             const $form = jQuery(this).closest('.list-variants');
 
@@ -480,7 +479,7 @@ var cart = {
             }
         });
 
-        // Submit do formulÃ¡rio
+        // Submit do formulário
         $body.on('submit', '.list-variants', function (e) {
             e.preventDefault();
             const $form = jQuery(this);
@@ -644,39 +643,44 @@ var cart = {
         var variants = document.querySelectorAll(".list-variants");
 
         variants.forEach((vars) => {
-            var variant = JSON.parse(vars.dataset.variants),
-                i = 0;
-            variant.sort((a, b) => {
-                return a.stock - b.stock;
-            });
-            var inputVariantFirst = jQuery(vars).find(".first");
-            while (i < inputVariantFirst.length) {
-                var j = 0;
-                while (j < variant.length) {
+            let data = vars.dataset.variants;
+
+            // Verifica se é um JSON válido
+            if (!data || data === "sem") return; // pula esse item
+
+            let variant;
+            try {
+                variant = JSON.parse(data);
+            } catch (e) {
+                console.warn("Erro ao fazer parse do dataset.variants:", e, data);
+                return; // pula esse item com JSON inválido
+            }
+
+            // Continua o processamento
+            variant.sort((a, b) => a.stock - b.stock);
+
+            const inputVariantFirst = jQuery(vars).find(".first");
+            for (let i = 0; i < inputVariantFirst.length; i++) {
+                for (let j = 0; j < variant.length; j++) {
                     if (variant[j].option == inputVariantFirst[i].value) {
-                        if (checkaStock(variant[j]) == false) {
-                            // console.log("false", variant[j], inputVariantFirst[i])
+                        if (!checkaStock(variant[j])) {
                             inputVariantFirst[i].closest('label').classList.add("out-stock");
                         } else {
-                            // console.log("true", variant[j], inputVariantFirst[i])
                             inputVariantFirst[i].closest('label').classList.remove("out-stock");
-                        };
+                        }
                     }
-                    j++;
                 }
-                i++;
             }
+
             function checkaStock(obj) {
-                if (obj.stock > 0) {
-                    return true;
-                } else if (obj.stock <= 0) {
-                    return false;
-                }
-            };
+                return obj.stock > 0;
+            }
         });
+
     },
 
     removeProduct: function (element) {
+        jQuery(element).closest(".box-cart").addClass('load-remove');
 
         var id = parseInt(jQuery(element).attr('data-id'));
         var variant = '/' + jQuery(element).attr('data-variant');
@@ -736,13 +740,13 @@ var cart = {
         // Atualiza o texto com o valor formatado
         jQuery('.cart-sidebar .total .value').text(toReal(parseFloat(price), 'R$'));
 
-        // Pega o valor total necessÃ¡rio para frete grÃ¡tis
+        // Pega o valor total necessário para frete grátis
         var value_barra = jQuery('.cart-sidebar .total').data('total');
 
-        // Converte os valores para nÃºmero e calcula a porcentagem
+        // Converte os valores para número e calcula a porcentagem
         var porcentagem = (parseFloat(price) / parseFloat(value_barra)) * 100;
 
-        // Garante que a porcentagem nÃ£o ultrapasse 100%
+        // Garante que a porcentagem não ultrapasse 100%
         porcentagem = Math.min(porcentagem, 100);
         var restante = value_barra - price;
 
@@ -876,6 +880,28 @@ var cart = {
         });
 
     },
+
+    addOnPageProduct: function () {
+        jQuery('#form_comprar').on('submit', function (e) {
+            e.preventDefault();
+            var inputVariatnId = jQuery(this).find('#selectedVariant').value;
+            var formSubmit = jQuery(this).find('button[type="submit"] span');
+
+            jQuery(formSubmit).text('Adicionando...').addClass('load');
+
+            if (inputVariatnId != undefined || inputVariatnId != null || inputVariatnId != '') {
+                setTimeout(function () {
+                    jQuery(formSubmit).text('Sucesso!').removeClass('load');
+                    cart.showCart();
+                    jQuery(formSubmit).text('Comprar');
+                }, 1200);
+            }
+            else {
+                jQuery(formSubmit).text('Comprar').removeClass('load');
+
+            }
+        });
+    }
 }
 
 function process(step) {
@@ -895,6 +921,10 @@ function process(step) {
 jQuery(function () {
     cart.startCart();
     cart.checkFirstVariantStock();
+
+    if (jQuery('body').hasClass('page-product')) {
+        cart.addOnPageProduct();
+    }
 });
 
 

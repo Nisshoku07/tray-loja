@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Remover as marcas do filtro categorias
+// ESTE CÓDIGO PERMANECE IGUAL.
 const limparCategoriasMarcas = setInterval(() => {
     const checkboxes = document.querySelectorAll('.filter-block-categories input[type="checkbox"]');
 

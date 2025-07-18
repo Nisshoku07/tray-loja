@@ -15,7 +15,7 @@
 <section id="product-container" class="product-view product-detail">
 
     {% element 'snippets/schema-product' {'product': product} %}
-
+    {% set ProductPrimary = product %}
     <div class="product-essential row">
 
         <div class="product-img-box col-md-7">
@@ -376,3 +376,6 @@
     {{ banner.bottom }}
 </div>
 {% endif %}
+
+
+{% element 'snippets/cart-sidebar' {"ProductPrimary" : ProductPrimary} %}

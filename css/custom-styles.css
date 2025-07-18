@@ -1,4 +1,4 @@
-/* --- Estilos para o Filtro de Pre√ßo Manual (Vers√£o Final Integrada) --- */
+/* --- Estilos para o Filtro de PreÁo Manual (Vers„o Final Integrada) --- */
 
 .manual-price-filter {
   margin-top: 15px;
@@ -8,10 +8,10 @@
 
 .manual-price-filter p {
   margin-bottom: 10px;
-  font-size: 15px; /* Tamanho da fonte dos t√≠tulos do filtro */
+  font-size: 15px; /* Tamanho da fonte dos tÌtulos do filtro */
   /* PESO DA FONTE DO TEMA */
   font-weight: 600;
-  color: #191919; /* Cor padr√£o de texto do seu site */
+  color: #191919; /* Cor padr„o de texto do seu site */
 }
 
 .price-inputs {
@@ -25,7 +25,7 @@
   width: 100%;
 }
 
-/* Estilo para os inputs de M√çNIMO e M√ÅXIMO */
+/* Estilo para os inputs de MÕNIMO e M¡XIMO */
 .input-wrapper input {
   width: 100%;
   font-family: 'Poppins', sans-serif; /* FONTE PRINCIPAL DO TEMA */
@@ -35,9 +35,9 @@
   height: 45px;
   padding: 8px 10px;
   font-size: 14px; /* Tamanho de fonte mais comum para inputs */
-  font-weight: 400; /* Peso normal para digita√ß√£o */
+  font-weight: 400; /* Peso normal para digitaÁ„o */
   color: #333;
-  border-radius: 2px; /* Raio de borda sutil usado em outros bot√µes */
+  border-radius: 2px; /* Raio de borda sutil usado em outros botıes */
   transition: border-color .3s;
 }
 
@@ -51,7 +51,7 @@
 }
 
 
-/* --- Estilos para os bot√µes --- */
+/* --- Estilos para os botıes --- */
 
 .filter-buttons {
   display: flex;
@@ -59,11 +59,11 @@
   gap: 8px;
 }
 
-/* Bot√£o "Filtrar por valor" - Agora id√™ntico aos outros bot√µes do filtro */
+/* Bot„o "Filtrar por valor" - Agora idÍntico aos outros botıes do filtro */
 #apply-price-filter {
   /* COR PRINCIPAL DO TEMA */
   background-color: #8C5F41; 
-  /* COR DO TEXTO DOS T√çTULOS DO FILTRO */
+  /* COR DO TEXTO DOS TÕTULOS DO FILTRO */
   color: #eee;
   border: none;
   
@@ -83,10 +83,10 @@
     opacity: 0.85; /* Efeito hover suave */
 }
 
-/* Link "Limpar" - Estilo secund√°rio e limpo */
+/* Link "Limpar" - Estilo secund·rio e limpo */
 .filter-clear {
   text-align: center;
-  font-size: 13px; /* Tamanho menor para a√ß√£o secund√°ria */
+  font-size: 13px; /* Tamanho menor para aÁ„o secund·ria */
   color: #999;
   text-decoration: underline;
   font-family: 'Poppins', sans-serif;
@@ -98,7 +98,7 @@
 }
 
 
-/* --- Estilos para Valida√ß√£o e Erros --- */
+/* --- Estilos para ValidaÁ„o e Erros --- */
 
 .price-error {
   color: #b70000;
@@ -108,7 +108,7 @@
 }
 
 .input-error {
-  border-color: #b70000 !important; /* !important para garantir a sobreposi√ß√£o */
+  border-color: #b70000 !important; /* !important para garantir a sobreposiÁ„o */
 }
 
 .hidden {

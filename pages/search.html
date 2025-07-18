@@ -1,0 +1,70 @@
+{% element 'snippets/breadcrumb' %}
+
+<div class="content {{ settings.enable_filter ? 'col-lg-9' : 'col-lg-12 no-sidebar-filters' }}">
+    
+    {% if search.word %}
+        <h1 class="catalog-name">Exibindo resultados para: {{ search.word }}</h1>
+    {% else %}
+        <h1 class="catalog-name">Exibindo todos os produtos</h1>
+    {% endif %}
+    
+    {% if banner.title %}
+    <div class="banner banner-title mobile-off">
+        {{ banner.title }}
+    </div>
+    {% endif %}	
+    
+    
+    {% if products|length > 0 %}
+
+        <div class="catalog-content">
+            {% element 'showcase-catalog' {
+                "products": products
+            } %}
+        </div>
+        
+        <div class="system-filter {{ not settings.enable_filter ? 'no-sidebar-filters'}}">
+            {% element 'snippets/filter' %}
+        </div>
+        
+        {% if settings.enable_filter %}
+        <div class="open-filters d-lg-none">
+            <i><svg viewBox="0 0 32 32"><path d="M2 7h.142A3.981 3.981 0 0 0 9.858 7H30a1 1 0 0 0 0-2H9.858A3.981 3.981 0 0 0 2.142 5H2A1 1 0 0 0 2 7zM6 4A2 2 0 1 1 4 6 2 2 0 0 1 6 4zM30 15h-.142a3.981 3.981 0 0 0-7.716 0H2a1 1 0 0 0 0 2H22.142a3.981 3.981 0 0 0 7.716 0H30a1 1 0 0 0 0-2zm-4 3a2 2 0 1 1 2-2A2 2 0 0 1 26 18zM30 25H19.858a3.981 3.981 0 0 0-7.716 0H2a1 1 0 0 0 0 2H12.142a3.981 3.981 0 0 0 7.716 0H30a1 1 0 0 0 0-2zM16 28a2 2 0 1 1 2-2A2 2 0 0 1 16 28z"></path></svg></i>
+            <span>Filtrar</span>
+        </div>
+        {% endif %}
+
+        {% if paginate.params.pageCount > 1 %}
+            <div class="catalog-bottom d-flex flex-wrap justify-content-center align-items-center justify-content-sm-between">
+                
+                <div>
+                    Resultado: {{ paginate.params.count }} produto(s) em {{ paginate.params.pageCount }} páginas(s)  
+                </div>
+                
+                <div class="pagination-wrapper d-flex justify-content-end">
+                    {% element('snippets/paginate') %}
+                </div>
+                
+            </div>
+        {% endif %}
+
+    {% else %}
+
+        <p>Nenhum produto encontrado nessa categoria.</p>
+
+    {% endif %}
+    
+</div>
+
+{% if settings.enable_filter %}
+{% element 'sidebar-left' %}
+{% endif %}
+
+
+
+
+
+
+
+
+

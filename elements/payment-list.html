@@ -1,0 +1,16 @@
+<div class="payment-list">
+    <ul class="clearfix">
+        {% for payment in paymentMethods.order %}
+        <li><img class="lazy" data-original="{{ payment.thumbnail.url }}" alt="{{ payment.display_name }}"></li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="payment-list">
+    <ul class="clearfix">
+        {% for payment in paymentMethods.credit %}
+        <li>
+            <img data-src="{{ payment.thumbnail.url }}" alt="{{ payment.display_name }}" class="lazyload" height="50" width="60">
+        </li>
+        {% endfor %} 
+    </ul>
+</div>
